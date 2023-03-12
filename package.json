@@ -1,0 +1,42 @@
+{
+  "name": "twi-ext",
+  "version": "1.0.0",
+  "description": "Unofficial utility to develop browser extensions for Twitter",
+  "main": "dist/twi-ext.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx type-predicates-generator -f \"./src/types/*.d.ts\" -o \"./src/types/predicates.ts\" && npx webpack",
+    "prepublishOnly": "npm run build",
+    "doc": "npx typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none \"src/index.ts\"",
+    "version": "npm run build && npm run doc && git add -A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robot-Inventor/twi-ext.git"
+  },
+  "keywords": [
+    "twitter",
+    "extension",
+    "web extension",
+    "utility"
+  ],
+  "files": [
+    "dist"
+  ],
+  "types": "dist/twi-ext.d.ts",
+  "author": "Robot-Inventor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robot-Inventor/twi-ext/issues"
+  },
+  "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
+  "devDependencies": {
+    "ts-loader": "^9.4.2",
+    "type-predicates-generator": "^0.4.0",
+    "typedoc": "^0.23.26",
+    "typedoc-plugin-markdown": "^3.14.0",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
