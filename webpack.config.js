@@ -15,9 +15,8 @@ module.exports = {
     },
     output: {
         filename: "twi-ext.js",
-        clean: true
-    },
-    optimization: {
-        usedExports: false
+        clean: true,
+        library: "twi-ext",
+        libraryTarget: "umd"
     }
 };
