@@ -13,4 +13,3 @@ twi-ext - v1.0.0
 ### Interfaces
 
 - [TwiExtPollData](interfaces/TwiExtPollData.md)
-- [TwiExtUserInfo](interfaces/TwiExtUserInfo.md)

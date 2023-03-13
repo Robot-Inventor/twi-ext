@@ -18,7 +18,7 @@
 
 #### Defined in
 
-types/index.d.ts:195
+types/index.ts:4
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-types/index.d.ts:193
+types/index.ts:2
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-types/index.d.ts:194
+types/index.ts:3

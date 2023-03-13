@@ -1,7 +1,7 @@
 module.exports = {
     mode: "production",
     devtool: false,
-    entry: "./src/twi-ext.ts",
+    entry: "./src/index.ts",
     module: {
         rules: [
             {
@@ -14,7 +14,7 @@ module.exports = {
         extensions: [".ts", ".js"]
     },
     output: {
-        filename: "twi-ext.js",
+        filename: "index.js",
         clean: true,
         library: "twi-ext",
         libraryTarget: "umd"
