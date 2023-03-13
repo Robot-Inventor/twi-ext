@@ -19,6 +19,12 @@ class TwiExt {
      * @param callback Callback function.
      */
     onTimelineLoaded(callback: Function) {
+        const timeline = document.body.querySelector(this.SELECTOR.TIMELINE);
+        if (timeline) {
+            callback();
+            return;
+        }
+
         const observer = new MutationObserver(() => {
             const timeline = document.body.querySelector(this.SELECTOR.TIMELINE);
             if (!timeline) return;
@@ -26,6 +32,21 @@ class TwiExt {
             callback();
         });
         observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    /**
+     * Execute the callback function when the timeline is changed.
+     * "Timeline" includes the notification page, but doesn't include the DM page.
+     * @param callback Callback function.
+     */
+    onTimeLineChanged(callback: Function) {
+        this.onTimelineLoaded(() => {
+            const timeline = document.body.querySelector(this.SELECTOR.TIMELINE) as Element;
+            const observer = new MutationObserver(() => {
+                callback();
+            });
+            observer.observe(timeline, { childList: true, subtree: true });
+        });
     }
 
     /**
