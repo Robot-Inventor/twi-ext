@@ -1,14 +1,10 @@
-import type { TwiExtPollData } from './index';
 import type { ReactProps, ReactPropsEntities, ReactPropsCardPollBindingValuesBase, ReactPropsCardPoll2, ReactPropsCardPoll3, ReactPropsCardPoll4, ReactPropsTweetInfo, ReactPropsUserInfo } from './internal';
 
-const isNumber = (value: unknown): value is number => typeof value === 'number';
 const isString = (value: unknown): value is string => typeof value === 'string';
+const isNumber = (value: unknown): value is number => typeof value === 'number';
 const isUndefined = (value: unknown): value is undefined => typeof value === 'undefined';
 const isObject = (value: unknown): value is Record<string, unknown> =>
   typeof value === 'object' && value !== null && !Array.isArray(value);
-const isUnion = (unionChecks: ((value: unknown) => boolean)[]) =>
-  (value: unknown): boolean =>
-    unionChecks.reduce((s: boolean, isT) => s || isT(value), false)
 type ArrayCheckOption = 'all' | 'first';
 const isArray = <T>(
   childCheckFn:
@@ -25,10 +21,9 @@ const isArray = <T>(
         return true;
       })(array)
     : typeof array[0] === "undefined" || childCheckFn(array[0]));
-
-export const isTwiExtPollData = (arg_0: unknown): arg_0 is TwiExtPollData => isObject(arg_0) && 
-  ('isFinal' in arg_0 && ((arg_1: unknown): boolean => isUnion([(arg_2: unknown): boolean => arg_2 === false, (arg_2: unknown): boolean => arg_2 === true])(arg_1))(arg_0['isFinal'])) && ('totalVotes' in arg_0 && (isNumber)(arg_0['totalVotes'])) && ('choices' in arg_0 && ((arg_1: unknown): boolean => isArray((arg_2: unknown): boolean => isObject(arg_2) && 
-  ('label' in arg_2 && (isString)(arg_2['label'])) && ('count' in arg_2 && (isNumber)(arg_2['count'])))(arg_1))(arg_0['choices']));
+const isUnion = (unionChecks: ((value: unknown) => boolean)[]) =>
+  (value: unknown): boolean =>
+    unionChecks.reduce((s: boolean, isT) => s || isT(value), false)
 
 export const isReactProps = (arg_0: unknown): arg_0 is ReactProps => isObject(arg_0) && 
   ('children' in arg_0 && ((arg_1: unknown): boolean => isObject(arg_1) && 
@@ -137,13 +132,13 @@ export const isReactProps = (arg_0: unknown): arg_0 is ReactProps => isObject(ar
     })(arg_2))(arg_1['flat'])) && ('at' in arg_1 && (/* WARN: Not Supported Type */ (value: unknown) => {
       console.warn(`check was skipped because ${value} is not supported type.`);
       return true;
-    })(arg_1['at'])) && ('__@iterator@35' in arg_1 && (/* WARN: Not Supported Type */ (value: unknown) => {
+    })(arg_1['at'])) && ('__@iterator@28' in arg_1 && (/* WARN: Not Supported Type */ (value: unknown) => {
       console.warn(`check was skipped because ${value} is not supported type.`);
       return true;
-    })(arg_1['__@iterator@35'])) && ('__@unscopables@37' in arg_1 && (/* WARN: Not Supported Type */ (value: unknown) => {
+    })(arg_1['__@iterator@28'])) && ('__@unscopables@30' in arg_1 && (/* WARN: Not Supported Type */ (value: unknown) => {
       console.warn(`check was skipped because ${value} is not supported type.`);
       return true;
-    })(arg_1['__@unscopables@37'])))(arg_0['children']));
+    })(arg_1['__@unscopables@30'])))(arg_0['children']));
 
 export const isReactPropsEntities = (arg_0: unknown): arg_0 is ReactPropsEntities => isObject(arg_0) && 
   ('hashtags' in arg_0 && ((arg_1: unknown): boolean => isArray((arg_2: unknown): boolean => isObject(arg_2) && 

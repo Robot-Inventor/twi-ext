@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[module/twiExtUser.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L6)
+[module/twiExtUser.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L6)
 
 ## Accessors
 
@@ -59,7 +59,7 @@ Whether the currently logged in user is blocked by this account.
 
 #### Defined in
 
-[module/twiExtUser.ts:91](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L91)
+[module/twiExtUser.ts:91](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L91)
 
 ___
 
@@ -75,7 +75,7 @@ Whether the currently logged-in user is blocking this account.
 
 #### Defined in
 
-[module/twiExtUser.ts:84](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L84)
+[module/twiExtUser.ts:84](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L84)
 
 ___
 
@@ -91,7 +91,7 @@ Twitter Blue verified account or not.
 
 #### Defined in
 
-[module/twiExtUser.ts:48](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L48)
+[module/twiExtUser.ts:48](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L48)
 
 ___
 
@@ -108,7 +108,7 @@ The time zone is zero UTC offset, as indicated by the suffix Z.
 
 #### Defined in
 
-[module/twiExtUser.ts:63](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L63)
+[module/twiExtUser.ts:63](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L63)
 
 ___
 
@@ -124,7 +124,7 @@ Bio text.
 
 #### Defined in
 
-[module/twiExtUser.ts:34](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L34)
+[module/twiExtUser.ts:34](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L34)
 
 ___
 
@@ -140,7 +140,7 @@ The number of tweets liked by the user.
 
 #### Defined in
 
-[module/twiExtUser.ts:133](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L133)
+[module/twiExtUser.ts:133](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L133)
 
 ___
 
@@ -156,7 +156,7 @@ Whether the currently logged in user is followed by this account.
 
 #### Defined in
 
-[module/twiExtUser.ts:77](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L77)
+[module/twiExtUser.ts:77](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L77)
 
 ___
 
@@ -172,7 +172,7 @@ Number of followers.
 
 #### Defined in
 
-[module/twiExtUser.ts:105](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L105)
+[module/twiExtUser.ts:105](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L105)
 
 ___
 
@@ -188,7 +188,7 @@ Whether the currently logged-in user is following this account.
 
 #### Defined in
 
-[module/twiExtUser.ts:70](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L70)
+[module/twiExtUser.ts:70](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L70)
 
 ___
 
@@ -204,7 +204,7 @@ Number of accounts the user is following.
 
 #### Defined in
 
-[module/twiExtUser.ts:112](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L112)
+[module/twiExtUser.ts:112](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L112)
 
 ___
 
@@ -220,7 +220,7 @@ User ID (not screen name). For example, [@Twitter](https://twitter.com/twitter)'
 
 #### Defined in
 
-[module/twiExtUser.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L13)
+[module/twiExtUser.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L13)
 
 ___
 
@@ -236,7 +236,7 @@ Number of media posted by the user.
 
 #### Defined in
 
-[module/twiExtUser.ts:126](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L126)
+[module/twiExtUser.ts:126](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L126)
 
 ___
 
@@ -252,7 +252,7 @@ Whether the currently logged-in user is muting this account.
 
 #### Defined in
 
-[module/twiExtUser.ts:98](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L98)
+[module/twiExtUser.ts:98](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L98)
 
 ___
 
@@ -268,7 +268,7 @@ Private account or not.
 
 #### Defined in
 
-[module/twiExtUser.ts:55](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L55)
+[module/twiExtUser.ts:55](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L55)
 
 ___
 
@@ -284,7 +284,7 @@ Screen name starting with ``@``.
 
 #### Defined in
 
-[module/twiExtUser.ts:27](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L27)
+[module/twiExtUser.ts:27](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L27)
 
 ___
 
@@ -300,7 +300,7 @@ Number of tweets by the user.
 
 #### Defined in
 
-[module/twiExtUser.ts:119](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L119)
+[module/twiExtUser.ts:119](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L119)
 
 ___
 
@@ -316,7 +316,7 @@ User name (not screen name). For example, [@TwitterDev](https://twitter.com/Twit
 
 #### Defined in
 
-[module/twiExtUser.ts:20](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L20)
+[module/twiExtUser.ts:20](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L20)
 
 ___
 
@@ -332,4 +332,4 @@ Verified account or not.
 
 #### Defined in
 
-[module/twiExtUser.ts:41](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtUser.ts#L41)
+[module/twiExtUser.ts:41](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtUser.ts#L41)

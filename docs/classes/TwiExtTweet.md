@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[module/twiExtTweet.ts:10](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L10)
+[module/twiExtTweet.ts:10](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L10)
 
 ## Accessors
 
@@ -62,7 +62,7 @@ Number of likes.
 
 #### Defined in
 
-[module/twiExtTweet.ts:134](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L134)
+[module/twiExtTweet.ts:134](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L134)
 
 ___
 
@@ -78,7 +78,7 @@ Array of hashtags.
 
 #### Defined in
 
-[module/twiExtTweet.ts:83](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L83)
+[module/twiExtTweet.ts:83](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L83)
 
 ___
 
@@ -95,7 +95,7 @@ For example, the ID of ``https://twitter.com/TwitterDev/status/16210269867843379
 
 #### Defined in
 
-[module/twiExtTweet.ts:32](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L32)
+[module/twiExtTweet.ts:32](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L32)
 
 ___
 
@@ -111,7 +111,7 @@ Language of the tweet.
 
 #### Defined in
 
-[module/twiExtTweet.ts:104](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L104)
+[module/twiExtTweet.ts:104](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L104)
 
 ___
 
@@ -127,7 +127,7 @@ Poll data. If the tweet does not have a poll, returns undefined.
 
 #### Defined in
 
-[module/twiExtTweet.ts:179](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L179)
+[module/twiExtTweet.ts:179](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L179)
 
 ___
 
@@ -144,7 +144,7 @@ The time zone is zero UTC offset, as indicated by the suffix Z.
 
 #### Defined in
 
-[module/twiExtTweet.ts:151](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L151)
+[module/twiExtTweet.ts:151](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L151)
 
 ___
 
@@ -161,7 +161,7 @@ To get the number of retweets without comments, use [retweetCount](TwiExtTweet.m
 
 #### Defined in
 
-[module/twiExtTweet.ts:127](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L127)
+[module/twiExtTweet.ts:127](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L127)
 
 ___
 
@@ -177,7 +177,7 @@ Number of replies.
 
 #### Defined in
 
-[module/twiExtTweet.ts:111](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L111)
+[module/twiExtTweet.ts:111](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L111)
 
 ___
 
@@ -194,7 +194,7 @@ To get the number of retweets including retweets with comments, add [retweetCoun
 
 #### Defined in
 
-[module/twiExtTweet.ts:119](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L119)
+[module/twiExtTweet.ts:119](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L119)
 
 ___
 
@@ -210,7 +210,7 @@ The source name from which the tweet was sent (e.g., ``Twitter Web App``, ``Twit
 
 #### Defined in
 
-[module/twiExtTweet.ts:158](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L158)
+[module/twiExtTweet.ts:158](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L158)
 
 ___
 
@@ -226,7 +226,7 @@ The source URL from which the tweet was sent (e.g., ``Twitter Web App`` is ``htt
 
 #### Defined in
 
-[module/twiExtTweet.ts:165](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L165)
+[module/twiExtTweet.ts:165](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L165)
 
 ___
 
@@ -244,7 +244,7 @@ To get in other formats, use [()](TwiExtTweet.md#getformattedtext).
 
 #### Defined in
 
-[module/twiExtTweet.ts:41](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L41)
+[module/twiExtTweet.ts:41](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L41)
 
 ___
 
@@ -260,7 +260,7 @@ Array of URLs.
 
 #### Defined in
 
-[module/twiExtTweet.ts:90](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L90)
+[module/twiExtTweet.ts:90](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L90)
 
 ___
 
@@ -276,7 +276,7 @@ Information about the user who sent the tweet.
 
 #### Defined in
 
-[module/twiExtTweet.ts:172](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L172)
+[module/twiExtTweet.ts:172](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L172)
 
 ___
 
@@ -292,7 +292,7 @@ Array of user mentions.
 
 #### Defined in
 
-[module/twiExtTweet.ts:97](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L97)
+[module/twiExtTweet.ts:97](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L97)
 
 ___
 
@@ -308,7 +308,7 @@ Number of views. If view count is unavailable, returns undefined.
 
 #### Defined in
 
-[module/twiExtTweet.ts:141](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L141)
+[module/twiExtTweet.ts:141](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L141)
 
 ## Methods
 
@@ -333,7 +333,7 @@ Full text of the tweet.
 
 #### Defined in
 
-[module/twiExtTweet.ts:57](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L57)
+[module/twiExtTweet.ts:57](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L57)
 
 ___
 
@@ -347,4 +347,4 @@ ___
 
 #### Defined in
 
-[module/twiExtTweet.ts:247](https://github.com/Robot-Inventor/twi-ext/blob/29a0089/src/module/twiExtTweet.ts#L247)
+[module/twiExtTweet.ts:247](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExtTweet.ts#L247)
