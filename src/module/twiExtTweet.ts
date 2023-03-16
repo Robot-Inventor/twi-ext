@@ -1,5 +1,5 @@
 import type { TwiExtPollData } from "../types/index";
-import { isReactProps } from "../types/predicates";
+import { isReactProps } from "../types/internal.guard";
 import { getReactProps } from "./utility";
 import { ReactPropsTweetInfo } from "../types/internal";
 import { TwiExtUser } from "./twiExtUser";
@@ -140,7 +140,7 @@ class TwiExtTweet {
      */
     get viewCount(): number | undefined {
         const viewInfo = this.getTweetInfo().views;
-        if (!(viewInfo && viewInfo.state === "EnabledWithCount")) return undefined;
+        if (!viewInfo) return undefined;
         return viewInfo.count;
     }
 
@@ -181,6 +181,8 @@ class TwiExtTweet {
         if (!tweetInfo.card) return undefined;
 
         const cardData = tweetInfo.card;
+        if (!("counts_are_final" in cardData.binding_values)) return undefined;
+
         let choices: TwiExtPollData["choices"] = [];
         switch (cardData.name) {
             case "poll2choice_text_only":
@@ -237,7 +239,7 @@ class TwiExtTweet {
 
         const totalVotes = choices.map((choice) => choice.count).reduce((a, b) => a + b);
         const result = {
-            isFinal: tweetInfo.card.binding_values.counts_are_final.boolean_value,
+            isFinal: cardData.binding_values.counts_are_final.boolean_value,
             totalVotes,
             choices
         };

@@ -53,7 +53,7 @@ class TwiExtUser {
      * Private account or not.
      */
     get protected(): boolean {
-        return this.userInfo.protected;
+        return Boolean(this.userInfo.protected);
     }
 
     /**
@@ -68,35 +68,35 @@ class TwiExtUser {
      * Whether the currently logged-in user is following this account.
      */
     get following(): boolean {
-        return this.userInfo.following;
+        return Boolean(this.userInfo.following);
     }
 
     /**
      * Whether the currently logged in user is followed by this account.
      */
     get followedBy(): boolean {
-        return this.userInfo.followed_by;
+        return Boolean(this.userInfo.followed_by);
     }
 
     /**
      * Whether the currently logged-in user is blocking this account.
      */
     get blocking(): boolean {
-        return this.userInfo.blocking;
+        return Boolean(this.userInfo.blocking);
     }
 
     /**
      * Whether the currently logged in user is blocked by this account.
      */
     get blockedBy(): boolean {
-        return this.userInfo.blocked_by;
+        return Boolean(this.userInfo.blocked_by);
     }
 
     /**
      * Whether the currently logged-in user is muting this account.
      */
     get muting(): boolean {
-        return this.userInfo.muting;
+        return Boolean(this.userInfo.muting);
     }
 
     /**

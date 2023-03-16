@@ -10,7 +10,20 @@ class TwiExt {
             TWEET_OUTER: "[data-testid='cellInnerDiv']",
             TWEET_INNER: "[data-testid='tweet']"
         } as const;
-        this.CHECKED_TWEETS_CLASS = "twi-ext-checked";
+        this.CHECKED_TWEETS_CLASS = `twi-ext-checked-${this.generateRandomString()}`;
+    }
+
+    /**
+     * Generate 10 random alphanumeric characters.
+     * @returns Random string.
+     */
+    private generateRandomString(): string {
+        const string = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let result = "";
+        for (let i = 0; i < 10; i++) {
+            result += string.charAt(Math.floor(Math.random() * string.length));
+        }
+        return result;
     }
 
     /**
@@ -42,6 +55,11 @@ class TwiExt {
     onTimeLineChanged(callback: Function) {
         this.onTimelineLoaded(() => {
             const timeline = document.body.querySelector(this.SELECTOR.TIMELINE) as Element;
+            timeline.addEventListener("DOMNodeRemoved", () => {
+                this.onTimelineLoaded(() => {
+                    callback();
+                });
+            });
             const observer = new MutationObserver(() => {
                 callback();
             });

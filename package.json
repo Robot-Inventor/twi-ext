@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx type-predicates-generator -f \"./src/types/internal.ts\" -o \"./src/types/predicates.ts\" && npx webpack",
+    "build": "npx ts-auto-guard \"./src/types/internal.ts\" && npx webpack",
     "prepublishOnly": "npm run build",
     "doc": "npx typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none \"src/index.ts\"",
     "version": "npm run build && npm run doc && git add -A"
@@ -31,8 +31,8 @@
   },
   "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
   "devDependencies": {
+    "ts-auto-guard": "^4.1.2",
     "ts-loader": "^9.4.2",
-    "type-predicates-generator": "^0.4.0",
     "typedoc": "^0.23.26",
     "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^4.9.5",

@@ -1,6 +1,9 @@
-export interface ReactProps {
+/**
+ * @see {isReactProps} ts-auto-guard:type-guard
+ */
+interface ReactProps {
     children: [
-        {},
+        unknown,
         {
             props: {
                 retweetWithCommentLink: {
@@ -13,7 +16,7 @@ export interface ReactProps {
     ];
 }
 
-export interface ReactPropsEntities {
+interface ReactPropsEntities {
     hashtags: {
         text: string;
     }[];
@@ -27,7 +30,7 @@ export interface ReactPropsEntities {
     }[];
 }
 
-export interface ReactPropsCardPollBindingValuesBase {
+interface ReactPropsCardPollBindingValuesBase {
     selected_choice?: {
         string_value: string;
         type: "STRING";
@@ -38,7 +41,7 @@ export interface ReactPropsCardPollBindingValuesBase {
     };
 }
 
-export interface ReactPropsCardPoll2 {
+interface ReactPropsCardPoll2 {
     name: "poll2choice_text_only";
     binding_values: {
         choice1_label: {
@@ -60,7 +63,7 @@ export interface ReactPropsCardPoll2 {
     } & ReactPropsCardPollBindingValuesBase;
 }
 
-export interface ReactPropsCardPoll3 {
+interface ReactPropsCardPoll3 {
     name: "poll3choice_text_only";
     binding_values: {
         choice1_label: {
@@ -90,7 +93,7 @@ export interface ReactPropsCardPoll3 {
     } & ReactPropsCardPollBindingValuesBase;
 }
 
-export interface ReactPropsCardPoll4 {
+interface ReactPropsCardPoll4 {
     name: "poll4choice_text_only";
     binding_values: {
         choice1_label: {
@@ -142,39 +145,38 @@ export interface ReactPropsTweetInfo {
     retweet_count: number;
     quote_count: number;
     favorite_count: number;
-    views?:
-        | {
-              count: number;
-              state: "EnabledWithCount";
-          }
-        | {
-              state: "Enabled";
-          };
+    views?: {
+        count?: number;
+    };
 
     created_at: string;
     source_name: string;
     source_url: string;
 
-    card?: ReactPropsCardPoll2 | ReactPropsCardPoll3 | ReactPropsCardPoll4;
+    card?:
+        | ReactPropsCardPoll2
+        | ReactPropsCardPoll3
+        | ReactPropsCardPoll4
+        | { name: "unified_card" | "summary_large_image" | "player"; binding_values: object };
 
     user: ReactPropsUserInfo;
 }
 
-export interface ReactPropsUserInfo {
+interface ReactPropsUserInfo {
     id_str: string;
     name: string;
     screen_name: string;
     description: string;
     verified: boolean;
     is_blue_verified: boolean;
-    protected: boolean;
+    protected?: boolean;
     created_at: string;
 
-    following: boolean;
-    followed_by: boolean;
-    blocking: boolean;
-    blocked_by: boolean;
-    muting: boolean;
+    following?: boolean | null;
+    followed_by?: boolean;
+    blocking?: boolean | null;
+    blocked_by?: boolean;
+    muting?: boolean | null;
 
     followers_count: number;
     friends_count: number;
@@ -182,3 +184,5 @@ export interface ReactPropsUserInfo {
     media_count: number;
     favourites_count: number;
 }
+
+export type { ReactProps, ReactPropsUserInfo };
