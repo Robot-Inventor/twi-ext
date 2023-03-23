@@ -157,7 +157,7 @@ export interface ReactPropsTweetInfo {
         | ReactPropsCardPoll2
         | ReactPropsCardPoll3
         | ReactPropsCardPoll4
-        | { name: "unified_card" | "summary_large_image" | "player"; binding_values: object };
+        | { name: "unified_card" | "summary_large_image" | "summary" | "player"; binding_values: object };
 
     user: ReactPropsUserInfo;
 }
@@ -181,7 +181,7 @@ interface ReactPropsUserInfo {
     followers_count: number;
     friends_count: number;
     statuses_count: number;
-    media_count: number;
+    media_count?: number;
     favourites_count: number;
 }
 

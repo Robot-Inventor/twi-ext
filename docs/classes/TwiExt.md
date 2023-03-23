@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[module/twiExt.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExt.ts#L7)
+[module/twiExt.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/module/twiExt.ts#L7)
 
 ## Methods
 
@@ -43,7 +43,7 @@ Tweets.
 
 #### Defined in
 
-[module/twiExt.ts:77](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExt.ts#L77)
+[module/twiExt.ts:147](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/module/twiExt.ts#L147)
 
 ___
 
@@ -63,7 +63,7 @@ Tweets.
 
 #### Defined in
 
-[module/twiExt.ts:58](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExt.ts#L58)
+[module/twiExt.ts:127](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/module/twiExt.ts#L127)
 
 ___
 
@@ -86,7 +86,7 @@ Execute the callback function when the timeline is changed.
 
 #### Defined in
 
-[module/twiExt.ts:42](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExt.ts#L42)
+[module/twiExt.ts:87](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/module/twiExt.ts#L87)
 
 ___
 
@@ -109,4 +109,4 @@ Execute the callback function when the timeline is loaded.
 
 #### Defined in
 
-[module/twiExt.ts:21](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/module/twiExt.ts#L21)
+[module/twiExt.ts:34](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/module/twiExt.ts#L34)

@@ -123,7 +123,7 @@ class TwiExtUser {
     /**
      * Number of media posted by the user.
      */
-    get mediaCount(): number {
+    get mediaCount(): number | undefined {
         return this.userInfo.media_count;
     }
 

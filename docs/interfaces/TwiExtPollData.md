@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[types/index.ts:4](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/types/index.ts#L4)
+[types/index.ts:4](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/types/index.ts#L4)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[types/index.ts:2](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/types/index.ts#L2)
+[types/index.ts:2](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/types/index.ts#L2)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[types/index.ts:3](https://github.com/Robot-Inventor/twi-ext/blob/cad15de/src/types/index.ts#L3)
+[types/index.ts:3](https://github.com/Robot-Inventor/twi-ext/blob/d982d56/src/types/index.ts#L3)

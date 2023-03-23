@@ -258,6 +258,7 @@ export function isReactProps(obj: unknown): obj is ReactProps {
                 typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["card"] === "function") &&
             (typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["card"]["name"] === "unified_card" ||
                 typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["card"]["name"] === "summary_large_image" ||
+                typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["card"]["name"] === "summary" ||
                 typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["card"]["name"] === "player") &&
             typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["card"]["binding_values"] === "object") &&
         (typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"] !== null &&
@@ -294,7 +295,8 @@ export function isReactProps(obj: unknown): obj is ReactProps {
         typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["followers_count"] === "number" &&
         typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["friends_count"] === "number" &&
         typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["statuses_count"] === "number" &&
-        typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["media_count"] === "number" &&
+        (typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["media_count"] === "undefined" ||
+            typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["media_count"] === "number") &&
         typeof typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["favourites_count"] === "number"
     )
 }
