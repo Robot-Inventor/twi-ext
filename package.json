@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx ts-auto-guard \"./src/types/internal.ts\" && npx webpack",
+    "build": "npx ts-auto-guard \"./src/types/internal.ts\" && npx webpack && npx banner-cli ./dist/**/*.js && npx banner-cli ./dist/**/*.ts",
     "prepublishOnly": "npm run build",
     "doc": "npx typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none \"src/index.ts\"",
     "version": "npm run build && npm run doc && git add -A"
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
   "devDependencies": {
+    "banner-cli": "^0.14.3",
     "ts-auto-guard": "^4.1.2",
     "ts-loader": "^9.4.2",
     "typedoc": "^0.23.26",
