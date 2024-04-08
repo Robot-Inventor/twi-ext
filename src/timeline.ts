@@ -26,7 +26,7 @@ class Timeline {
      * A class that observes the timeline and calls a callback when a new tweet is added.
      * @param options Options for the timeline observer.
      */
-    public constructor(options: Partial<TimelineOptions>) {
+    public constructor(options?: Partial<TimelineOptions>) {
         // Generate a unique data attribute name for each instance.
         const checkedDataAttribute = `twi-ext-checked${uuidv4()}`;
 
