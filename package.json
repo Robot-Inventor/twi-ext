@@ -8,7 +8,7 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc && typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/index.ts",
     "prepublishOnly": "npm run build",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
@@ -43,6 +43,8 @@
     "eslint-plugin-jsdoc": "^48.2.3",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.4.4"
   }
 }
