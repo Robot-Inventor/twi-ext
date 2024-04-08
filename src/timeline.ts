@@ -65,4 +65,4 @@ class Timeline {
     }
 }
 
-export { Timeline };
+export { Tweet, TimelineOptions, Timeline };
