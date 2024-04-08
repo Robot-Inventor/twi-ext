@@ -1,0 +1,48 @@
+{
+  "name": "twi-ext",
+  "version": "0.1.0",
+  "description": "Unofficial utility to develop browser extensions for Twitter / X",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "prepublishOnly": "npm run build",
+    "format": "prettier ./src/ --write",
+    "format:check": "prettier ./src/ --check",
+    "lint": "eslint --report-unused-disable-directives-severity error ./src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robot-Inventor/twi-ext.git"
+  },
+  "keywords": [
+    "twitter",
+    "extension",
+    "web-extension",
+    "browser-extension"
+  ],
+  "author": "Robot-Inventor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Robot-Inventor/twi-ext/issues"
+  },
+  "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
+  "dependencies": {
+    "async-query": "^1.0.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsdoc": "^48.2.3",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.4"
+  }
+}
