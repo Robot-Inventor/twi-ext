@@ -28,7 +28,7 @@ class Timeline {
      */
     public constructor(options?: Partial<TimelineOptions>) {
         // Generate a unique data attribute name for each instance.
-        const checkedDataAttribute = `twi-ext-checked${uuidv4()}`;
+        const checkedDataAttribute = `twi-ext-checked-${uuidv4()}`;
 
         const defaultOptions: TimelineOptions = {
             timeoutMs: 10000
