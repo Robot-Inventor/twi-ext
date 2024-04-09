@@ -1,4 +1,4 @@
-[twi-ext - v0.3.0](../README.md) / TimelineOptions
+[twi-ext - v0.3.1](../README.md) / TimelineOptions
 
 # Interface: TimelineOptions
 
@@ -24,4 +24,4 @@ The maximum time to wait for the timeline element to be found.
 
 #### Defined in
 
-[ts/timeline.ts:10](https://github.com/Robot-Inventor/twi-ext/blob/79e5dc460ebc966f3eca7ec34a832a566e0f827b/src/ts/timeline.ts#L10)
+[ts/timeline.ts:10](https://github.com/Robot-Inventor/twi-ext/blob/acadbd1188db69e7b5ac3a875eb3264554878484/src/ts/timeline.ts#L10)
