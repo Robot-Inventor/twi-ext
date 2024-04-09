@@ -1,7 +1,6 @@
+import { Tweet } from "./tweet.js";
 import { asyncQuerySelector } from "async-query";
 import { v4 as uuidv4 } from "uuid";
-
-interface Tweet extends HTMLElement {}
 
 interface TimelineOptions {
     /**
@@ -45,7 +44,7 @@ class Timeline {
 
             for (const tweet of tweets) {
                 tweet.setAttribute(checkedDataAttribute, "");
-                this.onNewTweetCallback(tweet as Tweet);
+                this.onNewTweetCallback(new Tweet(tweet));
             }
         });
 
@@ -65,4 +64,4 @@ class Timeline {
     }
 }
 
-export { Tweet, TimelineOptions, Timeline };
+export { TimelineOptions, Timeline };

@@ -2,17 +2,17 @@
   "name": "twi-ext",
   "version": "0.2.0",
   "description": "Unofficial utility to develop browser extensions for Twitter / X",
-  "main": "dist/index.js",
+  "main": "dist/ts/index.js",
   "files": [
     "dist"
   ],
   "type": "module",
   "scripts": {
-    "build": "rimraf dist && tsc && typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/index.ts",
+    "build": "rimraf dist && ts-auto-guard --import-extension=\"js\" ./src/types/**/*.d.ts && tsc && typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
     "prepublishOnly": "npm run build",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
-    "lint": "eslint --report-unused-disable-directives-severity error ./src/**/*.ts"
+    "lint": "eslint --report-unused-disable-directives-severity error ./src/ts/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
     "eslint-plugin-jsdoc": "^48.2.3",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
+    "ts-auto-guard": "^4.2.0",
     "typedoc": "^0.25.13",
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.4.4"
