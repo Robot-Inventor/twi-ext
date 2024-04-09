@@ -1,4 +1,4 @@
-import { Tweet } from "./tweet";
+import { Tweet } from "./tweet.js";
 import { asyncQuerySelector } from "async-query";
 import { v4 as uuidv4 } from "uuid";
 

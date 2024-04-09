@@ -2,13 +2,13 @@
   "name": "twi-ext",
   "version": "0.2.0",
   "description": "Unofficial utility to develop browser extensions for Twitter / X",
-  "main": "dist/index.js",
+  "main": "dist/ts/index.js",
   "files": [
     "dist"
   ],
   "type": "module",
   "scripts": {
-    "build": "rimraf dist && ts-auto-guard ./src/types/**/*.d.ts && tsc && typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
+    "build": "rimraf dist && ts-auto-guard --import-extension=\"js\" ./src/types/**/*.d.ts && tsc && typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
     "prepublishOnly": "npm run build",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",

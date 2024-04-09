@@ -34,7 +34,7 @@ A class that observes the timeline and calls a callback when a new tweet is adde
 
 #### Defined in
 
-[ts/timeline.ts:28](https://github.com/Robot-Inventor/twi-ext/blob/6fd4d61b7fda2561a1ab6c463e3cdf2391304708/src/ts/timeline.ts#L28)
+[ts/timeline.ts:28](https://github.com/Robot-Inventor/twi-ext/blob/85bf63c0c3184d3a5e0aa682ee4855cd2ce2361b/src/ts/timeline.ts#L28)
 
 ## Methods
 
@@ -56,4 +56,4 @@ Set a callback that is called when a new tweet is added.
 
 #### Defined in
 
-[ts/timeline.ts:62](https://github.com/Robot-Inventor/twi-ext/blob/6fd4d61b7fda2561a1ab6c463e3cdf2391304708/src/ts/timeline.ts#L62)
+[ts/timeline.ts:62](https://github.com/Robot-Inventor/twi-ext/blob/85bf63c0c3184d3a5e0aa682ee4855cd2ce2361b/src/ts/timeline.ts#L62)

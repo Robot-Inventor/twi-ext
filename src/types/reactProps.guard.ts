@@ -2,7 +2,7 @@
  * Generated type guards for "reactProps.d.ts".
  * WARNING: Do not manually change this file.
  */
-import { menubarReactProps } from "./reactProps";
+import { menubarReactProps } from "./reactProps.js";
 
 export function isMenuBarReactProps(obj: unknown): obj is menubarReactProps {
     const typedObj = obj as menubarReactProps
