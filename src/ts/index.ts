@@ -1,4 +1,4 @@
-import { BasicTweetProps, ProfileInterstitialType, UserProps } from "../types/reactProps.js";
+import type { BasicTweetProps, ProfileInterstitialType, UserProps } from "../types/reactProps.d.ts";
 import { Timeline, TimelineOptions } from "./timeline.js";
 import { Tweet } from "./tweet.js";
 

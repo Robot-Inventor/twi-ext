@@ -1,5 +1,5 @@
 /*
- * Generated type guards for "reactProps.d.ts".
+ * Generated type guards for "reactProps.ts".
  * WARNING: Do not manually change this file.
  */
 import { menubarReactProps } from "./reactProps.js";

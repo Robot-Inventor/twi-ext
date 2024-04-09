@@ -15,7 +15,7 @@ interface BasicTweetProps {
 }
 
 /** @see {isMenuBarReactProps} ts-auto-guard:type-guard */
-export interface menubarReactProps {
+interface menubarReactProps {
     children: [
         unknown,
         {
@@ -29,3 +29,5 @@ export interface menubarReactProps {
         }
     ];
 }
+
+export { ProfileInterstitialType, UserProps, BasicTweetProps, menubarReactProps };
