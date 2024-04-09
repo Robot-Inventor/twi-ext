@@ -27,4 +27,4 @@ twi-ext
 
 #### Defined in
 
-[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/acadbd1188db69e7b5ac3a875eb3264554878484/src/types/reactProps.ts#L1)
+[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/cd60163fd54e84e4f6c92643b64a6ba4541a1862/src/types/reactProps.ts#L1)
