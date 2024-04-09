@@ -1,4 +1,4 @@
-name: Node.js CI (format)
+name: Node.js CI (lint)
 
 on:
     push:
