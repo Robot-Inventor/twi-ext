@@ -35,7 +35,7 @@ Represents a tweet.
 
 #### Defined in
 
-ts/tweet.ts:15
+[ts/tweet.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/6fd4d61b7fda2561a1ab6c463e3cdf2391304708/src/ts/tweet.ts#L15)
 
 ## Accessors
 
@@ -53,7 +53,7 @@ The tweet element.
 
 #### Defined in
 
-ts/tweet.ts:34
+[ts/tweet.ts:34](https://github.com/Robot-Inventor/twi-ext/blob/6fd4d61b7fda2561a1ab6c463e3cdf2391304708/src/ts/tweet.ts#L34)
 
 ___
 
@@ -71,4 +71,4 @@ The React props of the tweet element.
 
 #### Defined in
 
-ts/tweet.ts:42
+[ts/tweet.ts:42](https://github.com/Robot-Inventor/twi-ext/blob/6fd4d61b7fda2561a1ab6c463e3cdf2391304708/src/ts/tweet.ts#L42)
