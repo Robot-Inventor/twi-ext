@@ -1,3 +1,4 @@
-import { Timeline, TimelineOptions, Tweet } from "./timeline.js";
+import { Timeline, TimelineOptions } from "./timeline";
+import { Tweet } from "./tweet";
 
 export { Timeline, TimelineOptions, Tweet };

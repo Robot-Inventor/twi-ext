@@ -1,4 +1,4 @@
-[twi-ext - v0.1.2](../README.md) / Tweet
+[twi-ext - v0.2.0](../README.md) / Tweet
 
 # Interface: Tweet
 
