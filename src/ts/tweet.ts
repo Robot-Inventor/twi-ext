@@ -1,5 +1,6 @@
+import { BasicTweetProps } from "../types/reactProps.js";
 import { getReactProps } from "./internal/utility.js";
-import { isMenuBarReactProps } from "./types/reactProps.guard.js";
+import { isMenuBarReactProps } from "../types/reactProps.guard.js";
 
 /**
  * Represents a tweet.
@@ -38,7 +39,7 @@ class Tweet {
      * Get the React props of the tweet element.
      * @returns The React props of the tweet element.
      */
-    public get props(): object | null {
+    public get props(): BasicTweetProps {
         const props = getReactProps(this.getMenuBar());
         if (!isMenuBarReactProps(props)) throw new Error("Failed to get React props of tweet");
         return props.children[1].props.retweetWithCommentLink.state.quotedStatus;

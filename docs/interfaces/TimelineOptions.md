@@ -24,4 +24,4 @@ The maximum time to wait for the timeline element to be found.
 
 #### Defined in
 
-[src/timeline.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/4b3d0146f22c3d7721c389c8ed678ae408d12cdd/src/timeline.ts#L11)
+ts/timeline.ts:10
