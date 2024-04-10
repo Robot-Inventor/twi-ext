@@ -15,6 +15,10 @@ Represents a tweet.
 - [element](Tweet.md#element)
 - [props](Tweet.md#props)
 
+### Methods
+
+- [quoteTweet](Tweet.md#quotetweet)
+
 ## Constructors
 
 ### constructor
@@ -35,7 +39,7 @@ Represents a tweet.
 
 #### Defined in
 
-[ts/tweet.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/cd60163fd54e84e4f6c92643b64a6ba4541a1862/src/ts/tweet.ts#L15)
+[ts/tweet.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L16)
 
 ## Accessors
 
@@ -53,7 +57,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:34](https://github.com/Robot-Inventor/twi-ext/blob/cd60163fd54e84e4f6c92643b64a6ba4541a1862/src/ts/tweet.ts#L34)
+[ts/tweet.ts:35](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L35)
 
 ___
 
@@ -71,4 +75,38 @@ The React props of the tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:42](https://github.com/Robot-Inventor/twi-ext/blob/cd60163fd54e84e4f6c92643b64a6ba4541a1862/src/ts/tweet.ts#L42)
+[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L43)
+
+## Methods
+
+### quoteTweet
+
+▸ **quoteTweet**(`text`, `timeoutMs`): `Promise`\<`void`\>
+
+Quote specified tweet with specified text.
+This function opens the compose screen and inputs text.
+It does not click the submit button.
+
+If the tweet is not retweetable, or failed to open the compose screen,
+it opens new tab with the specified text and the tweet URL.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `text` | `string` | Text to tweet. |
+| `timeoutMs` | `number` | Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. |
+
+#### Returns
+
+`Promise`\<`void`\>
+
+**`Default`**
+
+```ts
+1000
+```
+
+#### Defined in
+
+[ts/tweet.ts:116](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L116)
