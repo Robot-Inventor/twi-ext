@@ -39,7 +39,7 @@ Represents a tweet.
 
 #### Defined in
 
-[ts/tweet.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L16)
+[ts/tweet.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/da1f706c3fbbcad7fe759adb121db324c7bfe9e0/src/ts/tweet.ts#L16)
 
 ## Accessors
 
@@ -57,7 +57,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:35](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L35)
+[ts/tweet.ts:35](https://github.com/Robot-Inventor/twi-ext/blob/da1f706c3fbbcad7fe759adb121db324c7bfe9e0/src/ts/tweet.ts#L35)
 
 ___
 
@@ -75,13 +75,13 @@ The React props of the tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L43)
+[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/da1f706c3fbbcad7fe759adb121db324c7bfe9e0/src/ts/tweet.ts#L43)
 
 ## Methods
 
 ### quoteTweet
 
-▸ **quoteTweet**(`text`, `timeoutMs`): `Promise`\<`void`\>
+▸ **quoteTweet**(`text`, `timeoutMs?`): `Promise`\<`void`\>
 
 Quote specified tweet with specified text.
 This function opens the compose screen and inputs text.
@@ -92,21 +92,15 @@ it opens new tab with the specified text and the tweet URL.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `text` | `string` | Text to tweet. |
-| `timeoutMs` | `number` | Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `text` | `string` | `undefined` | Text to tweet. |
+| `timeoutMs` | `number` | `1000` | Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``. |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-**`Default`**
-
-```ts
-1000
-```
-
 #### Defined in
 
-[ts/tweet.ts:116](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L116)
+[ts/tweet.ts:117](https://github.com/Robot-Inventor/twi-ext/blob/da1f706c3fbbcad7fe759adb121db324c7bfe9e0/src/ts/tweet.ts#L117)

@@ -7,14 +7,14 @@ import { isMenuBarReactProps } from "../types/reactProps.guard.js";
  * Represents a tweet.
  */
 class Tweet {
-    private readonly tweet: HTMLElement;
+    private readonly tweetElement: HTMLElement;
 
     /**
      * Represents a tweet.
      * @param tweet The tweet element.
      */
     public constructor(tweet: HTMLElement) {
-        this.tweet = tweet;
+        this.tweetElement = tweet;
     }
 
     /**
@@ -22,7 +22,7 @@ class Tweet {
      * @returns Menu bar of the tweet.
      */
     private getMenuBar(): HTMLElement {
-        const menuBar = this.tweet.querySelector<HTMLElement>("div[role='group'][id]");
+        const menuBar = this.tweetElement.querySelector<HTMLElement>("div[role='group'][id]");
         if (!menuBar) throw new Error("Failed to get menu bar of tweet");
 
         return menuBar;
@@ -33,7 +33,7 @@ class Tweet {
      * @returns The tweet element.
      */
     public get element(): HTMLElement {
-        return this.tweet;
+        return this.tweetElement;
     }
 
     /**
@@ -53,7 +53,7 @@ class Tweet {
     private async clickRetweetButton(timeoutMs: number): Promise<void> {
         const retweetButton = await asyncQuerySelector<HTMLElement>(
             "[data-testid='unretweet'], [data-testid='retweet']",
-            this.tweet,
+            this.tweetElement,
             timeoutMs
         );
         if (!retweetButton) throw new Error("Failed to get retweet button of tweet");
@@ -65,7 +65,7 @@ class Tweet {
      * **This method should be called after {@link clickRetweetButton}.**
      * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
      */
-    private async clickQuoteButton(timeoutMs: number): Promise<void> {
+    private static async clickQuoteButton(timeoutMs: number): Promise<void> {
         const quoteButton = await asyncQuerySelector<HTMLElement>(
             [
                 // PC
@@ -86,7 +86,7 @@ class Tweet {
      * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
      * @returns Text box of the tweet composer.
      */
-    private async getTweetTextBox(timeoutMs: number): Promise<Element> {
+    private static async getTweetTextBox(timeoutMs: number): Promise<Element> {
         const isTweetDeck = location.hostname === "pro.twitter.com";
         const selector = isTweetDeck
             ? "[role='dialog'] [data-text='true'], [role='dialog'] textarea[data-testid='tweetTextarea_0']"
@@ -110,15 +110,16 @@ class Tweet {
      * If the tweet is not retweetable, or failed to open the compose screen,
      * it opens new tab with the specified text and the tweet URL.
      * @param text Text to tweet.
-     * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode.
-     * @default 1000
+     * @param timeoutMs
+     * Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``.
      */
-    public async quoteTweet(text: string, timeoutMs: number): Promise<void> {
+    // eslint-disable-next-line no-magic-numbers
+    public async quoteTweet(text: string, timeoutMs: number = 1000): Promise<void> {
         try {
             await this.clickRetweetButton(timeoutMs);
-            await this.clickQuoteButton(timeoutMs);
+            await Tweet.clickQuoteButton(timeoutMs);
 
-            const textBox = await this.getTweetTextBox(timeoutMs);
+            const textBox = await Tweet.getTweetTextBox(timeoutMs);
             textBox.innerHTML = text;
             textBox.dispatchEvent(new Event("input", { bubbles: true }));
         } catch (error) {
