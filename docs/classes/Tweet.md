@@ -1,4 +1,4 @@
-[twi-ext - v0.3.1](../README.md) / Tweet
+[twi-ext - v0.4.0](../README.md) / Tweet
 
 # Class: Tweet
 
@@ -39,7 +39,7 @@ Represents a tweet.
 
 #### Defined in
 
-[ts/tweet.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L16)
+[ts/tweet.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L16)
 
 ## Accessors
 
@@ -57,7 +57,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:35](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L35)
+[ts/tweet.ts:35](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L35)
 
 ___
 
@@ -75,7 +75,7 @@ The React props of the tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L43)
+[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L43)
 
 ## Methods
 
@@ -109,4 +109,4 @@ it opens new tab with the specified text and the tweet URL.
 
 #### Defined in
 
-[ts/tweet.ts:116](https://github.com/Robot-Inventor/twi-ext/blob/65d76bc9ad8547ef2aca87fa54e7ee6fa6a0c57e/src/ts/tweet.ts#L116)
+[ts/tweet.ts:116](https://github.com/Robot-Inventor/twi-ext/blob/3bdf206025c086005e660b1ddf038c46ef6882e0/src/ts/tweet.ts#L116)
