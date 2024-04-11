@@ -13,6 +13,7 @@ twi-ext
 
 - [BasicTweetProps](interfaces/BasicTweetProps.md)
 - [TimelineOptions](interfaces/TimelineOptions.md)
+- [TweetMetadata](interfaces/TweetMetadata.md)
 - [UserProps](interfaces/UserProps.md)
 
 ### Type Aliases
@@ -27,4 +28,4 @@ twi-ext
 
 #### Defined in
 
-[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/600adebdeda6436769a8dfe1d031b6d36a70b30d/src/types/reactProps.ts#L1)
+[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/3cdf57a77e0c91650a3f39174045198684ec215a/src/types/reactProps.ts#L1)

@@ -1,7 +1,15 @@
+import {
+    isFocalTweetOuterReactPropsData,
+    isMenuBarReactProps,
+    isTweetOuterReactPropsData
+} from "../types/reactProps.guard.js";
 import { BasicTweetProps } from "../types/reactProps.js";
 import { asyncQuerySelector } from "async-query";
 import { getReactProps } from "./internal/utility.js";
-import { isMenuBarReactProps } from "../types/reactProps.guard.js";
+
+interface TweetMetadata {
+    isPostedByCurrentUser: boolean;
+}
 
 /**
  * Represents a tweet.
@@ -44,6 +52,36 @@ class Tweet {
         const props = getReactProps(this.getMenuBar());
         if (!isMenuBarReactProps(props)) throw new Error("Failed to get React props of tweet");
         return props.children[1].props.retweetWithCommentLink.state.quotedStatus;
+    }
+
+    /**
+     * Get metadata of the tweet.
+     * @returns Metadata of the tweet.
+     */
+    public get metadata(): TweetMetadata {
+        const tweetAuthorScreenName = this.props.user.screen_name;
+        const tweetOuterProps = getReactProps(this.element);
+        if (!tweetOuterProps) throw new Error("Failed to get React props of tweet");
+
+        let loggedInUserScreenName: string | null = null;
+
+        if (isTweetOuterReactPropsData(tweetOuterProps)) {
+            loggedInUserScreenName =
+                tweetOuterProps.children[0][1].props.children[0].props.children[1].props.children[1][2].props
+                    .loggedInUser.screen_name;
+        }
+
+        if (isFocalTweetOuterReactPropsData(tweetOuterProps)) {
+            loggedInUserScreenName =
+                tweetOuterProps.children[0][1].props.children[0].props.children[2].props.children[7].props.loggedInUser
+                    .screen_name;
+        }
+
+        const result: TweetMetadata = {
+            isPostedByCurrentUser: tweetAuthorScreenName === loggedInUserScreenName
+        } as const;
+
+        return result;
     }
 
     /**
@@ -130,4 +168,4 @@ class Tweet {
     }
 }
 
-export { Tweet };
+export { TweetMetadata, Tweet };

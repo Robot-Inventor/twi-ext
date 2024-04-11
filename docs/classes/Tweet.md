@@ -13,6 +13,7 @@ Represents a tweet.
 ### Accessors
 
 - [element](Tweet.md#element)
+- [metadata](Tweet.md#metadata)
 - [props](Tweet.md#props)
 
 ### Methods
@@ -39,7 +40,7 @@ Represents a tweet.
 
 #### Defined in
 
-[ts/tweet.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/600adebdeda6436769a8dfe1d031b6d36a70b30d/src/ts/tweet.ts#L16)
+[ts/tweet.ts:24](https://github.com/Robot-Inventor/twi-ext/blob/3cdf57a77e0c91650a3f39174045198684ec215a/src/ts/tweet.ts#L24)
 
 ## Accessors
 
@@ -57,7 +58,25 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:35](https://github.com/Robot-Inventor/twi-ext/blob/600adebdeda6436769a8dfe1d031b6d36a70b30d/src/ts/tweet.ts#L35)
+[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/3cdf57a77e0c91650a3f39174045198684ec215a/src/ts/tweet.ts#L43)
+
+___
+
+### metadata
+
+• `get` **metadata**(): [`TweetMetadata`](../interfaces/TweetMetadata.md)
+
+Get metadata of the tweet.
+
+#### Returns
+
+[`TweetMetadata`](../interfaces/TweetMetadata.md)
+
+Metadata of the tweet.
+
+#### Defined in
+
+[ts/tweet.ts:61](https://github.com/Robot-Inventor/twi-ext/blob/3cdf57a77e0c91650a3f39174045198684ec215a/src/ts/tweet.ts#L61)
 
 ___
 
@@ -75,7 +94,7 @@ The React props of the tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/600adebdeda6436769a8dfe1d031b6d36a70b30d/src/ts/tweet.ts#L43)
+[ts/tweet.ts:51](https://github.com/Robot-Inventor/twi-ext/blob/3cdf57a77e0c91650a3f39174045198684ec215a/src/ts/tweet.ts#L51)
 
 ## Methods
 
@@ -103,4 +122,4 @@ it opens new tab with the specified text and the tweet URL.
 
 #### Defined in
 
-[ts/tweet.ts:117](https://github.com/Robot-Inventor/twi-ext/blob/600adebdeda6436769a8dfe1d031b6d36a70b30d/src/ts/tweet.ts#L117)
+[ts/tweet.ts:155](https://github.com/Robot-Inventor/twi-ext/blob/3cdf57a77e0c91650a3f39174045198684ec215a/src/ts/tweet.ts#L155)
