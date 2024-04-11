@@ -30,4 +30,93 @@ interface menubarReactProps {
     ];
 }
 
+/**
+ * @internal This type definition is for internal use of the library and is not intended to be called from the outside.
+ * @see {isTweetOuterReactPropsData} ts-auto-guard:type-guard
+ */
+export interface TweetOuterReactPropsData {
+    children: [
+        [
+            unknown,
+            {
+                props: {
+                    children: [
+                        {
+                            props: {
+                                children: [
+                                    unknown,
+                                    {
+                                        props: {
+                                            children: [
+                                                unknown,
+                                                [
+                                                    unknown,
+                                                    unknown,
+                                                    {
+                                                        props: {
+                                                            loggedInUser: {
+                                                                screen_name: string;
+                                                            };
+                                                        };
+                                                    }
+                                                ]
+                                            ];
+                                        };
+                                    }
+                                ];
+                            };
+                        }
+                    ];
+                };
+            }
+        ]
+    ];
+}
+
+/**
+ * @internal This type definition is for internal use of the library and is not intended to be called from the outside.
+ * @see {isFocalTweetOuterReactPropsData} ts-auto-guard:type-guard
+ */
+export interface FocalTweetOuterReactPropsData {
+    children: [
+        [
+            unknown,
+            {
+                props: {
+                    children: [
+                        {
+                            props: {
+                                children: [
+                                    unknown,
+                                    unknown,
+                                    {
+                                        props: {
+                                            children: [
+                                                unknown,
+                                                unknown,
+                                                unknown,
+                                                unknown,
+                                                unknown,
+                                                unknown,
+                                                unknown,
+                                                {
+                                                    props: {
+                                                        loggedInUser: {
+                                                            screen_name: string;
+                                                        };
+                                                    };
+                                                }
+                                            ];
+                                        };
+                                    }
+                                ];
+                            };
+                        }
+                    ];
+                };
+            }
+        ]
+    ];
+}
+
 export { ProfileInterstitialType, UserProps, BasicTweetProps, menubarReactProps };

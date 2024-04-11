@@ -2,7 +2,92 @@
  * Generated type guards for "reactProps.ts".
  * WARNING: Do not manually change this file.
  */
-import { menubarReactProps } from "./reactProps.js";
+import { TweetOuterReactPropsData, FocalTweetOuterReactPropsData, menubarReactProps } from "./reactProps.js";
+
+export function isTweetOuterReactPropsData(obj: unknown): obj is TweetOuterReactPropsData {
+    const typedObj = obj as TweetOuterReactPropsData
+    return (
+        (typedObj !== null &&
+            typeof typedObj === "object" ||
+            typeof typedObj === "function") &&
+        Array.isArray(typedObj["children"]) &&
+        Array.isArray(typedObj["children"][0]) &&
+        (typedObj["children"][0][1] !== null &&
+            typeof typedObj["children"][0][1] === "object" ||
+            typeof typedObj["children"][0][1] === "function") &&
+        (typedObj["children"][0][1]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"] === "function") &&
+        Array.isArray(typedObj["children"][0][1]["props"]["children"]) &&
+        (typedObj["children"][0][1]["props"]["children"][0] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"] === "function") &&
+        Array.isArray(typedObj["children"][0][1]["props"]["children"][0]["props"]["children"]) &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"] === "function") &&
+        Array.isArray(typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"]) &&
+        Array.isArray(typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1]) &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2]["props"] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2]["props"]["loggedInUser"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2]["props"]["loggedInUser"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2]["props"]["loggedInUser"] === "function") &&
+        typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][1]["props"]["children"][1][2]["props"]["loggedInUser"]["screen_name"] === "string"
+    )
+}
+
+export function isFocalTweetOuterReactPropsData(obj: unknown): obj is FocalTweetOuterReactPropsData {
+    const typedObj = obj as FocalTweetOuterReactPropsData
+    return (
+        (typedObj !== null &&
+            typeof typedObj === "object" ||
+            typeof typedObj === "function") &&
+        Array.isArray(typedObj["children"]) &&
+        Array.isArray(typedObj["children"][0]) &&
+        (typedObj["children"][0][1] !== null &&
+            typeof typedObj["children"][0][1] === "object" ||
+            typeof typedObj["children"][0][1] === "function") &&
+        (typedObj["children"][0][1]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"] === "function") &&
+        Array.isArray(typedObj["children"][0][1]["props"]["children"]) &&
+        (typedObj["children"][0][1]["props"]["children"][0] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"] === "function") &&
+        Array.isArray(typedObj["children"][0][1]["props"]["children"][0]["props"]["children"]) &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"] === "function") &&
+        Array.isArray(typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"]) &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7]["props"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7]["props"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7]["props"] === "function") &&
+        (typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7]["props"]["loggedInUser"] !== null &&
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7]["props"]["loggedInUser"] === "object" ||
+            typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7]["props"]["loggedInUser"] === "function") &&
+        typeof typedObj["children"][0][1]["props"]["children"][0]["props"]["children"][2]["props"]["children"][7]["props"]["loggedInUser"]["screen_name"] === "string"
+    )
+}
 
 export function isMenuBarReactProps(obj: unknown): obj is menubarReactProps {
     const typedObj = obj as menubarReactProps
