@@ -53,6 +53,13 @@ class Timeline {
 
             timelineObserver.observe(main, this.OBSERVER_OPTIONS);
         });
+
+        // #layers includes tweets that appear next to the image when you click on the image
+        void asyncQuerySelector("#layers", document, mergedOptions.timeoutMs).then((layers) => {
+            if (!layers) throw new Error("twi-ext: Failed to get #layers element");
+
+            timelineObserver.observe(layers, this.OBSERVER_OPTIONS);
+        });
     }
 
     /**
