@@ -48,3 +48,11 @@ To lint the code:
 ```bash
 npm run lint
 ```
+
+### Pull Requests
+
+This repository uses [Changesets](https://github.com/changesets/changesets) to manage versioning and releases. When creating a pull request, please run the Changesets CLI and commit the changeset file.
+
+```bash
+npx changeset
+```
