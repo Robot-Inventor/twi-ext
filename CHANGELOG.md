@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.7.4
+
+### Patch Changes
+
+- [#52](https://github.com/Robot-Inventor/twi-ext/pull/52) [`fe6ce0d`](https://github.com/Robot-Inventor/twi-ext/commit/fe6ce0de8d2d5e9fe695b8f9a029d22504a6906a) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: support npm provenance statements
+
 ## 0.7.3
 
 ### Patch Changes
