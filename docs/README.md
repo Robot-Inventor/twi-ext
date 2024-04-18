@@ -6,6 +6,7 @@ twi-ext
 
 ### Classes
 
+- [Profile](classes/Profile.md)
 - [Timeline](classes/Timeline.md)
 - [Tweet](classes/Tweet.md)
 
@@ -28,4 +29,4 @@ twi-ext
 
 #### Defined in
 
-[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/fec10e14811d08b300161fee08139819a95f8666/src/types/reactProps.ts#L1)
+[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/19fbc824eaabbe223fae85f0f2ec010bbe080cfc/src/types/reactProps.ts#L1)

@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[ts/tweet.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/fec10e14811d08b300161fee08139819a95f8666/src/ts/tweet.ts#L11)
+[ts/tweet.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/19fbc824eaabbe223fae85f0f2ec010bbe080cfc/src/ts/tweet.ts#L11)
