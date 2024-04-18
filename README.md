@@ -11,7 +11,24 @@ Unofficial utility to develop browser extensions for Twitter / X.
 npm install twi-ext
 ```
 
-## Documentation
+## Usage
+
+```typescript
+import { Timeline, Tweet } from "twi-ext";
+
+const onNewTweet = (tweet: Tweet): void => {
+    // Get the tweet element.
+    const tweetElement = tweet.element;
+    // Get the React props of the tweet.
+    const props = tweet.props;
+};
+
+const timeline = new Timeline();
+timeline.onNewTweet((tweet) => {
+    // Do something when a new tweet is added to the timeline.
+    onNewTweet(tweet);
+});
+```
 
 See the [documentation](./docs/README.md) for more information.
 
