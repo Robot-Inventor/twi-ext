@@ -11,9 +11,6 @@ jobs:
     release:
         name: Release
         runs-on: ubuntu-latest
-        permissions:
-            contents: read
-            id-token: write
         steps:
             - name: Checkout Repo
               uses: actions/checkout@v4
@@ -31,7 +28,7 @@ jobs:
               uses: changesets/action@v1
               with:
                   version: npm run changeset-version
-                  publish: npm publish --provenance
+                  publish: npm publish
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
