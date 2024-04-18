@@ -14,7 +14,7 @@
     "lint": "eslint ./src/ts/**/*.ts",
     "version": "npm run build && git add .",
     "changeset-version": "changeset version && npm run version",
-    "prepublishOnly": "npm run build"
+    "changeset-publish": "npm run build && changeset publish"
   },
   "repository": {
     "type": "git",
