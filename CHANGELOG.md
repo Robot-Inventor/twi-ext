@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.7.3
+
+### Patch Changes
+
+- [#48](https://github.com/Robot-Inventor/twi-ext/pull/48) [`d220db1`](https://github.com/Robot-Inventor/twi-ext/commit/d220db1abc25f7500da3ac50bc159c9a4370046e) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: enable auto-generated GitHub Releases
+
 ## 0.7.2
 
 ### Patch Changes
