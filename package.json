@@ -13,7 +13,8 @@
     "format:check": "prettier ./src/ --check",
     "lint": "eslint ./src/ts/**/*.ts",
     "version": "npm run build && git add .",
-    "changeset-version": "changeset version && npm run version"
+    "changeset-version": "changeset version && npm run version",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
