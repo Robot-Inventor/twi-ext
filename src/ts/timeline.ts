@@ -1,3 +1,4 @@
+import { Profile } from "./profile.js";
 import { Tweet } from "./tweet.js";
 import { asyncQuerySelector } from "async-query";
 import { v4 as uuidv4 } from "uuid";
@@ -20,6 +21,7 @@ class Timeline {
     } as const;
 
     private onNewTweetCallback: ((tweet: Tweet) => void) | null = null;
+    private onNewProfileCallback: ((profile: Profile) => void) | null = null;
 
     /**
      * A class that observes the timeline and calls a callback when a new tweet is added.
@@ -35,16 +37,26 @@ class Timeline {
         const mergedOptions = { ...defaultOptions, ...options };
 
         const timelineObserver = new MutationObserver(() => {
-            if (!this.onNewTweetCallback) return;
+            if (this.onNewTweetCallback) {
+                const tweets = document.querySelectorAll<HTMLElement>(
+                    `[data-testid="tweet"]:not([${checkedDataAttribute}])`
+                );
 
-            const tweets = document.querySelectorAll<HTMLElement>(
-                `[data-testid="tweet"]:not([${checkedDataAttribute}])`
-            );
-            if (!tweets.length) return;
+                for (const tweet of tweets) {
+                    tweet.setAttribute(checkedDataAttribute, "");
+                    this.onNewTweetCallback(new Tweet(tweet));
+                }
+            }
 
-            for (const tweet of tweets) {
-                tweet.setAttribute(checkedDataAttribute, "");
-                this.onNewTweetCallback(new Tweet(tweet));
+            if (this.onNewProfileCallback) {
+                const profile = document.querySelector<HTMLElement>(
+                    `:not([data-testid="tweet"]) [data-testid="UserName"]:not([${checkedDataAttribute}])`
+                );
+
+                if (profile) {
+                    profile.setAttribute(checkedDataAttribute, "");
+                    this.onNewProfileCallback(new Profile(profile));
+                }
             }
         });
 
@@ -68,6 +80,14 @@ class Timeline {
      */
     public onNewTweet(callback: (tweet: Tweet) => void): void {
         this.onNewTweetCallback = callback;
+    }
+
+    /**
+     * Set a callback that is called when a new profile is added.
+     * @param callback A callback that is called when a new profile is added.
+     */
+    public onNewProfile(callback: (profile: Profile) => void): void {
+        this.onNewProfileCallback = callback;
     }
 }
 
