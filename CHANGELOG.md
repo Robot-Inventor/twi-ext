@@ -1,5 +1,15 @@
 # twi-ext
 
+## 0.8.0
+
+### Minor Changes
+
+- [#58](https://github.com/Robot-Inventor/twi-ext/pull/58) [`7e44739`](https://github.com/Robot-Inventor/twi-ext/commit/7e447399aa6efaea535f3b2cf15fffd07e5d1fb8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `Profile` class
+
+### Patch Changes
+
+- [#56](https://github.com/Robot-Inventor/twi-ext/pull/56) [`19fbc82`](https://github.com/Robot-Inventor/twi-ext/commit/19fbc824eaabbe223fae85f0f2ec010bbe080cfc) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - docs: add example code
+
 ## 0.7.4
 
 ### Patch Changes

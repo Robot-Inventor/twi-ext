@@ -1,4 +1,4 @@
-[twi-ext - v0.7.4](../README.md) / TweetMetadata
+[twi-ext - v0.8.0](../README.md) / TweetMetadata
 
 # Interface: TweetMetadata
 
@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[ts/tweet.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/19fbc824eaabbe223fae85f0f2ec010bbe080cfc/src/ts/tweet.ts#L11)
+[ts/tweet.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/7e447399aa6efaea535f3b2cf15fffd07e5d1fb8/src/ts/tweet.ts#L11)
