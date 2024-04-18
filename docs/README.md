@@ -1,6 +1,6 @@
 twi-ext
 
-# twi-ext - v0.7.3
+# twi-ext - v0.7.4
 
 ## Table of contents
 
@@ -28,4 +28,4 @@ twi-ext
 
 #### Defined in
 
-[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/b2900c79c8576bc9b2c2e4ee6e7684e9a82c8717/src/types/reactProps.ts#L1)
+[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/fec10e14811d08b300161fee08139819a95f8666/src/types/reactProps.ts#L1)
