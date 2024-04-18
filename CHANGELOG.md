@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.7.2
+
+### Patch Changes
+
+- [#43](https://github.com/Robot-Inventor/twi-ext/pull/43) [`15f9445`](https://github.com/Robot-Inventor/twi-ext/commit/15f9445f5c5ca4beaa52385415d794e975a30fab) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: add `prepublishOnly` script to build before changeset publish
+
 ## 0.7.1
 
 ### Patch Changes
