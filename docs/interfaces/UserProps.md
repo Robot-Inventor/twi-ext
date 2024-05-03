@@ -1,52 +1,47 @@
-[twi-ext - v0.8.1](../README.md) / UserProps
+[**twi-ext v0.8.2**](../README.md) • **Docs**
+
+***
+
+[twi-ext v0.8.2](../README.md) / UserProps
 
 # Interface: UserProps
 
-## Table of contents
-
-### Properties
-
-- [possibly\_sensitive](UserProps.md#possibly_sensitive)
-- [profile\_interstitial\_type](UserProps.md#profile_interstitial_type)
-- [screen\_name](UserProps.md#screen_name)
-- [withheld\_in\_countries](UserProps.md#withheld_in_countries)
-
 ## Properties
 
-### possibly\_sensitive
+### possibly\_sensitive?
 
-• `Optional` **possibly\_sensitive**: ``null`` \| `boolean`
+> `optional` **possibly\_sensitive**: `null` \| `boolean`
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:4](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L4)
+[types/reactProps.ts:4](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L4)
 
-___
+***
 
 ### profile\_interstitial\_type
 
-• **profile\_interstitial\_type**: [`ProfileInterstitialType`](../README.md#profileinterstitialtype)
+> **profile\_interstitial\_type**: [`ProfileInterstitialType`](../type-aliases/ProfileInterstitialType.md)
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L6)
+[types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L6)
 
-___
+***
 
 ### screen\_name
 
-• **screen\_name**: `string`
+> **screen\_name**: `string`
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L5)
+[types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L5)
 
-___
+***
 
 ### withheld\_in\_countries
 
-• **withheld\_in\_countries**: `string`[]
+> **withheld\_in\_countries**: `string`[]
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L7)
+[types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L7)
