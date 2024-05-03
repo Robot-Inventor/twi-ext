@@ -1,52 +1,40 @@
-[twi-ext - v0.8.1](../README.md) / Tweet
+[**twi-ext v0.8.2**](../README.md) • **Docs**
+
+***
+
+[twi-ext v0.8.2](../README.md) / Tweet
 
 # Class: Tweet
 
 Represents a tweet.
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Tweet.md#constructor)
-
-### Accessors
-
-- [element](Tweet.md#element)
-- [metadata](Tweet.md#metadata)
-- [props](Tweet.md#props)
-
-### Methods
-
-- [quoteTweet](Tweet.md#quotetweet)
-
 ## Constructors
 
-### constructor
+### new Tweet()
 
-• **new Tweet**(`tweet`): [`Tweet`](Tweet.md)
+> **new Tweet**(`tweet`): [`Tweet`](Tweet.md)
 
 Represents a tweet.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `tweet` | `HTMLElement` | The tweet element. |
+• **tweet**: `HTMLElement`
+
+The tweet element.
 
 #### Returns
 
 [`Tweet`](Tweet.md)
 
-#### Defined in
+#### Source
 
-[ts/tweet.ts:24](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/ts/tweet.ts#L24)
+[ts/tweet.ts:24](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/ts/tweet.ts#L24)
 
 ## Accessors
 
 ### element
 
-• `get` **element**(): `HTMLElement`
+> `get` **element**(): `HTMLElement`
 
 Get the tweet element.
 
@@ -56,15 +44,15 @@ Get the tweet element.
 
 The tweet element.
 
-#### Defined in
+#### Source
 
-[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/ts/tweet.ts#L43)
+[ts/tweet.ts:43](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/ts/tweet.ts#L43)
 
-___
+***
 
 ### metadata
 
-• `get` **metadata**(): [`TweetMetadata`](../interfaces/TweetMetadata.md)
+> `get` **metadata**(): [`TweetMetadata`](../interfaces/TweetMetadata.md)
 
 Get metadata of the tweet.
 
@@ -74,15 +62,15 @@ Get metadata of the tweet.
 
 Metadata of the tweet.
 
-#### Defined in
+#### Source
 
-[ts/tweet.ts:61](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/ts/tweet.ts#L61)
+[ts/tweet.ts:61](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/ts/tweet.ts#L61)
 
-___
+***
 
 ### props
 
-• `get` **props**(): [`BasicTweetProps`](../interfaces/BasicTweetProps.md)
+> `get` **props**(): [`BasicTweetProps`](../interfaces/BasicTweetProps.md)
 
 Get the React props of the tweet element.
 
@@ -92,15 +80,15 @@ Get the React props of the tweet element.
 
 The React props of the tweet element.
 
-#### Defined in
+#### Source
 
-[ts/tweet.ts:51](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/ts/tweet.ts#L51)
+[ts/tweet.ts:51](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/ts/tweet.ts#L51)
 
 ## Methods
 
-### quoteTweet
+### quoteTweet()
 
-▸ **quoteTweet**(`text`, `timeoutMs?`): `Promise`\<`void`\>
+> **quoteTweet**(`text`, `timeoutMs`): `Promise`\<`void`\>
 
 Quote specified tweet with specified text.
 This function opens the compose screen and inputs text.
@@ -111,15 +99,18 @@ it opens new tab with the specified text and the tweet URL.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `text` | `string` | `undefined` | Text to tweet. |
-| `timeoutMs` | `number` | `1000` | Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``. |
+• **text**: `string`
+
+Text to tweet.
+
+• **timeoutMs**: `number`= `1000`
+
+Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``.
 
 #### Returns
 
 `Promise`\<`void`\>
 
-#### Defined in
+#### Source
 
-[ts/tweet.ts:155](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/ts/tweet.ts#L155)
+[ts/tweet.ts:155](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/ts/tweet.ts#L155)

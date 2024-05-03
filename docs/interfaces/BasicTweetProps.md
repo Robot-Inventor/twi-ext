@@ -1,52 +1,47 @@
-[twi-ext - v0.8.1](../README.md) / BasicTweetProps
+[**twi-ext v0.8.2**](../README.md) • **Docs**
+
+***
+
+[twi-ext v0.8.2](../README.md) / BasicTweetProps
 
 # Interface: BasicTweetProps
-
-## Table of contents
-
-### Properties
-
-- [permalink](BasicTweetProps.md#permalink)
-- [possibly\_sensitive](BasicTweetProps.md#possibly_sensitive)
-- [possibly\_sensitive\_editable](BasicTweetProps.md#possibly_sensitive_editable)
-- [user](BasicTweetProps.md#user)
 
 ## Properties
 
 ### permalink
 
-• **permalink**: `string`
+> **permalink**: `string`
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L13)
+[types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L13)
 
-___
+***
 
-### possibly\_sensitive
+### possibly\_sensitive?
 
-• `Optional` **possibly\_sensitive**: ``null`` \| `boolean`
+> `optional` **possibly\_sensitive**: `null` \| `boolean`
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L11)
+[types/reactProps.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L11)
 
-___
+***
 
-### possibly\_sensitive\_editable
+### possibly\_sensitive\_editable?
 
-• `Optional` **possibly\_sensitive\_editable**: ``null`` \| `boolean`
+> `optional` **possibly\_sensitive\_editable**: `null` \| `boolean`
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L12)
+[types/reactProps.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L12)
 
-___
+***
 
 ### user
 
-• **user**: [`UserProps`](UserProps.md)
+> **user**: [`UserProps`](UserProps.md)
 
-#### Defined in
+#### Source
 
-[types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/e55cd2d8fa0f6dc5d7ec2e51e49bc3d00578e799/src/types/reactProps.ts#L14)
+[types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/ea76001205c6fba1f3478194a75c56db78c28f28/src/types/reactProps.ts#L14)
