@@ -11,12 +11,12 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "rimraf dist && ts-auto-guard --import-extension=\"js\" ./src/types/**/*.ts && tsc && typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
+    "build": "rimraf dist && ts-auto-guard --import-extension=\"js\" ./src/types/**/*.ts && tsc",
+    "typedoc": "typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
     "lint": "eslint ./src/ts/**/*.ts",
-    "version": "npm run build && git add .",
-    "changeset-version": "changeset version && npm run version",
+    "changeset-version": "changeset version && npm run build && npm run typedoc && git add .",
     "changeset-publish": "npm run build && changeset publish"
   },
   "repository": {
