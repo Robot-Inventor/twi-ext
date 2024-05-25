@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.8.4
+
+### Patch Changes
+
+-   [#81](https://github.com/Robot-Inventor/twi-ext/pull/81) [`92c3f56`](https://github.com/Robot-Inventor/twi-ext/commit/92c3f56241bae719c15dd0d6f0a29bbe763271ef) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: exclude document generation from the build command
+
+-   [#80](https://github.com/Robot-Inventor/twi-ext/pull/80) [`4e60dc7`](https://github.com/Robot-Inventor/twi-ext/commit/4e60dc75cf812827a4e88ee940a5bf53d490b9bc) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: use a data attribute instead of a non-standard attribute
+
 ## 0.8.3
 
 ### Patch Changes
