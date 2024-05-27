@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.8.5
+
+### Patch Changes
+
+-   [#83](https://github.com/Robot-Inventor/twi-ext/pull/83) [`49c4831`](https://github.com/Robot-Inventor/twi-ext/commit/49c4831d073e47b89f0cc5d38bd479b62257a1f7) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typedoc-plugin-markdown to v4.0.3
+
 ## 0.8.4
 
 ### Patch Changes
