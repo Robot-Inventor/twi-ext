@@ -2,8 +2,15 @@
 
 Unofficial utility to develop browser extensions for Twitter / X.
 
+This package provides a simple API to interact with the Twitter web interface. It allows you to listen to events such as new tweets being added to the timeline, and provides access to the React props of the tweets or user profiles.
+
+It is used to develop [Shadowban Scanner](https://github.com/Robot-Inventor/shadowban-scanner/), a browser extension that helps you detect shadowbans on Twitter, and other extensions.
+
 > [!IMPORTANT]
 > This utility works only within page scripts. Running it within a content script may result in an error.
+
+> [!WARNING]
+> This package is under development and some features are not yet implemented.
 
 ## Installation
 
