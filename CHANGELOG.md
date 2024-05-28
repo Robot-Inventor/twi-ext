@@ -1,5 +1,15 @@
 # twi-ext
 
+## 0.9.0
+
+### Minor Changes
+
+-   [#86](https://github.com/Robot-Inventor/twi-ext/pull/86) [`b3dced3`](https://github.com/Robot-Inventor/twi-ext/commit/b3dced306d53214f1f3a4690f00bde5a7b5e6518) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `Tweet.metadata.isFocalMode`
+
+### Patch Changes
+
+-   [#87](https://github.com/Robot-Inventor/twi-ext/pull/87) [`a3024ee`](https://github.com/Robot-Inventor/twi-ext/commit/a3024ee2cc960c967706ac7e4d07372c4b58d2b4) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - docs: improve package description
+
 ## 0.8.5
 
 ### Patch Changes

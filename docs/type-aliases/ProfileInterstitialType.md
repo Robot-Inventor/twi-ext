@@ -1,8 +1,8 @@
-[**twi-ext v0.8.5**](../README.md) • **Docs**
+[**twi-ext v0.9.0**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.8.5](../README.md) / ProfileInterstitialType
+[twi-ext v0.9.0](../README.md) / ProfileInterstitialType
 
 # Type alias: ProfileInterstitialType
 
@@ -10,4 +10,4 @@
 
 ## Source
 
-[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/49c4831d073e47b89f0cc5d38bd479b62257a1f7/src/types/reactProps.ts#L1)
+[types/reactProps.ts:1](https://github.com/Robot-Inventor/twi-ext/blob/a3024ee2cc960c967706ac7e4d07372c4b58d2b4/src/types/reactProps.ts#L1)
