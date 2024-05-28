@@ -8,6 +8,7 @@ import { asyncQuerySelector } from "async-query";
 import { getReactProps } from "./internal/utility.js";
 
 interface TweetMetadata {
+    isFocalMode: boolean;
     isPostedByCurrentUser: boolean;
 }
 
@@ -64,6 +65,7 @@ class Tweet {
         if (!tweetOuterProps) throw new Error("Failed to get React props of tweet");
 
         let loggedInUserScreenName: string | null = null;
+        const isFocalMode = isFocalTweetOuterReactPropsData(tweetOuterProps);
 
         if (isTweetOuterReactPropsData(tweetOuterProps)) {
             loggedInUserScreenName =
@@ -71,13 +73,14 @@ class Tweet {
                     .loggedInUser.screen_name;
         }
 
-        if (isFocalTweetOuterReactPropsData(tweetOuterProps)) {
+        if (isFocalMode) {
             loggedInUserScreenName =
                 tweetOuterProps.children[0][1].props.children[0].props.children[2].props.children[7].props.loggedInUser
                     .screen_name;
         }
 
         const result: TweetMetadata = {
+            isFocalMode,
             isPostedByCurrentUser: tweetAuthorScreenName === loggedInUserScreenName
         } as const;
 
