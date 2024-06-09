@@ -1,8 +1,8 @@
-[**twi-ext v0.9.0**](../README.md) • **Docs**
+[**twi-ext v0.9.1**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.9.0](../README.md) / Tweet
+[twi-ext v0.9.1](../README.md) / Tweet
 
 # Class: Tweet
 
@@ -28,7 +28,7 @@ The tweet element.
 
 #### Source
 
-[ts/tweet.ts:25](https://github.com/Robot-Inventor/twi-ext/blob/a3024ee2cc960c967706ac7e4d07372c4b58d2b4/src/ts/tweet.ts#L25)
+[ts/tweet.ts:25](https://github.com/Robot-Inventor/twi-ext/blob/7673a423a011b798f91aa441576b9feb222376e7/src/ts/tweet.ts#L25)
 
 ## Accessors
 
@@ -46,7 +46,7 @@ The tweet element.
 
 #### Source
 
-[ts/tweet.ts:44](https://github.com/Robot-Inventor/twi-ext/blob/a3024ee2cc960c967706ac7e4d07372c4b58d2b4/src/ts/tweet.ts#L44)
+[ts/tweet.ts:44](https://github.com/Robot-Inventor/twi-ext/blob/7673a423a011b798f91aa441576b9feb222376e7/src/ts/tweet.ts#L44)
 
 ***
 
@@ -64,7 +64,7 @@ Metadata of the tweet.
 
 #### Source
 
-[ts/tweet.ts:62](https://github.com/Robot-Inventor/twi-ext/blob/a3024ee2cc960c967706ac7e4d07372c4b58d2b4/src/ts/tweet.ts#L62)
+[ts/tweet.ts:62](https://github.com/Robot-Inventor/twi-ext/blob/7673a423a011b798f91aa441576b9feb222376e7/src/ts/tweet.ts#L62)
 
 ***
 
@@ -82,7 +82,7 @@ The React props of the tweet element.
 
 #### Source
 
-[ts/tweet.ts:52](https://github.com/Robot-Inventor/twi-ext/blob/a3024ee2cc960c967706ac7e4d07372c4b58d2b4/src/ts/tweet.ts#L52)
+[ts/tweet.ts:52](https://github.com/Robot-Inventor/twi-ext/blob/7673a423a011b798f91aa441576b9feb222376e7/src/ts/tweet.ts#L52)
 
 ## Methods
 
@@ -113,4 +113,4 @@ Timeout in milliseconds. After the specified time has elapsed, it moves to fallb
 
 #### Source
 
-[ts/tweet.ts:158](https://github.com/Robot-Inventor/twi-ext/blob/a3024ee2cc960c967706ac7e4d07372c4b58d2b4/src/ts/tweet.ts#L158)
+[ts/tweet.ts:158](https://github.com/Robot-Inventor/twi-ext/blob/7673a423a011b798f91aa441576b9feb222376e7/src/ts/tweet.ts#L158)
