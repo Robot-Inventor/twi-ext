@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.9.2
+
+### Patch Changes
+
+-   [#103](https://github.com/Robot-Inventor/twi-ext/pull/103) [`98e40b8`](https://github.com/Robot-Inventor/twi-ext/commit/98e40b87c233b92a97b00149903f364a52d68e04) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps-dev): bump braces from 3.0.2 to 3.0.3
+
 ## 0.9.1
 
 ### Patch Changes
