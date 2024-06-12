@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.9.4
+
+### Patch Changes
+
+-   [#108](https://github.com/Robot-Inventor/twi-ext/pull/108) [`24a2dc4`](https://github.com/Robot-Inventor/twi-ext/commit/24a2dc4301a8080c72b12d8fafc73f4bb59bebcc) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency ts-auto-guard to v5
+
 ## 0.9.3
 
 ### Patch Changes
