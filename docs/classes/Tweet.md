@@ -1,8 +1,8 @@
-[**twi-ext v0.9.5**](../README.md) • **Docs**
+[**twi-ext v0.9.6**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.9.5](../README.md) / Tweet
+[twi-ext v0.9.6](../README.md) / Tweet
 
 # Class: Tweet
 
@@ -26,9 +26,9 @@ The tweet element.
 
 [`Tweet`](Tweet.md)
 
-#### Source
+#### Defined in
 
-[ts/tweet.ts:25](https://github.com/Robot-Inventor/twi-ext/blob/0043afb9bd23d6bf1ccfc7a09fc743107f67542c/src/ts/tweet.ts#L25)
+[ts/tweet.ts:25](https://github.com/Robot-Inventor/twi-ext/blob/e69b1551d321a94701ff6b35bfa47ac414bd1c87/src/ts/tweet.ts#L25)
 
 ## Accessors
 
@@ -44,9 +44,9 @@ Get the tweet element.
 
 The tweet element.
 
-#### Source
+#### Defined in
 
-[ts/tweet.ts:44](https://github.com/Robot-Inventor/twi-ext/blob/0043afb9bd23d6bf1ccfc7a09fc743107f67542c/src/ts/tweet.ts#L44)
+[ts/tweet.ts:44](https://github.com/Robot-Inventor/twi-ext/blob/e69b1551d321a94701ff6b35bfa47ac414bd1c87/src/ts/tweet.ts#L44)
 
 ***
 
@@ -62,9 +62,9 @@ Get metadata of the tweet.
 
 Metadata of the tweet.
 
-#### Source
+#### Defined in
 
-[ts/tweet.ts:62](https://github.com/Robot-Inventor/twi-ext/blob/0043afb9bd23d6bf1ccfc7a09fc743107f67542c/src/ts/tweet.ts#L62)
+[ts/tweet.ts:62](https://github.com/Robot-Inventor/twi-ext/blob/e69b1551d321a94701ff6b35bfa47ac414bd1c87/src/ts/tweet.ts#L62)
 
 ***
 
@@ -80,9 +80,9 @@ Get the React props of the tweet element.
 
 The React props of the tweet element.
 
-#### Source
+#### Defined in
 
-[ts/tweet.ts:52](https://github.com/Robot-Inventor/twi-ext/blob/0043afb9bd23d6bf1ccfc7a09fc743107f67542c/src/ts/tweet.ts#L52)
+[ts/tweet.ts:52](https://github.com/Robot-Inventor/twi-ext/blob/e69b1551d321a94701ff6b35bfa47ac414bd1c87/src/ts/tweet.ts#L52)
 
 ## Methods
 
@@ -103,7 +103,7 @@ it opens new tab with the specified text and the tweet URL.
 
 Text to tweet.
 
-• **timeoutMs**: `number`= `1000`
+• **timeoutMs**: `number` = `1000`
 
 Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``.
 
@@ -111,6 +111,6 @@ Timeout in milliseconds. After the specified time has elapsed, it moves to fallb
 
 `Promise`\<`void`\>
 
-#### Source
+#### Defined in
 
-[ts/tweet.ts:158](https://github.com/Robot-Inventor/twi-ext/blob/0043afb9bd23d6bf1ccfc7a09fc743107f67542c/src/ts/tweet.ts#L158)
+[ts/tweet.ts:158](https://github.com/Robot-Inventor/twi-ext/blob/e69b1551d321a94701ff6b35bfa47ac414bd1c87/src/ts/tweet.ts#L158)

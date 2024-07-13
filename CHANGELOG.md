@@ -1,5 +1,21 @@
 # twi-ext
 
+## 0.9.6
+
+### Patch Changes
+
+-   [#124](https://github.com/Robot-Inventor/twi-ext/pull/124) [`b78e83d`](https://github.com/Robot-Inventor/twi-ext/commit/b78e83dfb72374e5806f5dfb285674e07d40e00a) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typedoc to v0.26.4
+
+-   [#118](https://github.com/Robot-Inventor/twi-ext/pull/118) [`987bc31`](https://github.com/Robot-Inventor/twi-ext/commit/987bc314a7633f4ddc30b97a4a2c6eb7a361e690) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typedoc-plugin-markdown to v4.1.0
+
+-   [#126](https://github.com/Robot-Inventor/twi-ext/pull/126) [`0cd06c4`](https://github.com/Robot-Inventor/twi-ext/commit/0cd06c4c7b432166c82769dfec8e789cb9076102) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typedoc-plugin-markdown to v4.2.1
+
+-   [#122](https://github.com/Robot-Inventor/twi-ext/pull/122) [`fcb5a45`](https://github.com/Robot-Inventor/twi-ext/commit/fcb5a45f862cad5c2c1e768882b3d97055340b69) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typedoc to v0.26.2
+
+-   [#117](https://github.com/Robot-Inventor/twi-ext/pull/117) [`6d9f79b`](https://github.com/Robot-Inventor/twi-ext/commit/6d9f79b151cdbad94d8d46ae2d2e6dd3b349fdba) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typedoc to ^0.26.0
+
+-   [#120](https://github.com/Robot-Inventor/twi-ext/pull/120) [`2f47b50`](https://github.com/Robot-Inventor/twi-ext/commit/2f47b501c3ae262d37b14a90d21aa074251bb074) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typedoc to v0.26.1
+
 ## 0.9.5
 
 ### Patch Changes
