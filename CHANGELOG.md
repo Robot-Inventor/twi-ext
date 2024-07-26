@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.9.7
+
+### Patch Changes
+
+-   [#138](https://github.com/Robot-Inventor/twi-ext/pull/138) [`688a3de`](https://github.com/Robot-Inventor/twi-ext/commit/688a3de578bc93fd7a7ce028029a01d82ab7e041) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: support for the latest Twitter / X specification changes
+
+    Supported `UserProps` type change. Users do not need to change their existing code.
+
 ## 0.9.6
 
 ### Patch Changes
