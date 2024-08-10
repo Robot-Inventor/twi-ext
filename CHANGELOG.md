@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.9.8
+
+### Patch Changes
+
+-   [#148](https://github.com/Robot-Inventor/twi-ext/pull/148) [`8b86c55`](https://github.com/Robot-Inventor/twi-ext/commit/8b86c557cd83f603f7303ecce8b3165057704c07) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps-dev): bump @75lb/deep-merge from 1.1.1 to 1.1.2
+
 ## 0.9.7
 
 ### Patch Changes
