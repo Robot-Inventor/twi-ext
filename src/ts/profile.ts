@@ -1,4 +1,4 @@
-import { UserProps } from "../types/reactProps.js";
+import type { UserProps } from "../types/reactProps.js";
 import { getReactProps } from "./internal/utility.js";
 import { isProfileReactPropsData } from "../types/reactProps.guard.js";
 

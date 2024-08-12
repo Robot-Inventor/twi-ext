@@ -4,8 +4,8 @@
  * @returns The React props of the element.
  */
 const getReactProps = (element: HTMLElement): object | null => {
-    const properties = Object.getOwnPropertyNames(element) as (keyof typeof element)[];
-    const reactPropsNames: (keyof HTMLElement)[] = properties.filter((name) => name.startsWith("__reactProps$"));
+    const properties = Object.getOwnPropertyNames(element) as Array<keyof typeof element>;
+    const reactPropsNames: Array<keyof HTMLElement> = properties.filter((name) => name.startsWith("__reactProps$"));
     if (!reactPropsNames.length) return null;
 
     return element[reactPropsNames[0]] as object;
