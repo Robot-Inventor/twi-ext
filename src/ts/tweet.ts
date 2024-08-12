@@ -3,7 +3,7 @@ import {
     isMenuBarReactProps,
     isTweetOuterReactPropsData
 } from "../types/reactProps.guard.js";
-import { BasicTweetProps } from "../types/reactProps.js";
+import type { BasicTweetProps } from "../types/reactProps.js";
 import { asyncQuerySelector } from "async-query";
 import { getReactProps } from "./internal/utility.js";
 
@@ -59,6 +59,7 @@ class Tweet {
      * Get metadata of the tweet.
      * @returns Metadata of the tweet.
      */
+    // eslint-disable-next-line max-statements
     public get metadata(): TweetMetadata {
         const tweetAuthorScreenName = this.props.user.screen_name;
         const tweetOuterProps = getReactProps(this.element);
@@ -155,7 +156,7 @@ class Tweet {
      * Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``.
      */
     // eslint-disable-next-line no-magic-numbers
-    public async quoteTweet(text: string, timeoutMs: number = 1000): Promise<void> {
+    public async quoteTweet(text: string, timeoutMs = 1000): Promise<void> {
         try {
             await this.clickRetweetButton(timeoutMs);
             await Tweet.clickQuoteButton(timeoutMs);
@@ -163,7 +164,7 @@ class Tweet {
             const textBox = await Tweet.getTweetTextBox(timeoutMs);
             textBox.innerHTML = text;
             textBox.dispatchEvent(new Event("input", { bubbles: true }));
-        } catch (error) {
+        } catch {
             const sourceTweetPermalink = this.props.permalink;
             const tweetText = `${text}\nhttps://twitter.com${sourceTweetPermalink}`;
             open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
@@ -171,4 +172,4 @@ class Tweet {
     }
 }
 
-export { TweetMetadata, Tweet };
+export { type TweetMetadata, Tweet };

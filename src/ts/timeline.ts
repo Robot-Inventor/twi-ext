@@ -91,4 +91,4 @@ class Timeline {
     }
 }
 
-export { TimelineOptions, Timeline };
+export { type TimelineOptions, Timeline };
