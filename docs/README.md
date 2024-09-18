@@ -1,8 +1,8 @@
-**twi-ext v0.9.11** • **Docs**
+**twi-ext v0.10.0** • **Docs**
 
 ***
 
-# twi-ext v0.9.11
+# twi-ext v0.10.0
 
 ## Classes
 
@@ -20,3 +20,7 @@
 ## Type Aliases
 
 - [ProfileInterstitialType](type-aliases/ProfileInterstitialType.md)
+
+## Functions
+
+- [getColorScheme](functions/getColorScheme.md)

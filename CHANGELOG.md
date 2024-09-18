@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.10.0
+
+### Minor Changes
+
+-   [#179](https://github.com/Robot-Inventor/twi-ext/pull/179) [`71f902b`](https://github.com/Robot-Inventor/twi-ext/commit/71f902b95c19fccdef60c81ed4ae95097b7deba8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `getColorScheme()` function
+
 ## 0.9.11
 
 ### Patch Changes
