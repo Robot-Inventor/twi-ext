@@ -2,6 +2,7 @@ import type { BasicTweetProps, ProfileInterstitialType, UserProps } from "../typ
 import { Timeline, type TimelineOptions } from "./timeline.js";
 import { Tweet, type TweetMetadata } from "./tweet.js";
 import { Profile } from "./profile.js";
+import { getColorScheme } from "./util.js";
 
 export {
     type BasicTweetProps,
@@ -11,5 +12,6 @@ export {
     type TimelineOptions,
     Tweet,
     type TweetMetadata,
-    Profile
+    Profile,
+    getColorScheme
 };
