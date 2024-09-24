@@ -1,8 +1,8 @@
 import type { BasicTweetProps, ProfileInterstitialType, UserProps } from "../types/reactProps.d.ts";
 import { Timeline, type TimelineOptions } from "./timeline.js";
 import { Tweet, type TweetMetadata } from "./tweet.js";
+import { composeNewTweet, getColorScheme } from "./util.js";
 import { Profile } from "./profile.js";
-import { getColorScheme } from "./util.js";
 
 export {
     type BasicTweetProps,
@@ -13,5 +13,6 @@ export {
     Tweet,
     type TweetMetadata,
     Profile,
+    composeNewTweet,
     getColorScheme
 };

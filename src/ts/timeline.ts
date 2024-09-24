@@ -61,14 +61,14 @@ class Timeline {
         });
 
         void asyncQuerySelector("main", document, mergedOptions.timeoutMs).then((main) => {
-            if (!main) throw new Error("twi-ext: Failed to get main element");
+            if (!main) throw new Error("[twi-ext] Failed to get main element");
 
             timelineObserver.observe(main, this.OBSERVER_OPTIONS);
         });
 
         // #layers includes tweets that appear next to the image when you click on the image
         void asyncQuerySelector("#layers", document, mergedOptions.timeoutMs).then((layers) => {
-            if (!layers) throw new Error("twi-ext: Failed to get #layers element");
+            if (!layers) throw new Error("[twi-ext] Failed to get #layers element");
 
             timelineObserver.observe(layers, this.OBSERVER_OPTIONS);
         });
