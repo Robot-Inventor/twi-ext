@@ -1,5 +1,15 @@
 # twi-ext
 
+## 0.11.0
+
+### Minor Changes
+
+-   [#185](https://github.com/Robot-Inventor/twi-ext/pull/185) [`c9a62b2`](https://github.com/Robot-Inventor/twi-ext/commit/c9a62b212c02cdb14e7bb535759d2d063512afc8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `composeNewTweet()` function
+
+### Patch Changes
+
+-   [#183](https://github.com/Robot-Inventor/twi-ext/pull/183) [`9570a05`](https://github.com/Robot-Inventor/twi-ext/commit/9570a050f69814334da32b18ac74d799e939d25f) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: run `npm audit fix`
+
 ## 0.10.0
 
 ### Minor Changes

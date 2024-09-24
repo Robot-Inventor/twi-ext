@@ -1,8 +1,8 @@
-**twi-ext v0.10.0** • **Docs**
+**twi-ext v0.11.0** • **Docs**
 
 ***
 
-# twi-ext v0.10.0
+# twi-ext v0.11.0
 
 ## Classes
 
@@ -23,4 +23,5 @@
 
 ## Functions
 
+- [composeNewTweet](functions/composeNewTweet.md)
 - [getColorScheme](functions/getColorScheme.md)
