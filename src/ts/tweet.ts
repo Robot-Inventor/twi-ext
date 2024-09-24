@@ -5,6 +5,7 @@ import {
 } from "../types/reactProps.guard.js";
 import type { BasicTweetProps } from "../types/reactProps.js";
 import { asyncQuerySelector } from "async-query";
+import { enterTweetText } from "./util.js";
 import { getReactProps } from "./internal/utility.js";
 
 interface TweetMetadata {
@@ -32,7 +33,7 @@ class Tweet {
      */
     private getMenuBar(): HTMLElement {
         const menuBar = this.tweetElement.querySelector<HTMLElement>("div[role='group'][id]");
-        if (!menuBar) throw new Error("Failed to get menu bar of tweet");
+        if (!menuBar) throw new Error("[twi-ext] Failed to get menu bar of tweet");
 
         return menuBar;
     }
@@ -51,7 +52,7 @@ class Tweet {
      */
     public get props(): BasicTweetProps {
         const props = getReactProps(this.getMenuBar());
-        if (!isMenuBarReactProps(props)) throw new Error("Failed to get React props of tweet");
+        if (!isMenuBarReactProps(props)) throw new Error("[twi-ext] Failed to get React props of tweet");
         return props.children[1].props.retweetWithCommentLink.state.quotedStatus;
     }
 
@@ -63,7 +64,7 @@ class Tweet {
     public get metadata(): TweetMetadata {
         const tweetAuthorScreenName = this.props.user.screen_name;
         const tweetOuterProps = getReactProps(this.element);
-        if (!tweetOuterProps) throw new Error("Failed to get React props of tweet");
+        if (!tweetOuterProps) throw new Error("[twi-ext] Failed to get React props of tweet");
 
         let loggedInUserScreenName: string | null = null;
         const isFocalMode = isFocalTweetOuterReactPropsData(tweetOuterProps);
@@ -98,7 +99,7 @@ class Tweet {
             this.tweetElement,
             timeoutMs
         );
-        if (!retweetButton) throw new Error("Failed to get retweet button of tweet");
+        if (!retweetButton) throw new Error("[twi-ext] Failed to get retweet button of tweet");
         retweetButton.click();
     }
 
@@ -118,30 +119,8 @@ class Tweet {
             document,
             timeoutMs
         );
-        if (!quoteButton) throw new Error("Failed to get quote button of tweet");
+        if (!quoteButton) throw new Error("[twi-ext] Failed to get quote button of tweet");
         quoteButton.click();
-    }
-
-    /**
-     * Get the text box of the tweet composer.
-     * This method should be called after {@link clickQuoteButton}.
-     * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
-     * @returns Text box of the tweet composer.
-     */
-    private static async getTweetTextBox(timeoutMs: number): Promise<Element> {
-        const isTweetDeck = location.hostname === "pro.twitter.com";
-        const selector = isTweetDeck
-            ? "[role='dialog'] [data-text='true'], [role='dialog'] textarea[data-testid='tweetTextarea_0']"
-            : "[role='dialog'] [data-text='true'], textarea[data-testid='tweetTextarea_0']";
-
-        const textBoxMarker = await asyncQuerySelector(selector, document, timeoutMs);
-        if (!textBoxMarker) throw new Error("Failed to get text box marker of tweet");
-
-        const isTextArea = textBoxMarker.tagName === "TEXTAREA";
-        const textBox = isTextArea ? textBoxMarker : textBoxMarker.parentElement;
-        if (!textBox) throw new Error("Failed to get text box of tweet");
-
-        return textBox;
     }
 
     /**
@@ -161,9 +140,7 @@ class Tweet {
             await this.clickRetweetButton(timeoutMs);
             await Tweet.clickQuoteButton(timeoutMs);
 
-            const textBox = await Tweet.getTweetTextBox(timeoutMs);
-            textBox.innerHTML = text;
-            textBox.dispatchEvent(new Event("input", { bubbles: true }));
+            await enterTweetText(text, timeoutMs);
         } catch {
             const sourceTweetPermalink = this.props.permalink;
             const tweetText = `${text}\nhttps://twitter.com${sourceTweetPermalink}`;
