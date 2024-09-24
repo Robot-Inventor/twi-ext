@@ -1,8 +1,8 @@
-[**twi-ext v0.10.0**](../README.md) • **Docs**
+[**twi-ext v0.11.0**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.10.0](../README.md) / TweetMetadata
+[twi-ext v0.11.0](../README.md) / TweetMetadata
 
 # Interface: TweetMetadata
 
@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[ts/tweet.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/71f902b95c19fccdef60c81ed4ae95097b7deba8/src/ts/tweet.ts#L11)
+[ts/tweet.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/c9a62b212c02cdb14e7bb535759d2d063512afc8/src/ts/tweet.ts#L12)
 
 ***
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[ts/tweet.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/71f902b95c19fccdef60c81ed4ae95097b7deba8/src/ts/tweet.ts#L12)
+[ts/tweet.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/c9a62b212c02cdb14e7bb535759d2d063512afc8/src/ts/tweet.ts#L13)
