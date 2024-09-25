@@ -143,8 +143,8 @@ class Tweet {
             await enterTweetText(text, timeoutMs);
         } catch {
             const sourceTweetPermalink = this.props.permalink;
-            const tweetText = `${text}\nhttps://twitter.com${sourceTweetPermalink}`;
-            open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+            const tweetText = `${text}\nhttps://x.com${sourceTweetPermalink}`;
+            open(`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
         }
     }
 }
