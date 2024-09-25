@@ -1,8 +1,8 @@
-[**twi-ext v0.11.0**](../README.md) • **Docs**
+[**twi-ext v0.11.1**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.11.0](../README.md) / getColorScheme
+[twi-ext v0.11.1](../README.md) / getColorScheme
 
 # Function: getColorScheme()
 
@@ -18,4 +18,4 @@ The color scheme of the page. The possible values are "light", "darkblue", "blac
 
 ## Defined in
 
-[ts/util.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/c9a62b212c02cdb14e7bb535759d2d063512afc8/src/ts/util.ts#L8)
+[ts/util.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/30715a861b9be3dbd39395205fb59e3de933cef8/src/ts/util.ts#L8)

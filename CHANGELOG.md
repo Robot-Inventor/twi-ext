@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.11.1
+
+### Patch Changes
+
+-   [#188](https://github.com/Robot-Inventor/twi-ext/pull/188) [`0a3d087`](https://github.com/Robot-Inventor/twi-ext/commit/0a3d08737fb12145c4e5aa5ccd3756d3243b44c3) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: fallback feature for `composeNewTweet()` function
+
+-   [#191](https://github.com/Robot-Inventor/twi-ext/pull/191) [`30715a8`](https://github.com/Robot-Inventor/twi-ext/commit/30715a861b9be3dbd39395205fb59e3de933cef8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: replace `twitter.com` to `x.com`
+
 ## 0.11.0
 
 ### Minor Changes
