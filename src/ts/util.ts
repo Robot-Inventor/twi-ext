@@ -57,6 +57,7 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
 
 /**
  * Compose a new tweet with the specified text.
+ * If the function fails to compose a tweet within the specified timeout, it opens a new tab with the tweet text and URL.
  * @param text Text to tweet.
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
@@ -69,11 +70,18 @@ const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> =>
 
     const composeButton = document.querySelector<HTMLElement>(composeButtonSelector);
     if (!composeButton) {
-        throw new Error("[twi-ext] Compose button not found.");
+        const tweetText = `${text}`;
+        open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+        return;
     }
 
-    composeButton.click();
-    await enterTweetText(text, timeoutMs);
+    try {
+        composeButton.click();
+        await enterTweetText(text, timeoutMs);
+    } catch {
+        const tweetText = `${text}`;
+        open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+    }
 };
 
 export { getColorScheme, enterTweetText, composeNewTweet };
