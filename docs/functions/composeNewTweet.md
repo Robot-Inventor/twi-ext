@@ -1,8 +1,8 @@
-[**twi-ext v0.11.1**](../README.md) • **Docs**
+[**twi-ext v0.11.2**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.11.1](../README.md) / composeNewTweet
+[twi-ext v0.11.2](../README.md) / composeNewTweet
 
 # Function: composeNewTweet()
 
@@ -27,4 +27,4 @@ Timeout in milliseconds. After the specified time has elapsed, it throws an erro
 
 ## Defined in
 
-[ts/util.ts:65](https://github.com/Robot-Inventor/twi-ext/blob/30715a861b9be3dbd39395205fb59e3de933cef8/src/ts/util.ts#L65)
+[ts/util.ts:65](https://github.com/Robot-Inventor/twi-ext/blob/ebead7f2aef513bf4e9ea1360935b159bfe61389/src/ts/util.ts#L65)
