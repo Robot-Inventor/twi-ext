@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.11.2
+
+### Patch Changes
+
+-   [#192](https://github.com/Robot-Inventor/twi-ext/pull/192) [`ebead7f`](https://github.com/Robot-Inventor/twi-ext/commit/ebead7f2aef513bf4e9ea1360935b159bfe61389) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: clear tweet composer before entering specified text
+
 ## 0.11.1
 
 ### Patch Changes
