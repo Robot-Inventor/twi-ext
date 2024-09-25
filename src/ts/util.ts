@@ -61,7 +61,7 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
  * @param text Text to tweet.
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
-// eslint-disable-next-line no-magic-numbers
+// eslint-disable-next-line no-magic-numbers, max-statements
 const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> => {
     const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
     const composeButtonSelector = isTweetDeck
@@ -70,17 +70,19 @@ const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> =>
 
     const composeButton = document.querySelector<HTMLElement>(composeButtonSelector);
     if (!composeButton) {
-        const tweetText = `${text}`;
-        open(`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+        open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
         return;
     }
 
     try {
         composeButton.click();
+        // Delete the mentions that are initially entered when the composer is opened on the user profile page.
+        // For some unknown reason, it is necessary to call the `enterTweetText()` function twice to clear the composer.
+        await enterTweetText("", timeoutMs);
+        await enterTweetText("", timeoutMs);
         await enterTweetText(text, timeoutMs);
     } catch {
-        const tweetText = `${text}`;
-        open(`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+        open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
     }
 };
 
