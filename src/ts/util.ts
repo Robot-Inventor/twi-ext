@@ -71,7 +71,7 @@ const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> =>
     const composeButton = document.querySelector<HTMLElement>(composeButtonSelector);
     if (!composeButton) {
         const tweetText = `${text}`;
-        open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+        open(`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
         return;
     }
 
@@ -80,7 +80,7 @@ const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> =>
         await enterTweetText(text, timeoutMs);
     } catch {
         const tweetText = `${text}`;
-        open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+        open(`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
     }
 };
 
