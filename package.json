@@ -1,6 +1,6 @@
 {
   "name": "twi-ext",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Unofficial utility to develop browser extensions for Twitter / X",
   "main": "dist/ts/index.js",
   "publishConfig": {
