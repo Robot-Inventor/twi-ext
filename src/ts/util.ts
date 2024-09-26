@@ -1,5 +1,5 @@
 import { TWEETDECK_DOMAINS } from "./constants.js";
-import { asyncQuerySelector } from "async-query";
+import { asyncQuerySelectorAll } from "async-query";
 
 /**
  * Get the current color scheme of the page.
@@ -23,34 +23,62 @@ const getColorScheme = (): "light" | "darkblue" | "black" | "unknown" => {
 };
 
 /**
- * Get the text box of the tweet composer.
- * This method should be called after open tweet composer.
- * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
- * @returns Text box of the tweet composer.
+ * Check if the specified element is a text area.
+ * @param element Element to check.
+ * @returns True if the element is a text area, otherwise false.
  */
-const getTweetTextBox = async (timeoutMs: number): Promise<Element> => {
-    const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
-    const selector = isTweetDeck
-        ? "[role='dialog'] [data-text='true'], [role='dialog'] textarea[data-testid='tweetTextarea_0']"
-        : "[role='dialog'] [data-text='true'], textarea[data-testid='tweetTextarea_0']";
+const isTextArea = (element: Element): element is HTMLTextAreaElement => element.tagName === "TEXTAREA";
 
-    const textBoxMarker = await asyncQuerySelector(selector, document, timeoutMs);
-    if (!textBoxMarker) throw new Error("[twi-ext] Failed to get text box marker of tweet");
-
-    const isTextArea = textBoxMarker.tagName === "TEXTAREA";
-    const textBox = isTextArea ? textBoxMarker : textBoxMarker.parentElement;
-    if (!textBox) throw new Error("[twi-ext] Failed to get text box of tweet");
-
-    return textBox;
-};
+/**
+ * Get the text box element from the specified marker element.
+ * @param marker Marker element of the text box.
+ * @returns The text box element. If the text box element is not found, it returns null.
+ */
+const getTextBoxFromMarker = (marker: HTMLElement): HTMLElement | HTMLTextAreaElement | null =>
+    isTextArea(marker) ? marker : marker.parentElement;
 
 /**
  * Enter the specified text to the tweet composer.
  * @param text Text to tweet.
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
+// eslint-disable-next-line max-statements
 const enterTweetText = async (text: string, timeoutMs: number): Promise<void> => {
-    const textBox = await getTweetTextBox(timeoutMs);
+    const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
+    const selector = isTweetDeck
+        ? "[role='dialog'] [data-text='true'], [role='dialog'] textarea[data-testid='tweetTextarea_0']"
+        : "[role='dialog'] [data-text='true'], textarea[data-testid='tweetTextarea_0']";
+
+    const textBoxMarkers = await asyncQuerySelectorAll<HTMLElement>(selector, document, timeoutMs);
+    if (!textBoxMarkers.length) throw new Error("[twi-ext] Failed to get text box marker of tweet");
+
+    // Clear existing text.
+    // eslint-disable-next-line id-length
+    for (let i = 0; i < textBoxMarkers.length; i++) {
+        // eslint-disable-next-line no-magic-numbers
+        if (i !== 0) {
+            const textBox = getTextBoxFromMarker(textBoxMarkers[i]);
+            if (textBox) {
+                textBox.remove();
+            }
+        }
+    }
+
+    const textBox = getTextBoxFromMarker(textBoxMarkers[0]);
+    if (!textBox) throw new Error("[twi-ext] Failed to get text box of tweet");
+
+    // const textBoxProps = getReactProps(textBox);
+    // if (textBoxProps && "value" in textBoxProps && typeof textBoxProps.value === "string" && textBoxProps.value) {
+    //     // Wait until pre-entered text is placed in the text box and then replace it with the specified text.
+    //     setTimeout(() => {
+    //         textBox.innerHTML = text;
+    //         textBox.dispatchEvent(new Event("input", { bubbles: true }));
+    //     }, 1);
+    // } else {
+    //     textBox.innerHTML = text;
+    //     textBox.dispatchEvent(new Event("input", { bubbles: true }));
+    // }
+
     textBox.innerHTML = text;
     textBox.dispatchEvent(new Event("input", { bubbles: true }));
 };
@@ -61,7 +89,7 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
  * @param text Text to tweet.
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
-// eslint-disable-next-line no-magic-numbers, max-statements
+// eslint-disable-next-line no-magic-numbers
 const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> => {
     const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
     const composeButtonSelector = isTweetDeck
@@ -76,10 +104,6 @@ const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> =>
 
     try {
         composeButton.click();
-        // Delete the mentions that are initially entered when the composer is opened on the user profile page.
-        // For some unknown reason, it is necessary to call the `enterTweetText()` function twice to clear the composer.
-        await enterTweetText("", timeoutMs);
-        await enterTweetText("", timeoutMs);
         await enterTweetText(text, timeoutMs);
     } catch {
         open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
