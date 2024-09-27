@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.11.3
+
+### Patch Changes
+
+-   [#194](https://github.com/Robot-Inventor/twi-ext/pull/194) [`24fc916`](https://github.com/Robot-Inventor/twi-ext/commit/24fc91677a0d2aa2580a6ad2dc00635bd7cc459b) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: improve stability for the `composeNewTweet()` function
+
 ## 0.11.2
 
 ### Patch Changes
