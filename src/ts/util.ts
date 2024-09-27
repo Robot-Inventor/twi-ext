@@ -67,18 +67,6 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
     const textBox = getTextBoxFromMarker(textBoxMarkers[0]);
     if (!textBox) throw new Error("[twi-ext] Failed to get text box of tweet");
 
-    // const textBoxProps = getReactProps(textBox);
-    // if (textBoxProps && "value" in textBoxProps && typeof textBoxProps.value === "string" && textBoxProps.value) {
-    //     // Wait until pre-entered text is placed in the text box and then replace it with the specified text.
-    //     setTimeout(() => {
-    //         textBox.innerHTML = text;
-    //         textBox.dispatchEvent(new Event("input", { bubbles: true }));
-    //     }, 1);
-    // } else {
-    //     textBox.innerHTML = text;
-    //     textBox.dispatchEvent(new Event("input", { bubbles: true }));
-    // }
-
     textBox.innerHTML = text;
     textBox.dispatchEvent(new Event("input", { bubbles: true }));
 };
@@ -91,19 +79,13 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
  */
 // eslint-disable-next-line no-magic-numbers
 const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> => {
-    const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
-    const composeButtonSelector = isTweetDeck
-        ? 'div:has([data-testid="SideNav_AccountSwitcher_Button"]) ~ div button[role="button"][aria-label]'
-        : '[data-testid="SideNav_NewTweet_Button"], [data-testid="FloatingActionButtonBase"] a[href="/compose/post"]';
-
-    const composeButton = document.querySelector<HTMLElement>(composeButtonSelector);
-    if (!composeButton) {
-        open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
-        return;
-    }
+    const keyboardEvent = new KeyboardEvent("keypress", {
+        bubbles: true,
+        which: 78
+    });
+    document.dispatchEvent(keyboardEvent);
 
     try {
-        composeButton.click();
         await enterTweetText(text, timeoutMs);
     } catch {
         open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
