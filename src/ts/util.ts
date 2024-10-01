@@ -81,6 +81,7 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
 const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> => {
     const keyboardEvent = new KeyboardEvent("keypress", {
         bubbles: true,
+        keyCode: 78,
         which: 78
     });
     document.dispatchEvent(keyboardEvent);
