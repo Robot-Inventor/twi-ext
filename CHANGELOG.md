@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.11.4
+
+### Patch Changes
+
+-   [#197](https://github.com/Robot-Inventor/twi-ext/pull/197) [`9791084`](https://github.com/Robot-Inventor/twi-ext/commit/9791084d97a2768f632c72f08e2e4e9fe3c7157d) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: address issue where `composeNewTweet()` fallback behavior is triggered in Chrome
+
 ## 0.11.3
 
 ### Patch Changes
