@@ -1,3 +1,4 @@
+import { enterTweetText, openTweetComposerInNewTab } from "./util.js";
 import {
     isFocalTweetOuterReactPropsData,
     isMenuBarReactProps,
@@ -5,7 +6,6 @@ import {
 } from "../types/reactProps.guard.js";
 import type { BasicTweetProps } from "../types/reactProps.js";
 import { asyncQuerySelector } from "async-query";
-import { enterTweetText } from "./util.js";
 import { getReactProps } from "./internal/utility.js";
 
 interface TweetMetadata {
@@ -132,19 +132,26 @@ class Tweet {
      * it opens new tab with the specified text and the tweet URL.
      * @param text Text to tweet.
      * @param timeoutMs
-     * Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``.
+     * Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode.
+     * @param shouldOpenInNewTab Whether to open the tweet composer in a new tab immediately.
      */
     // eslint-disable-next-line no-magic-numbers
-    public async quoteTweet(text: string, timeoutMs = 1000): Promise<void> {
+    public async quoteTweet(text: string, timeoutMs = 1000, shouldOpenInNewTab = false): Promise<void> {
+        const sourceTweetPermalink = this.props.permalink;
+        const tweetTextWithSourceLink = `${text}\nhttps://x.com${sourceTweetPermalink}`;
+
+        if (shouldOpenInNewTab) {
+            openTweetComposerInNewTab(tweetTextWithSourceLink);
+            return;
+        }
+
         try {
             await this.clickRetweetButton(timeoutMs);
             await Tweet.clickQuoteButton(timeoutMs);
 
             await enterTweetText(text, timeoutMs);
         } catch {
-            const sourceTweetPermalink = this.props.permalink;
-            const tweetText = `${text}\nhttps://x.com${sourceTweetPermalink}`;
-            open(`https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`, "_blank");
+            openTweetComposerInNewTab(tweetTextWithSourceLink);
         }
     }
 }

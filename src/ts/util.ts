@@ -72,13 +72,27 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
 };
 
 /**
+ * Open the tweet composer in a new tab with the specified text.
+ * @param text Text to tweet.
+ */
+const openTweetComposerInNewTab = (text: string): void => {
+    open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
+};
+
+/**
  * Compose a new tweet with the specified text.
  * If the function fails to compose a tweet within the specified timeout, it opens a new tab with the tweet text and URL.
  * @param text Text to tweet.
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
+ * @param shouldOpenInNewTab Whether to open the tweet composer in a new tab immediately.
  */
 // eslint-disable-next-line no-magic-numbers
-const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> => {
+const composeNewTweet = async (text: string, timeoutMs = 1000, shouldOpenInNewTab = false): Promise<void> => {
+    if (shouldOpenInNewTab) {
+        openTweetComposerInNewTab(text);
+        return;
+    }
+
     const keyboardEvent = new KeyboardEvent("keypress", {
         bubbles: true,
         keyCode: 78,
@@ -89,8 +103,8 @@ const composeNewTweet = async (text: string, timeoutMs = 1000): Promise<void> =>
     try {
         await enterTweetText(text, timeoutMs);
     } catch {
-        open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}`, "_blank");
+        openTweetComposerInNewTab(text);
     }
 };
 
-export { getColorScheme, enterTweetText, composeNewTweet };
+export { getColorScheme, enterTweetText, openTweetComposerInNewTab, composeNewTweet };
