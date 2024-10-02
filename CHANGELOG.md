@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.12.0
+
+### Minor Changes
+
+-   [#200](https://github.com/Robot-Inventor/twi-ext/pull/200) [`5432137`](https://github.com/Robot-Inventor/twi-ext/commit/5432137d6eb09323b25fbbf53792c28b12ccf072) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `shouldOpenInNewTab` to `composeNewTweet()` and `Tweet.quoteTweet()`
+
 ## 0.11.4
 
 ### Patch Changes

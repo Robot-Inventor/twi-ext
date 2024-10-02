@@ -1,8 +1,8 @@
-[**twi-ext v0.11.4**](../README.md) • **Docs**
+[**twi-ext v0.12.0**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.11.4](../README.md) / Tweet
+[twi-ext v0.12.0](../README.md) / Tweet
 
 # Class: Tweet
 
@@ -28,7 +28,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/03168b941ce741c510b889fc4bbe7294b3071dcd/src/ts/tweet.ts#L26)
+[ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/06f63754cd6168b31f19cf6a4c136c5a9263fb42/src/ts/tweet.ts#L26)
 
 ## Accessors
 
@@ -46,7 +46,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/03168b941ce741c510b889fc4bbe7294b3071dcd/src/ts/tweet.ts#L45)
+[ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/06f63754cd6168b31f19cf6a4c136c5a9263fb42/src/ts/tweet.ts#L45)
 
 ***
 
@@ -64,7 +64,7 @@ Metadata of the tweet.
 
 #### Defined in
 
-[ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/03168b941ce741c510b889fc4bbe7294b3071dcd/src/ts/tweet.ts#L64)
+[ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/06f63754cd6168b31f19cf6a4c136c5a9263fb42/src/ts/tweet.ts#L64)
 
 ***
 
@@ -82,13 +82,13 @@ The React props of the tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/03168b941ce741c510b889fc4bbe7294b3071dcd/src/ts/tweet.ts#L53)
+[ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/06f63754cd6168b31f19cf6a4c136c5a9263fb42/src/ts/tweet.ts#L53)
 
 ## Methods
 
 ### quoteTweet()
 
-> **quoteTweet**(`text`, `timeoutMs`): `Promise`\<`void`\>
+> **quoteTweet**(`text`, `timeoutMs`, `shouldOpenInNewTab`): `Promise`\<`void`\>
 
 Quote specified tweet with specified text.
 This function opens the compose screen and inputs text.
@@ -105,7 +105,11 @@ Text to tweet.
 
 • **timeoutMs**: `number` = `1000`
 
-Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode. Default is ``1000``.
+Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode.
+
+• **shouldOpenInNewTab**: `boolean` = `false`
+
+Whether to open the tweet composer in a new tab immediately.
 
 #### Returns
 
@@ -113,4 +117,4 @@ Timeout in milliseconds. After the specified time has elapsed, it moves to fallb
 
 #### Defined in
 
-[ts/tweet.ts:138](https://github.com/Robot-Inventor/twi-ext/blob/03168b941ce741c510b889fc4bbe7294b3071dcd/src/ts/tweet.ts#L138)
+[ts/tweet.ts:139](https://github.com/Robot-Inventor/twi-ext/blob/06f63754cd6168b31f19cf6a4c136c5a9263fb42/src/ts/tweet.ts#L139)
