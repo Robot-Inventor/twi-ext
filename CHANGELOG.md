@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.12.1
+
+### Patch Changes
+
+-   [#212](https://github.com/Robot-Inventor/twi-ext/pull/212) [`2b2f991`](https://github.com/Robot-Inventor/twi-ext/commit/2b2f991fa65f7fd2fa21e0eb8e3c6df9e0c1808a) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency uuid to v11
+
+-   [#215](https://github.com/Robot-Inventor/twi-ext/pull/215) [`6c64656`](https://github.com/Robot-Inventor/twi-ext/commit/6c6465649dfa269135b190dfa33bbf5db5c81b92) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency uuid to v11.0.2
+
 ## 0.12.0
 
 ### Minor Changes
