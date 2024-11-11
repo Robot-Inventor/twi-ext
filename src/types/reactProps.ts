@@ -31,10 +31,10 @@ interface menubarReactProps {
 }
 
 /**
- * @internal This type definition is for internal use of the library and is not intended to be called from the outside.
+ * @internal
  * @see {isTweetOuterReactPropsData} ts-auto-guard:type-guard
  */
-export interface TweetOuterReactPropsData {
+interface TweetOuterReactPropsData {
     children: [
         [
             unknown,
@@ -74,10 +74,10 @@ export interface TweetOuterReactPropsData {
 }
 
 /**
- * @internal This type definition is for internal use of the library and is not intended to be called from the outside.
+ * @internal
  * @see {isFocalTweetOuterReactPropsData} ts-auto-guard:type-guard
  */
-export interface FocalTweetOuterReactPropsData {
+interface FocalTweetOuterReactPropsData {
     children: [
         [
             unknown,
@@ -120,7 +120,7 @@ export interface FocalTweetOuterReactPropsData {
 }
 
 /** @see {isProfileReactPropsData} ts-auto-guard:type-guard */
-export interface ProfileReactPropsData {
+interface ProfileReactPropsData {
     children: [
         {
             props: {
@@ -138,4 +138,12 @@ export interface ProfileReactPropsData {
     ];
 }
 
-export { ProfileInterstitialType, UserProps, BasicTweetProps, menubarReactProps };
+export type {
+    TweetOuterReactPropsData,
+    FocalTweetOuterReactPropsData,
+    ProfileInterstitialType,
+    UserProps,
+    BasicTweetProps,
+    menubarReactProps,
+    ProfileReactPropsData
+};
