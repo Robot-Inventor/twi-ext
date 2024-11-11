@@ -2,7 +2,7 @@
  * Generated type guards for "reactProps.ts".
  * WARNING: Do not manually change this file.
  */
-import { TweetOuterReactPropsData, FocalTweetOuterReactPropsData, ProfileReactPropsData, menubarReactProps } from "./reactProps.js";
+import { TweetOuterReactPropsData, FocalTweetOuterReactPropsData, menubarReactProps, ProfileReactPropsData } from "./reactProps.js";
 
 export function isTweetOuterReactPropsData(obj: unknown): obj is TweetOuterReactPropsData {
     const typedObj = obj as TweetOuterReactPropsData
@@ -89,46 +89,6 @@ export function isFocalTweetOuterReactPropsData(obj: unknown): obj is FocalTweet
     )
 }
 
-export function isProfileReactPropsData(obj: unknown): obj is ProfileReactPropsData {
-    const typedObj = obj as ProfileReactPropsData
-    return (
-        (typedObj !== null &&
-            typeof typedObj === "object" ||
-            typeof typedObj === "function") &&
-        Array.isArray(typedObj["children"]) &&
-        (typedObj["children"][0] !== null &&
-            typeof typedObj["children"][0] === "object" ||
-            typeof typedObj["children"][0] === "function") &&
-        (typedObj["children"][0]["props"] !== null &&
-            typeof typedObj["children"][0]["props"] === "object" ||
-            typeof typedObj["children"][0]["props"] === "function") &&
-        Array.isArray(typedObj["children"][0]["props"]["children"]) &&
-        (typedObj["children"][0]["props"]["children"][1] !== null &&
-            typeof typedObj["children"][0]["props"]["children"][1] === "object" ||
-            typeof typedObj["children"][0]["props"]["children"][1] === "function") &&
-        (typedObj["children"][0]["props"]["children"][1]["props"] !== null &&
-            typeof typedObj["children"][0]["props"]["children"][1]["props"] === "object" ||
-            typeof typedObj["children"][0]["props"]["children"][1]["props"] === "function") &&
-        (typedObj["children"][0]["props"]["children"][1]["props"]["user"] !== null &&
-            typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"] === "object" ||
-            typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"] === "function") &&
-        (typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === "undefined" ||
-            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === null ||
-            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === false ||
-            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === true) &&
-        typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"]["screen_name"] === "string" &&
-        (typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "" ||
-            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "sensitive_media" ||
-            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "fake_account" ||
-            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "offensive_profile_content" ||
-            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "timeout") &&
-        Array.isArray(typedObj["children"][0]["props"]["children"][1]["props"]["user"]["withheld_in_countries"]) &&
-        typedObj["children"][0]["props"]["children"][1]["props"]["user"]["withheld_in_countries"].every((e: any) =>
-            typeof e === "string"
-        )
-    )
-}
-
 export function isMenuBarReactProps(obj: unknown): obj is menubarReactProps {
     const typedObj = obj as menubarReactProps
     return (
@@ -175,6 +135,46 @@ export function isMenuBarReactProps(obj: unknown): obj is menubarReactProps {
             typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["profile_interstitial_type"] === "timeout") &&
         Array.isArray(typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["withheld_in_countries"]) &&
         typedObj["children"][1]["props"]["retweetWithCommentLink"]["state"]["quotedStatus"]["user"]["withheld_in_countries"].every((e: any) =>
+            typeof e === "string"
+        )
+    )
+}
+
+export function isProfileReactPropsData(obj: unknown): obj is ProfileReactPropsData {
+    const typedObj = obj as ProfileReactPropsData
+    return (
+        (typedObj !== null &&
+            typeof typedObj === "object" ||
+            typeof typedObj === "function") &&
+        Array.isArray(typedObj["children"]) &&
+        (typedObj["children"][0] !== null &&
+            typeof typedObj["children"][0] === "object" ||
+            typeof typedObj["children"][0] === "function") &&
+        (typedObj["children"][0]["props"] !== null &&
+            typeof typedObj["children"][0]["props"] === "object" ||
+            typeof typedObj["children"][0]["props"] === "function") &&
+        Array.isArray(typedObj["children"][0]["props"]["children"]) &&
+        (typedObj["children"][0]["props"]["children"][1] !== null &&
+            typeof typedObj["children"][0]["props"]["children"][1] === "object" ||
+            typeof typedObj["children"][0]["props"]["children"][1] === "function") &&
+        (typedObj["children"][0]["props"]["children"][1]["props"] !== null &&
+            typeof typedObj["children"][0]["props"]["children"][1]["props"] === "object" ||
+            typeof typedObj["children"][0]["props"]["children"][1]["props"] === "function") &&
+        (typedObj["children"][0]["props"]["children"][1]["props"]["user"] !== null &&
+            typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"] === "object" ||
+            typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"] === "function") &&
+        (typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === "undefined" ||
+            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === null ||
+            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === false ||
+            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["possibly_sensitive"] === true) &&
+        typeof typedObj["children"][0]["props"]["children"][1]["props"]["user"]["screen_name"] === "string" &&
+        (typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "" ||
+            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "sensitive_media" ||
+            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "fake_account" ||
+            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "offensive_profile_content" ||
+            typedObj["children"][0]["props"]["children"][1]["props"]["user"]["profile_interstitial_type"] === "timeout") &&
+        Array.isArray(typedObj["children"][0]["props"]["children"][1]["props"]["user"]["withheld_in_countries"]) &&
+        typedObj["children"][0]["props"]["children"][1]["props"]["user"]["withheld_in_countries"].every((e: any) =>
             typeof e === "string"
         )
     )
