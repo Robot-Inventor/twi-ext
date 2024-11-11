@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.12.2
+
+### Patch Changes
+
+-   [#219](https://github.com/Robot-Inventor/twi-ext/pull/219) [`1b0570c`](https://github.com/Robot-Inventor/twi-ext/commit/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: resolve errors caused by enabling `isolatedModules`
+
+-   [#218](https://github.com/Robot-Inventor/twi-ext/pull/218) [`edaf82b`](https://github.com/Robot-Inventor/twi-ext/commit/edaf82b81fffb5fc1b0720db705efdcac7336f61) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency uuid to v11.0.3
+
 ## 0.12.1
 
 ### Patch Changes
