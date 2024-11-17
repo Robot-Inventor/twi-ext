@@ -1,5 +1,6 @@
 import { TWEETDECK_DOMAINS } from "./constants.js";
 import { asyncQuerySelectorAll } from "async-query";
+import { isNonEmptyArray } from "@robot-inventor/ts-utils";
 
 /**
  * Get the current color scheme of the page.
@@ -49,15 +50,16 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
         ? "[role='dialog'] [data-text='true'], [role='dialog'] textarea[data-testid='tweetTextarea_0']"
         : "[role='dialog'] [data-text='true'], textarea[data-testid='tweetTextarea_0']";
 
-    const textBoxMarkers = await asyncQuerySelectorAll<HTMLElement>(selector, document, timeoutMs);
-    if (!textBoxMarkers.length) throw new Error("[twi-ext] Failed to get text box marker of tweet");
+    const textBoxMarkers = [...(await asyncQuerySelectorAll<HTMLElement>(selector, document, timeoutMs))];
+    if (!isNonEmptyArray(textBoxMarkers)) throw new Error("[twi-ext] Failed to get text box marker of tweet");
 
     // Clear existing text.
     // eslint-disable-next-line id-length
     for (let i = 0; i < textBoxMarkers.length; i++) {
+        const textBoxMarker = textBoxMarkers[i];
         // eslint-disable-next-line no-magic-numbers
-        if (i !== 0) {
-            const textBox = getTextBoxFromMarker(textBoxMarkers[i]);
+        if (i !== 0 && textBoxMarker) {
+            const textBox = getTextBoxFromMarker(textBoxMarker);
             if (textBox) {
                 textBox.remove();
             }
