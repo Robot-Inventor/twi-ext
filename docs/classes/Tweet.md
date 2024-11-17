@@ -1,8 +1,8 @@
-[**twi-ext v0.12.2**](../README.md) • **Docs**
+[**twi-ext v0.13.0**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.12.2](../README.md) / Tweet
+[twi-ext v0.13.0](../README.md) / Tweet
 
 # Class: Tweet
 
@@ -28,7 +28,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/tweet.ts#L26)
+[ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L26)
 
 ## Accessors
 
@@ -48,7 +48,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/tweet.ts#L45)
+[ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L45)
 
 ***
 
@@ -68,7 +68,7 @@ Metadata of the tweet.
 
 #### Defined in
 
-[ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/tweet.ts#L64)
+[ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L64)
 
 ***
 
@@ -88,7 +88,7 @@ The React props of the tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/tweet.ts#L53)
+[ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L53)
 
 ## Methods
 
@@ -123,4 +123,4 @@ Whether to open the tweet composer in a new tab immediately.
 
 #### Defined in
 
-[ts/tweet.ts:139](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/tweet.ts#L139)
+[ts/tweet.ts:139](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L139)
