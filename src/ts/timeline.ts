@@ -1,7 +1,6 @@
 import { Profile } from "./profile.js";
 import { Tweet } from "./tweet.js";
 import { asyncQuerySelector } from "async-query";
-import { v4 as uuidv4 } from "uuid";
 
 interface TimelineOptions {
     /**
@@ -29,7 +28,7 @@ class Timeline {
      */
     public constructor(options?: Partial<TimelineOptions>) {
         // Generate a unique data attribute name for each instance.
-        const checkedDataAttribute = `data-twi-ext-checked-${uuidv4()}`;
+        const checkedDataAttribute = `data-twi-ext-checked-${crypto.randomUUID()}`;
 
         const defaultOptions: TimelineOptions = {
             timeoutMs: 10000
