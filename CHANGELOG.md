@@ -1,5 +1,19 @@
 # twi-ext
 
+## 0.13.0
+
+### Minor Changes
+
+-   [#228](https://github.com/Robot-Inventor/twi-ext/pull/228) [`a1ec3fb`](https://github.com/Robot-Inventor/twi-ext/commit/a1ec3fb52ced3be3134dfa444de58ad83a671ce0) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: replace `uuid` dependency with `crypto.randomUUID()`
+
+### Patch Changes
+
+-   [#226](https://github.com/Robot-Inventor/twi-ext/pull/226) [`84648a7`](https://github.com/Robot-Inventor/twi-ext/commit/84648a7314653d427ed1217a4159d3e6fe99118f) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: resolve TypeScript type errors
+
+-   [#224](https://github.com/Robot-Inventor/twi-ext/pull/224) [`fc3fc4b`](https://github.com/Robot-Inventor/twi-ext/commit/fc3fc4be4bfb6a87fd2032d1b0c987e9a4230f7d) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency async-query to v2.0.6
+
+-   [#225](https://github.com/Robot-Inventor/twi-ext/pull/225) [`f1a90a8`](https://github.com/Robot-Inventor/twi-ext/commit/f1a90a834f4d10d917244e8aba0897f45ea64225) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: add GitHub Actions workflow to verify build success
+
 ## 0.12.2
 
 ### Patch Changes

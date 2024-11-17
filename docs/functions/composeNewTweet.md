@@ -1,8 +1,8 @@
-[**twi-ext v0.12.2**](../README.md) • **Docs**
+[**twi-ext v0.13.0**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.12.2](../README.md) / composeNewTweet
+[twi-ext v0.13.0](../README.md) / composeNewTweet
 
 # Function: composeNewTweet()
 
@@ -31,4 +31,4 @@ Whether to open the tweet composer in a new tab immediately.
 
 ## Defined in
 
-[ts/util.ts:90](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/util.ts#L90)
+[ts/util.ts:92](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/util.ts#L92)

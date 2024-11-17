@@ -1,8 +1,8 @@
-[**twi-ext v0.12.2**](../README.md) • **Docs**
+[**twi-ext v0.13.0**](../README.md) • **Docs**
 
 ***
 
-[twi-ext v0.12.2](../README.md) / Profile
+[twi-ext v0.13.0](../README.md) / Profile
 
 # Class: Profile
 
@@ -28,7 +28,7 @@ The profile element.
 
 #### Defined in
 
-[ts/profile.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/profile.ts#L15)
+[ts/profile.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/profile.ts#L15)
 
 ## Accessors
 
@@ -48,4 +48,4 @@ The React props of the profile element.
 
 #### Defined in
 
-[ts/profile.ts:23](https://github.com/Robot-Inventor/twi-ext/blob/1b0570cc904bcdfb1a5730f7cb91ae1b53d0f2e8/src/ts/profile.ts#L23)
+[ts/profile.ts:23](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/profile.ts#L23)
