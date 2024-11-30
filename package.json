@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
   "dependencies": {
-    "@robot-inventor/ts-utils": "^0.5.0",
+    "@robot-inventor/ts-utils": "^0.6.0",
     "async-query": "^2.0.0"
   },
   "devDependencies": {
