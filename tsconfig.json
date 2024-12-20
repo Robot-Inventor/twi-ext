@@ -1,3 +1,10 @@
 {
-  "extends": "@robot-inventor/tsconfig-base/tsc.json"
+  "extends": "@robot-inventor/tsconfig-base/tsc.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "transform": "typia/lib/transform"
+      }
+    ]
+  }
 }

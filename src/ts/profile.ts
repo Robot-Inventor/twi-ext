@@ -1,6 +1,5 @@
-import type { UserProps } from "../types/reactProps.js";
+import { type UserProps, isProfileReactPropsData } from "../types/reactProps.js";
 import { getReactProps } from "./internal/utility.js";
-import { isProfileReactPropsData } from "../types/reactProps.guard.js";
 
 /**
  * Represents a profile.
