@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.13.2
+
+### Patch Changes
+
+- [#248](https://github.com/Robot-Inventor/twi-ext/pull/248) [`954e335`](https://github.com/Robot-Inventor/twi-ext/commit/954e335f23904a0355a79e4133d59c9888108e45) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: move typia from devDependencies to dependencies
+
 ## 0.13.1
 
 ### Patch Changes
