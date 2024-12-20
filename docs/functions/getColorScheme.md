@@ -1,4 +1,4 @@
-[**twi-ext v0.13.1**](../README.md)
+[**twi-ext v0.13.2**](../README.md)
 
 ***
 
@@ -18,4 +18,4 @@ The color scheme of the page. The possible values are "light", "darkblue", "blac
 
 ## Defined in
 
-[ts/util.ts:9](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/util.ts#L9)
+[ts/util.ts:9](https://github.com/Robot-Inventor/twi-ext/blob/954e335f23904a0355a79e4133d59c9888108e45/src/ts/util.ts#L9)
