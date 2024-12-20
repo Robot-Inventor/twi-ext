@@ -6,8 +6,8 @@ import { isNonEmptyArray } from "@robot-inventor/ts-utils";
  * @returns The React props of the element.
  */
 const getReactProps = (element: HTMLElement): object | null => {
-    const properties = Object.getOwnPropertyNames(element) as Array<keyof typeof element>;
-    const reactPropsNames: Array<keyof HTMLElement> = properties.filter((name) => name.startsWith("__reactProps$"));
+    const properties = Object.getOwnPropertyNames(element);
+    const reactPropsNames = properties.filter((name) => name.startsWith("__reactProps$")) as Array<keyof Element>;
     if (!isNonEmptyArray(reactPropsNames)) return null;
 
     return element[reactPropsNames[0]] as object;
