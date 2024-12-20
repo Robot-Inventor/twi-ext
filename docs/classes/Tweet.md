@@ -1,8 +1,8 @@
-[**twi-ext v0.13.0**](../README.md) • **Docs**
+[**twi-ext v0.13.1**](../README.md)
 
 ***
 
-[twi-ext v0.13.0](../README.md) / Tweet
+[twi-ext](../README.md) / Tweet
 
 # Class: Tweet
 
@@ -18,7 +18,9 @@ Represents a tweet.
 
 #### Parameters
 
-• **tweet**: `HTMLElement`
+##### tweet
+
+`HTMLElement`
 
 The tweet element.
 
@@ -28,7 +30,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L26)
+[ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/tweet.ts#L26)
 
 ## Accessors
 
@@ -48,7 +50,7 @@ The tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L45)
+[ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/tweet.ts#L45)
 
 ***
 
@@ -68,7 +70,7 @@ Metadata of the tweet.
 
 #### Defined in
 
-[ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L64)
+[ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/tweet.ts#L64)
 
 ***
 
@@ -88,7 +90,7 @@ The React props of the tweet element.
 
 #### Defined in
 
-[ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L53)
+[ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/tweet.ts#L53)
 
 ## Methods
 
@@ -105,15 +107,21 @@ it opens new tab with the specified text and the tweet URL.
 
 #### Parameters
 
-• **text**: `string`
+##### text
+
+`string`
 
 Text to tweet.
 
-• **timeoutMs**: `number` = `1000`
+##### timeoutMs
+
+`number` = `1000`
 
 Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode.
 
-• **shouldOpenInNewTab**: `boolean` = `false`
+##### shouldOpenInNewTab
+
+`boolean` = `false`
 
 Whether to open the tweet composer in a new tab immediately.
 
@@ -123,4 +131,4 @@ Whether to open the tweet composer in a new tab immediately.
 
 #### Defined in
 
-[ts/tweet.ts:139](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/tweet.ts#L139)
+[ts/tweet.ts:139](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/tweet.ts#L139)

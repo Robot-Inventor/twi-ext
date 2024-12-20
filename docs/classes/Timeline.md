@@ -1,8 +1,8 @@
-[**twi-ext v0.13.0**](../README.md) • **Docs**
+[**twi-ext v0.13.1**](../README.md)
 
 ***
 
-[twi-ext v0.13.0](../README.md) / Timeline
+[twi-ext](../README.md) / Timeline
 
 # Class: Timeline
 
@@ -18,7 +18,9 @@ A class that observes the timeline and calls a callback when a new tweet is adde
 
 #### Parameters
 
-• **options?**: `Partial`\<[`TimelineOptions`](../interfaces/TimelineOptions.md)\>
+##### options?
+
+`Partial`\<[`TimelineOptions`](../interfaces/TimelineOptions.md)\>
 
 Options for the timeline observer.
 
@@ -28,7 +30,7 @@ Options for the timeline observer.
 
 #### Defined in
 
-[ts/timeline.ts:29](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/timeline.ts#L29)
+[ts/timeline.ts:29](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/timeline.ts#L29)
 
 ## Methods
 
@@ -40,7 +42,9 @@ Set a callback that is called when a new profile is added.
 
 #### Parameters
 
-• **callback**
+##### callback
+
+(`profile`) => `void`
 
 A callback that is called when a new profile is added.
 
@@ -50,7 +54,7 @@ A callback that is called when a new profile is added.
 
 #### Defined in
 
-[ts/timeline.ts:88](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/timeline.ts#L88)
+[ts/timeline.ts:88](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/timeline.ts#L88)
 
 ***
 
@@ -62,7 +66,9 @@ Set a callback that is called when a new tweet is added.
 
 #### Parameters
 
-• **callback**
+##### callback
+
+(`tweet`) => `void`
 
 A callback that is called when a new tweet is added.
 
@@ -72,4 +78,4 @@ A callback that is called when a new tweet is added.
 
 #### Defined in
 
-[ts/timeline.ts:80](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/timeline.ts#L80)
+[ts/timeline.ts:80](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/timeline.ts#L80)

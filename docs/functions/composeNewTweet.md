@@ -1,8 +1,8 @@
-[**twi-ext v0.13.0**](../README.md) • **Docs**
+[**twi-ext v0.13.1**](../README.md)
 
 ***
 
-[twi-ext v0.13.0](../README.md) / composeNewTweet
+[twi-ext](../README.md) / composeNewTweet
 
 # Function: composeNewTweet()
 
@@ -13,15 +13,21 @@ If the function fails to compose a tweet within the specified timeout, it opens 
 
 ## Parameters
 
-• **text**: `string`
+### text
+
+`string`
 
 Text to tweet.
 
-• **timeoutMs**: `number` = `1000`
+### timeoutMs
+
+`number` = `1000`
 
 Timeout in milliseconds. After the specified time has elapsed, it throws an error.
 
-• **shouldOpenInNewTab**: `boolean` = `false`
+### shouldOpenInNewTab
+
+`boolean` = `false`
 
 Whether to open the tweet composer in a new tab immediately.
 
@@ -31,4 +37,4 @@ Whether to open the tweet composer in a new tab immediately.
 
 ## Defined in
 
-[ts/util.ts:92](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/ts/util.ts#L92)
+[ts/util.ts:92](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/ts/util.ts#L92)

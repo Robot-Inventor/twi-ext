@@ -1,8 +1,8 @@
-[**twi-ext v0.13.0**](../README.md) • **Docs**
+[**twi-ext v0.13.1**](../README.md)
 
 ***
 
-[twi-ext v0.13.0](../README.md) / BasicTweetProps
+[twi-ext](../README.md) / BasicTweetProps
 
 # Interface: BasicTweetProps
 
@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/types/reactProps.ts#L13)
+[types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/types/reactProps.ts#L15)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[types/reactProps.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/types/reactProps.ts#L11)
+[types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/types/reactProps.ts#L13)
 
 ***
 
@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[types/reactProps.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/types/reactProps.ts#L12)
+[types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/types/reactProps.ts#L14)
 
 ***
 
@@ -44,4 +44,4 @@
 
 #### Defined in
 
-[types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/a1ec3fb52ced3be3134dfa444de58ad83a671ce0/src/types/reactProps.ts#L14)
+[types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/ed9aaed7e9dce7dc374b0f5176cd6643ec4af3bd/src/types/reactProps.ts#L16)
