@@ -1,3 +1,5 @@
+import typia from "typia";
+
 type ProfileInterstitialType = "" | "sensitive_media" | "fake_account" | "offensive_profile_content" | "timeout";
 
 interface UserProps {
@@ -14,8 +16,7 @@ interface BasicTweetProps {
     user: UserProps;
 }
 
-/** @see {isMenuBarReactProps} ts-auto-guard:type-guard */
-interface menubarReactProps {
+interface MenubarReactProps {
     children: [
         unknown,
         {
@@ -30,10 +31,8 @@ interface menubarReactProps {
     ];
 }
 
-/**
- * @internal
- * @see {isTweetOuterReactPropsData} ts-auto-guard:type-guard
- */
+const isMenubarReactProps = typia.createIs<MenubarReactProps>();
+
 interface TweetOuterReactPropsData {
     children: [
         [
@@ -73,10 +72,8 @@ interface TweetOuterReactPropsData {
     ];
 }
 
-/**
- * @internal
- * @see {isFocalTweetOuterReactPropsData} ts-auto-guard:type-guard
- */
+const isTweetOuterReactPropsData = typia.createIs<TweetOuterReactPropsData>();
+
 interface FocalTweetOuterReactPropsData {
     children: [
         [
@@ -119,7 +116,8 @@ interface FocalTweetOuterReactPropsData {
     ];
 }
 
-/** @see {isProfileReactPropsData} ts-auto-guard:type-guard */
+const isFocalTweetOuterReactPropsData = typia.createIs<FocalTweetOuterReactPropsData>();
+
 interface ProfileReactPropsData {
     children: [
         {
@@ -138,12 +136,14 @@ interface ProfileReactPropsData {
     ];
 }
 
-export type {
-    TweetOuterReactPropsData,
-    FocalTweetOuterReactPropsData,
-    ProfileInterstitialType,
-    UserProps,
-    BasicTweetProps,
-    menubarReactProps,
-    ProfileReactPropsData
+const isProfileReactPropsData = typia.createIs<ProfileReactPropsData>();
+
+export {
+    isTweetOuterReactPropsData,
+    isFocalTweetOuterReactPropsData,
+    type ProfileInterstitialType,
+    type UserProps,
+    type BasicTweetProps,
+    isMenubarReactProps,
+    isProfileReactPropsData
 };

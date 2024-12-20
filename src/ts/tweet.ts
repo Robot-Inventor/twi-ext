@@ -1,10 +1,10 @@
-import { enterTweetText, openTweetComposerInNewTab } from "./util.js";
 import {
+    type BasicTweetProps,
     isFocalTweetOuterReactPropsData,
-    isMenuBarReactProps,
+    isMenubarReactProps,
     isTweetOuterReactPropsData
-} from "../types/reactProps.guard.js";
-import type { BasicTweetProps } from "../types/reactProps.js";
+} from "../types/reactProps.js";
+import { enterTweetText, openTweetComposerInNewTab } from "./util.js";
 import { asyncQuerySelector } from "async-query";
 import { getReactProps } from "./internal/utility.js";
 
@@ -52,7 +52,7 @@ class Tweet {
      */
     public get props(): BasicTweetProps {
         const props = getReactProps(this.getMenuBar());
-        if (!isMenuBarReactProps(props)) throw new Error("[twi-ext] Failed to get React props of tweet");
+        if (!isMenubarReactProps(props)) throw new Error("[twi-ext] Failed to get React props of tweet");
         return props.children[1].props.retweetWithCommentLink.state.quotedStatus;
     }
 

@@ -11,13 +11,14 @@
   ],
   "type": "module",
   "scripts": {
-    "build": "rimraf dist && ts-auto-guard --import-extension=\"js\" ./src/types/**/*.ts && tsc",
+    "build": "rimraf dist && tsc",
     "typedoc": "typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
     "lint": "eslint ./src/ts/**/*.ts ./src/types/**/*.ts",
     "changeset-version": "changeset version && npm run build && npm run typedoc && git add .",
-    "changeset-publish": "npm run build && changeset publish"
+    "changeset-publish": "npm run build && changeset publish",
+    "prepare": "ts-patch install && typia patch"
   },
   "repository": {
     "type": "git",
@@ -48,9 +49,10 @@
     "eslint": "^9.0.0",
     "prettier": "^3.2.5",
     "rimraf": "^6.0.0",
-    "ts-auto-guard": "^5.0.0",
+    "ts-patch": "^3.3.0",
     "typedoc": "^0.27.5",
     "typedoc-plugin-markdown": "^4.0.0",
-    "typescript": "^5.4.4"
+    "typescript": "^5.4.4",
+    "typia": "^7.5.0"
   }
 }
