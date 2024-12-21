@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.13.5
+
+### Patch Changes
+
+- [#255](https://github.com/Robot-Inventor/twi-ext/pull/255) [`1611809`](https://github.com/Robot-Inventor/twi-ext/commit/161180962d20763ef92b105acdbfd3ec11584936) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency async-query to v2.0.8
+
 ## 0.13.4
 
 ### Patch Changes
