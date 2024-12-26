@@ -1,4 +1,4 @@
-[**twi-ext v0.13.5**](../README.md)
+[**twi-ext v0.13.6**](../README.md)
 
 ***
 
@@ -37,4 +37,4 @@ Whether to open the tweet composer in a new tab immediately.
 
 ## Defined in
 
-[ts/util.ts:92](https://github.com/Robot-Inventor/twi-ext/blob/161180962d20763ef92b105acdbfd3ec11584936/src/ts/util.ts#L92)
+[ts/util.ts:92](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/ts/util.ts#L92)

@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.13.6
+
+### Patch Changes
+
+- [#260](https://github.com/Robot-Inventor/twi-ext/pull/260) [`56a9e07`](https://github.com/Robot-Inventor/twi-ext/commit/56a9e071cee410259f93c31f302738fc7524caa8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: correct issue where `TweetMetadata.isPostedByCurrentUser` always returns `false`
+
+- [#259](https://github.com/Robot-Inventor/twi-ext/pull/259) [`4278461`](https://github.com/Robot-Inventor/twi-ext/commit/42784617a8b776509d1d8f3ac97bb25898b0f014) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: resolve constant error in retrieving React props of tweet
+
 ## 0.13.5
 
 ### Patch Changes

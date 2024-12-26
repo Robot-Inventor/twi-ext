@@ -1,4 +1,4 @@
-[**twi-ext v0.13.5**](../README.md)
+[**twi-ext v0.13.6**](../README.md)
 
 ***
 
@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[ts/tweet.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/161180962d20763ef92b105acdbfd3ec11584936/src/ts/tweet.ts#L12)
+[ts/tweet.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/ts/tweet.ts#L12)
 
 ***
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[ts/tweet.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/161180962d20763ef92b105acdbfd3ec11584936/src/ts/tweet.ts#L13)
+[ts/tweet.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/ts/tweet.ts#L13)
