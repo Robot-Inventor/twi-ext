@@ -27,7 +27,8 @@ interface MenubarReactProps {
                     };
                 };
             };
-        }
+        },
+        ...unknown[]
     ];
 }
 
