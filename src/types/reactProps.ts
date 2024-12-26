@@ -57,18 +57,24 @@ interface TweetOuterReactPropsData {
                                                                 screen_name: string;
                                                             };
                                                         };
-                                                    }
-                                                ]
+                                                    },
+                                                    ...unknown[]
+                                                ],
+                                                ...unknown[]
                                             ];
                                         };
-                                    }
+                                    },
+                                    ...unknown[]
                                 ];
                             };
-                        }
+                        },
+                        ...unknown[]
                     ];
                 };
-            }
-        ]
+            },
+            ...unknown[]
+        ],
+        ...unknown[]
     ];
 }
 
@@ -102,17 +108,22 @@ interface FocalTweetOuterReactPropsData {
                                                             screen_name: string;
                                                         };
                                                     };
-                                                }
+                                                },
+                                                ...unknown[]
                                             ];
                                         };
-                                    }
+                                    },
+                                    ...unknown[]
                                 ];
                             };
-                        }
+                        },
+                        ...unknown[]
                     ];
                 };
-            }
-        ]
+            },
+            ...unknown[]
+        ],
+        ...unknown[]
     ];
 }
 
