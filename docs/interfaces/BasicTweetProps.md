@@ -1,4 +1,4 @@
-[**twi-ext v0.13.6**](../README.md)
+[**twi-ext v0.13.7**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: BasicTweetProps
 
+Defined in: [types/reactProps.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/types/reactProps.ts#L12)
+
 ## Properties
 
 ### permalink
 
 > **permalink**: `string`
 
-#### Defined in
-
-[types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/types/reactProps.ts#L15)
+Defined in: [types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/types/reactProps.ts#L15)
 
 ***
 
@@ -22,9 +22,7 @@
 
 > `optional` **possibly\_sensitive**: `null` \| `boolean`
 
-#### Defined in
-
-[types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/types/reactProps.ts#L13)
+Defined in: [types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/types/reactProps.ts#L13)
 
 ***
 
@@ -32,9 +30,7 @@
 
 > `optional` **possibly\_sensitive\_editable**: `null` \| `boolean`
 
-#### Defined in
-
-[types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/types/reactProps.ts#L14)
+Defined in: [types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/types/reactProps.ts#L14)
 
 ***
 
@@ -42,6 +38,4 @@
 
 > **user**: [`UserProps`](UserProps.md)
 
-#### Defined in
-
-[types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/types/reactProps.ts#L16)
+Defined in: [types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/types/reactProps.ts#L16)
