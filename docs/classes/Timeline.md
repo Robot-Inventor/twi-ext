@@ -1,10 +1,12 @@
-[**twi-ext v0.13.6**](../README.md)
+[**twi-ext v0.13.7**](../README.md)
 
 ***
 
 [twi-ext](../README.md) / Timeline
 
 # Class: Timeline
+
+Defined in: [ts/timeline.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/ts/timeline.ts#L16)
 
 A class that observes the timeline and calls a callback when a new tweet is added.
 
@@ -13,6 +15,8 @@ A class that observes the timeline and calls a callback when a new tweet is adde
 ### new Timeline()
 
 > **new Timeline**(`options`?): [`Timeline`](Timeline.md)
+
+Defined in: [ts/timeline.ts:29](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/ts/timeline.ts#L29)
 
 A class that observes the timeline and calls a callback when a new tweet is added.
 
@@ -28,15 +32,13 @@ Options for the timeline observer.
 
 [`Timeline`](Timeline.md)
 
-#### Defined in
-
-[ts/timeline.ts:29](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/ts/timeline.ts#L29)
-
 ## Methods
 
 ### onNewProfile()
 
 > **onNewProfile**(`callback`): `void`
+
+Defined in: [ts/timeline.ts:88](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/ts/timeline.ts#L88)
 
 Set a callback that is called when a new profile is added.
 
@@ -52,15 +54,13 @@ A callback that is called when a new profile is added.
 
 `void`
 
-#### Defined in
-
-[ts/timeline.ts:88](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/ts/timeline.ts#L88)
-
 ***
 
 ### onNewTweet()
 
 > **onNewTweet**(`callback`): `void`
+
+Defined in: [ts/timeline.ts:80](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/ts/timeline.ts#L80)
 
 Set a callback that is called when a new tweet is added.
 
@@ -75,7 +75,3 @@ A callback that is called when a new tweet is added.
 #### Returns
 
 `void`
-
-#### Defined in
-
-[ts/timeline.ts:80](https://github.com/Robot-Inventor/twi-ext/blob/56a9e071cee410259f93c31f302738fc7524caa8/src/ts/timeline.ts#L80)
