@@ -1,4 +1,4 @@
-[**twi-ext v0.13.7**](../README.md)
+[**twi-ext v0.13.8**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **composeNewTweet**(`text`, `timeoutMs`, `shouldOpenInNewTab`): `Promise`\<`void`\>
 
-Defined in: [ts/util.ts:92](https://github.com/Robot-Inventor/twi-ext/blob/63b474ab27265f4d9a10975689884c45853cd758/src/ts/util.ts#L92)
+Defined in: [ts/util.ts:92](https://github.com/Robot-Inventor/twi-ext/blob/ac90004a4dfae5ddc8597d029cf1f1ea18096b13/src/ts/util.ts#L92)
 
 Compose a new tweet with the specified text.
 If the function fails to compose a tweet within the specified timeout, it opens a new tab with the tweet text and URL.
