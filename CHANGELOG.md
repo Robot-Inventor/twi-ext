@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.13.9
+
+### Patch Changes
+
+- [#299](https://github.com/Robot-Inventor/twi-ext/pull/299) [`fe95737`](https://github.com/Robot-Inventor/twi-ext/commit/fe957378fb53749d83e58a8f90bcdc42db1e9a35) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: update type definitions to match latest specification changes
+
 ## 0.13.8
 
 ### Patch Changes
