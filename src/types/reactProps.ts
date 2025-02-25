@@ -1,4 +1,4 @@
-import typia from "typia";
+import { createIs } from "typia";
 
 type ProfileInterstitialType = "" | "sensitive_media" | "fake_account" | "offensive_profile_content" | "timeout";
 
@@ -32,7 +32,7 @@ interface MenubarReactProps {
     ];
 }
 
-const isMenubarReactProps = typia.createIs<MenubarReactProps>();
+const isMenubarReactProps = createIs<MenubarReactProps>();
 
 interface TweetOuterReactPropsData {
     children: [
@@ -79,7 +79,7 @@ interface TweetOuterReactPropsData {
     ];
 }
 
-const isTweetOuterReactPropsData = typia.createIs<TweetOuterReactPropsData>();
+const isTweetOuterReactPropsData = createIs<TweetOuterReactPropsData>();
 
 interface FocalTweetOuterReactPropsData {
     children: [
@@ -96,6 +96,7 @@ interface FocalTweetOuterReactPropsData {
                                     {
                                         props: {
                                             children: [
+                                                unknown,
                                                 unknown,
                                                 unknown,
                                                 unknown,
@@ -128,7 +129,7 @@ interface FocalTweetOuterReactPropsData {
     ];
 }
 
-const isFocalTweetOuterReactPropsData = typia.createIs<FocalTweetOuterReactPropsData>();
+const isFocalTweetOuterReactPropsData = createIs<FocalTweetOuterReactPropsData>();
 
 interface ProfileReactPropsData {
     children: [
@@ -148,7 +149,7 @@ interface ProfileReactPropsData {
     ];
 }
 
-const isProfileReactPropsData = typia.createIs<ProfileReactPropsData>();
+const isProfileReactPropsData = createIs<ProfileReactPropsData>();
 
 export {
     isTweetOuterReactPropsData,

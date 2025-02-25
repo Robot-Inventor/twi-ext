@@ -77,7 +77,7 @@ class Tweet {
 
         if (isFocalMode) {
             loggedInUserScreenName =
-                tweetOuterProps.children[0][1].props.children[0].props.children[2].props.children[7].props.loggedInUser
+                tweetOuterProps.children[0][1].props.children[0].props.children[2].props.children[8].props.loggedInUser
                     .screen_name;
         }
 
