@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.13.11
+
+### Patch Changes
+
+- [#304](https://github.com/Robot-Inventor/twi-ext/pull/304) [`6560d56`](https://github.com/Robot-Inventor/twi-ext/commit/6560d56bffdd1ffeec3470726601b9ed679c2f40) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typescript to v5.8.2
+
 ## 0.13.10
 
 ### Patch Changes
