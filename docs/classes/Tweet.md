@@ -1,4 +1,4 @@
-[**twi-ext v0.13.12**](../README.md)
+[**twi-ext v0.13.13**](../README.md)
 
 ***
 
@@ -6,17 +6,17 @@
 
 # Class: Tweet
 
-Defined in: [ts/tweet.ts:19](https://github.com/Robot-Inventor/twi-ext/blob/8b545e372d37d3bd8a9a60b4daddf6602af884b4/src/ts/tweet.ts#L19)
+Defined in: [ts/tweet.ts:19](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/tweet.ts#L19)
 
 Represents a tweet.
 
 ## Constructors
 
-### new Tweet()
+### Constructor
 
-> **new Tweet**(`tweet`): [`Tweet`](Tweet.md)
+> **new Tweet**(`tweet`): `Tweet`
 
-Defined in: [ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/8b545e372d37d3bd8a9a60b4daddf6602af884b4/src/ts/tweet.ts#L26)
+Defined in: [ts/tweet.ts:26](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/tweet.ts#L26)
 
 Represents a tweet.
 
@@ -30,7 +30,7 @@ The tweet element.
 
 #### Returns
 
-[`Tweet`](Tweet.md)
+`Tweet`
 
 ## Accessors
 
@@ -40,7 +40,7 @@ The tweet element.
 
 > **get** **element**(): `HTMLElement`
 
-Defined in: [ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/8b545e372d37d3bd8a9a60b4daddf6602af884b4/src/ts/tweet.ts#L45)
+Defined in: [ts/tweet.ts:45](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/tweet.ts#L45)
 
 Get the tweet element.
 
@@ -58,7 +58,7 @@ The tweet element.
 
 > **get** **metadata**(): [`TweetMetadata`](../interfaces/TweetMetadata.md)
 
-Defined in: [ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/8b545e372d37d3bd8a9a60b4daddf6602af884b4/src/ts/tweet.ts#L64)
+Defined in: [ts/tweet.ts:64](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/tweet.ts#L64)
 
 Get metadata of the tweet.
 
@@ -76,7 +76,7 @@ Metadata of the tweet.
 
 > **get** **props**(): [`BasicTweetProps`](../interfaces/BasicTweetProps.md)
 
-Defined in: [ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/8b545e372d37d3bd8a9a60b4daddf6602af884b4/src/ts/tweet.ts#L53)
+Defined in: [ts/tweet.ts:53](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/tweet.ts#L53)
 
 Get the React props of the tweet element.
 
@@ -92,7 +92,7 @@ The React props of the tweet element.
 
 > **quoteTweet**(`text`, `timeoutMs`, `shouldOpenInNewTab`): `Promise`\<`void`\>
 
-Defined in: [ts/tweet.ts:139](https://github.com/Robot-Inventor/twi-ext/blob/8b545e372d37d3bd8a9a60b4daddf6602af884b4/src/ts/tweet.ts#L139)
+Defined in: [ts/tweet.ts:139](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/tweet.ts#L139)
 
 Quote specified tweet with specified text.
 This function opens the compose screen and inputs text.
