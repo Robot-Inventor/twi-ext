@@ -34,102 +34,15 @@ interface MenubarReactProps {
 
 const isMenubarReactProps = createIs<MenubarReactProps>();
 
-interface TweetOuterReactPropsData {
-    children: [
-        [
-            unknown,
-            {
-                props: {
-                    children: [
-                        {
-                            props: {
-                                children: [
-                                    unknown,
-                                    {
-                                        props: {
-                                            children: [
-                                                unknown,
-                                                [
-                                                    unknown,
-                                                    unknown,
-                                                    {
-                                                        props: {
-                                                            loggedInUser: {
-                                                                screen_name: string;
-                                                            };
-                                                        };
-                                                    },
-                                                    ...unknown[]
-                                                ],
-                                                ...unknown[]
-                                            ];
-                                        };
-                                    },
-                                    ...unknown[]
-                                ];
-                            };
-                        },
-                        ...unknown[]
-                    ];
-                };
-            },
-            ...unknown[]
-        ],
-        ...unknown[]
-    ];
+interface MenubarGrandparentReactProps {
+    children: {
+        props: {
+            isFocalTweet: boolean;
+        };
+    };
 }
 
-const isTweetOuterReactPropsData = createIs<TweetOuterReactPropsData>();
-
-interface FocalTweetOuterReactPropsData {
-    children: [
-        [
-            unknown,
-            {
-                props: {
-                    children: [
-                        {
-                            props: {
-                                children: [
-                                    unknown,
-                                    unknown,
-                                    {
-                                        props: {
-                                            children: [
-                                                unknown,
-                                                unknown,
-                                                unknown,
-                                                unknown,
-                                                unknown,
-                                                unknown,
-                                                unknown,
-                                                unknown,
-                                                {
-                                                    props: {
-                                                        loggedInUser: {
-                                                            screen_name: string;
-                                                        };
-                                                    };
-                                                },
-                                                ...unknown[]
-                                            ];
-                                        };
-                                    },
-                                    ...unknown[]
-                                ];
-                            };
-                        },
-                        ...unknown[]
-                    ];
-                };
-            },
-            ...unknown[]
-        ],
-        ...unknown[]
-    ];
-}
-
-const isFocalTweetOuterReactPropsData = createIs<FocalTweetOuterReactPropsData>();
+const isMenubarGrandparentReactProps = createIs<MenubarGrandparentReactProps>();
 
 interface ProfileReactPropsData {
     children: [
@@ -152,11 +65,10 @@ interface ProfileReactPropsData {
 const isProfileReactPropsData = createIs<ProfileReactPropsData>();
 
 export {
-    isTweetOuterReactPropsData,
-    isFocalTweetOuterReactPropsData,
     type ProfileInterstitialType,
     type UserProps,
     type BasicTweetProps,
     isMenubarReactProps,
+    isMenubarGrandparentReactProps,
     isProfileReactPropsData
 };

@@ -1,12 +1,7 @@
-import {
-    type BasicTweetProps,
-    isFocalTweetOuterReactPropsData,
-    isMenubarReactProps,
-    isTweetOuterReactPropsData
-} from "../types/reactProps.js";
+import { type BasicTweetProps, isMenubarGrandparentReactProps, isMenubarReactProps } from "../types/reactProps.js";
 import { enterTweetText, openTweetComposerInNewTab } from "./util.js";
+import { getInitialState, getReactProps } from "./internal/utility.js";
 import { asyncQuerySelector } from "async-query";
-import { getReactProps } from "./internal/utility.js";
 
 interface TweetMetadata {
     isFocalMode: boolean;
@@ -60,26 +55,21 @@ class Tweet {
      * Get metadata of the tweet.
      * @returns Metadata of the tweet.
      */
-    // eslint-disable-next-line max-statements
     public get metadata(): TweetMetadata {
         const tweetAuthorScreenName = this.props.user.screen_name;
-        const tweetOuterProps = getReactProps(this.element);
-        if (!tweetOuterProps) throw new Error("[twi-ext] Failed to get React props of tweet");
 
-        let loggedInUserScreenName: string | null = null;
-        const isFocalMode = isFocalTweetOuterReactPropsData(tweetOuterProps);
+        const grandparentOfMenuBar = this.getMenuBar().parentElement?.parentElement;
+        if (!grandparentOfMenuBar) throw new Error("[twi-ext] Failed to get grandparent of menu bar of tweet");
 
-        if (isTweetOuterReactPropsData(tweetOuterProps)) {
-            loggedInUserScreenName =
-                tweetOuterProps.children[0][1].props.children[0].props.children[1].props.children[1][2].props
-                    .loggedInUser.screen_name;
+        const grandparentProps = getReactProps(grandparentOfMenuBar);
+        if (!isMenubarGrandparentReactProps(grandparentProps)) {
+            throw new Error(
+                "[twi-ext] Failed to determine whether it is in focal mode. There may have been a change in X's specifications."
+            );
         }
 
-        if (isFocalMode) {
-            loggedInUserScreenName =
-                tweetOuterProps.children[0][1].props.children[0].props.children[2].props.children[8].props.loggedInUser
-                    .screen_name;
-        }
+        const loggedInUserScreenName = getInitialState().settings.remote.settings.screen_name;
+        const isFocalMode = grandparentProps.children.props.isFocalTweet;
 
         const result: TweetMetadata = {
             isFocalMode,
