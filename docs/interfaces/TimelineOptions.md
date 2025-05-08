@@ -1,4 +1,4 @@
-[**twi-ext v0.13.13**](../README.md)
+[**twi-ext v0.14.0**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TimelineOptions
 
-Defined in: [ts/timeline.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/timeline.ts#L5)
+Defined in: [ts/timeline.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/8c0db3e46c0b7e67bb5a44a6d2d438c7ebb9f592/src/ts/timeline.ts#L5)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [ts/timeline.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/db
 
 > **timeoutMs**: `number`
 
-Defined in: [ts/timeline.ts:10](https://github.com/Robot-Inventor/twi-ext/blob/db8d2997cb698cd5fee2ae46f3b7bc7c50c3658f/src/ts/timeline.ts#L10)
+Defined in: [ts/timeline.ts:10](https://github.com/Robot-Inventor/twi-ext/blob/8c0db3e46c0b7e67bb5a44a6d2d438c7ebb9f592/src/ts/timeline.ts#L10)
 
 The maximum time to wait for the timeline element to be found.
 

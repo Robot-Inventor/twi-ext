@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.14.0
+
+### Minor Changes
+
+- [#340](https://github.com/Robot-Inventor/twi-ext/pull/340) [`c4fe22c`](https://github.com/Robot-Inventor/twi-ext/commit/c4fe22c15b20ca683ab380c755bf472cfa554e79) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: restore broken features due to X spec change and make `TweetMetadata` detection more robust
+
 ## 0.13.13
 
 ### Patch Changes
