@@ -1,4 +1,4 @@
-[**twi-ext v0.14.0**](../README.md)
+[**twi-ext v0.15.0**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Function: getColorScheme()
 
-> **getColorScheme**(): `"light"` \| `"darkblue"` \| `"black"` \| `"unknown"`
+> **getColorScheme**(): [`ColorScheme`](../type-aliases/ColorScheme.md)
 
-Defined in: [ts/util.ts:9](https://github.com/Robot-Inventor/twi-ext/blob/8c0db3e46c0b7e67bb5a44a6d2d438c7ebb9f592/src/ts/util.ts#L9)
+Defined in: [ts/util.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/7628f034c80ad423e858393d32ec5e16e5e017f8/src/ts/util.ts#L11)
 
 Get the current color scheme of the page.
 
 ## Returns
 
-`"light"` \| `"darkblue"` \| `"black"` \| `"unknown"`
+[`ColorScheme`](../type-aliases/ColorScheme.md)
 
 The color scheme of the page. The possible values are "light", "darkblue", "black", and "unknown".

@@ -1,8 +1,8 @@
-**twi-ext v0.14.0**
+**twi-ext v0.15.0**
 
 ***
 
-# twi-ext v0.14.0
+# twi-ext v0.15.0
 
 ## Classes
 
@@ -19,9 +19,11 @@
 
 ## Type Aliases
 
+- [ColorScheme](type-aliases/ColorScheme.md)
 - [ProfileInterstitialType](type-aliases/ProfileInterstitialType.md)
 
 ## Functions
 
 - [composeNewTweet](functions/composeNewTweet.md)
 - [getColorScheme](functions/getColorScheme.md)
+- [onColorSchemeChange](functions/onColorSchemeChange.md)

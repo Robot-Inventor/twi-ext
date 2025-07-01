@@ -1,5 +1,15 @@
 # twi-ext
 
+## 0.15.0
+
+### Minor Changes
+
+- [#354](https://github.com/Robot-Inventor/twi-ext/pull/354) [`7628f03`](https://github.com/Robot-Inventor/twi-ext/commit/7628f034c80ad423e858393d32ec5e16e5e017f8) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add `onColorSchemeChange()` utility and `ColorScheme` type
+
+### Patch Changes
+
+- [#342](https://github.com/Robot-Inventor/twi-ext/pull/342) [`d1dacfb`](https://github.com/Robot-Inventor/twi-ext/commit/d1dacfb9b7e5dcbc7d87050b9d0143fed6e10d08) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency typia to v9.3.1
+
 ## 0.14.0
 
 ### Minor Changes
