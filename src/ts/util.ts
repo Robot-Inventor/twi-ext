@@ -2,11 +2,13 @@ import { TWEETDECK_DOMAINS } from "./constants.js";
 import { asyncQuerySelectorAll } from "async-query";
 import { isNonEmptyArray } from "@robot-inventor/ts-utils";
 
+type ColorScheme = "light" | "darkblue" | "black" | "unknown";
+
 /**
  * Get the current color scheme of the page.
  * @returns The color scheme of the page. The possible values are "light", "darkblue", "black", and "unknown".
  */
-const getColorScheme = (): "light" | "darkblue" | "black" | "unknown" => {
+const getColorScheme = (): ColorScheme => {
     const background = document.body.style.backgroundColor;
     switch (background) {
         case "rgb(255, 255, 255)":
@@ -21,6 +23,24 @@ const getColorScheme = (): "light" | "darkblue" | "black" | "unknown" => {
         default:
             return "unknown";
     }
+};
+
+/**
+ * Observe changes in the color scheme of the page and call the specified callback function when it changes.
+ * @param callback Callback function to call when the color scheme changes.
+ */
+const onColorSchemeChange = (callback: (colorScheme: ColorScheme) => void): void => {
+    let previousColorScheme = getColorScheme();
+
+    const observer = new MutationObserver(() => {
+        const colorScheme = getColorScheme();
+        if (colorScheme === previousColorScheme) return;
+
+        previousColorScheme = colorScheme;
+        callback(colorScheme);
+    });
+
+    observer.observe(document.body, { attributeFilter: ["style"], attributes: true });
 };
 
 /**
@@ -109,4 +129,11 @@ const composeNewTweet = async (text: string, timeoutMs = 1000, shouldOpenInNewTa
     }
 };
 
-export { getColorScheme, enterTweetText, openTweetComposerInNewTab, composeNewTweet };
+export {
+    type ColorScheme,
+    getColorScheme,
+    onColorSchemeChange,
+    enterTweetText,
+    openTweetComposerInNewTab,
+    composeNewTweet
+};
