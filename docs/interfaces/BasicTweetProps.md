@@ -1,4 +1,4 @@
-[**twi-ext v0.15.0**](../README.md)
+[**twi-ext v0.15.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BasicTweetProps
 
-Defined in: [types/reactProps.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/7628f034c80ad423e858393d32ec5e16e5e017f8/src/types/reactProps.ts#L12)
+Defined in: [types/reactProps.ts:12](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L12)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/reactProps.ts:12](https://github.com/Robot-Inventor/twi-ext/b
 
 > **permalink**: `string`
 
-Defined in: [types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/7628f034c80ad423e858393d32ec5e16e5e017f8/src/types/reactProps.ts#L15)
+Defined in: [types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L15)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/b
 
 > `optional` **possibly\_sensitive**: `null` \| `boolean`
 
-Defined in: [types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/7628f034c80ad423e858393d32ec5e16e5e017f8/src/types/reactProps.ts#L13)
+Defined in: [types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L13)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/b
 
 > `optional` **possibly\_sensitive\_editable**: `null` \| `boolean`
 
-Defined in: [types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/7628f034c80ad423e858393d32ec5e16e5e017f8/src/types/reactProps.ts#L14)
+Defined in: [types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L14)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/b
 
 > **user**: [`UserProps`](UserProps.md)
 
-Defined in: [types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/7628f034c80ad423e858393d32ec5e16e5e017f8/src/types/reactProps.ts#L16)
+Defined in: [types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L16)

@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.15.1
+
+### Patch Changes
+
+- [#362](https://github.com/Robot-Inventor/twi-ext/pull/362) [`eddc0d5`](https://github.com/Robot-Inventor/twi-ext/commit/eddc0d5719158952055e3534e272bc14561b8c30) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: remove unnecessary optional chain
+
 ## 0.15.0
 
 ### Minor Changes
