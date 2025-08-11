@@ -1,5 +1,17 @@
 # twi-ext
 
+## 0.15.2
+
+### Patch Changes
+
+- [#371](https://github.com/Robot-Inventor/twi-ext/pull/371) [`a821b68`](https://github.com/Robot-Inventor/twi-ext/commit/a821b682da901bd58ce4a79e4ba99715c21f46b1) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
+- [#366](https://github.com/Robot-Inventor/twi-ext/pull/366) [`e1fc343`](https://github.com/Robot-Inventor/twi-ext/commit/e1fc343be23436036fe5edff8ee4936391bb2f4f) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency typia to v9.7.1
+
+- [#370](https://github.com/Robot-Inventor/twi-ext/pull/370) [`491c36b`](https://github.com/Robot-Inventor/twi-ext/commit/491c36b37983fd866c0a3372fe249e459da578fa) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - ci: migrate from npm token to trusted publishing
+
+- [#364](https://github.com/Robot-Inventor/twi-ext/pull/364) [`231267e`](https://github.com/Robot-Inventor/twi-ext/commit/231267e590b1048c64651149aaa83e803f75f42a) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency @robot-inventor/ts-utils to v0.8.1
+
 ## 0.15.1
 
 ### Patch Changes

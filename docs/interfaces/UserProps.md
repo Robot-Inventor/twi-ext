@@ -1,4 +1,4 @@
-[**twi-ext v0.15.1**](../README.md)
+[**twi-ext v0.15.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UserProps
 
-Defined in: [types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L5)
+Defined in: [types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/e1fc343be23436036fe5edff8ee4936391bb2f4f/src/types/reactProps.ts#L5)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/bl
 
 > `optional` **possibly\_sensitive**: `null` \| `boolean`
 
-Defined in: [types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L6)
+Defined in: [types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/e1fc343be23436036fe5edff8ee4936391bb2f4f/src/types/reactProps.ts#L6)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/bl
 
 > **profile\_interstitial\_type**: [`ProfileInterstitialType`](../type-aliases/ProfileInterstitialType.md)
 
-Defined in: [types/reactProps.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L8)
+Defined in: [types/reactProps.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/e1fc343be23436036fe5edff8ee4936391bb2f4f/src/types/reactProps.ts#L8)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [types/reactProps.ts:8](https://github.com/Robot-Inventor/twi-ext/bl
 
 > **screen\_name**: `string`
 
-Defined in: [types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L7)
+Defined in: [types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/e1fc343be23436036fe5edff8ee4936391bb2f4f/src/types/reactProps.ts#L7)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/bl
 
 > **withheld\_in\_countries**: `string`[]
 
-Defined in: [types/reactProps.ts:9](https://github.com/Robot-Inventor/twi-ext/blob/eddc0d5719158952055e3534e272bc14561b8c30/src/types/reactProps.ts#L9)
+Defined in: [types/reactProps.ts:9](https://github.com/Robot-Inventor/twi-ext/blob/e1fc343be23436036fe5edff8ee4936391bb2f4f/src/types/reactProps.ts#L9)
