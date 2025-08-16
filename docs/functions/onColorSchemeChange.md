@@ -1,4 +1,4 @@
-[**twi-ext v0.15.2**](../README.md)
+[**twi-ext v0.15.3**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **onColorSchemeChange**(`callback`): `void`
 
-Defined in: [ts/util.ts:32](https://github.com/Robot-Inventor/twi-ext/blob/e1fc343be23436036fe5edff8ee4936391bb2f4f/src/ts/util.ts#L32)
+Defined in: [ts/util.ts:32](https://github.com/Robot-Inventor/twi-ext/blob/c7c5a9c194427db3fa539bce55edd3842efb96b5/src/ts/util.ts#L32)
 
 Observe changes in the color scheme of the page and call the specified callback function when it changes.
 

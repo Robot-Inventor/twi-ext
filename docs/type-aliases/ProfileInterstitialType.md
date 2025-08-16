@@ -1,4 +1,4 @@
-[**twi-ext v0.15.2**](../README.md)
+[**twi-ext v0.15.3**](../README.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 > **ProfileInterstitialType** = `""` \| `"sensitive_media"` \| `"fake_account"` \| `"offensive_profile_content"` \| `"timeout"`
 
-Defined in: [types/reactProps.ts:3](https://github.com/Robot-Inventor/twi-ext/blob/e1fc343be23436036fe5edff8ee4936391bb2f4f/src/types/reactProps.ts#L3)
+Defined in: [types/reactProps.ts:3](https://github.com/Robot-Inventor/twi-ext/blob/c7c5a9c194427db3fa539bce55edd3842efb96b5/src/types/reactProps.ts#L3)
