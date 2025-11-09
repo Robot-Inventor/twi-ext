@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.15.5
+
+### Patch Changes
+
+- [#400](https://github.com/Robot-Inventor/twi-ext/pull/400) [`dabf4ec`](https://github.com/Robot-Inventor/twi-ext/commit/dabf4ec7f7e2ce12837037345bc3f3add9a1f9f9) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency typia to v10
+
+- [#402](https://github.com/Robot-Inventor/twi-ext/pull/402) [`9638319`](https://github.com/Robot-Inventor/twi-ext/commit/9638319581a846ece708db91708851e070e3cb03) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typia to v10.0.2
+
 ## 0.15.4
 
 ### Patch Changes

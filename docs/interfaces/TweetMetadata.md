@@ -1,4 +1,4 @@
-[**twi-ext v0.15.4**](../README.md)
+[**twi-ext v0.15.5**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TweetMetadata
 
-Defined in: [ts/tweet.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/e4f881062839cdf3cc18a87d323a12995b68badf/src/ts/tweet.ts#L6)
+Defined in: [ts/tweet.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/9638319581a846ece708db91708851e070e3cb03/src/ts/tweet.ts#L6)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [ts/tweet.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/e4f88
 
 > **isFocalMode**: `boolean`
 
-Defined in: [ts/tweet.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/e4f881062839cdf3cc18a87d323a12995b68badf/src/ts/tweet.ts#L7)
+Defined in: [ts/tweet.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/9638319581a846ece708db91708851e070e3cb03/src/ts/tweet.ts#L7)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [ts/tweet.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/e4f88
 
 > **isPostedByCurrentUser**: `boolean`
 
-Defined in: [ts/tweet.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/e4f881062839cdf3cc18a87d323a12995b68badf/src/ts/tweet.ts#L8)
+Defined in: [ts/tweet.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/9638319581a846ece708db91708851e070e3cb03/src/ts/tweet.ts#L8)
