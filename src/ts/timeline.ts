@@ -189,18 +189,22 @@ class Timeline {
             }
         }
 
-        const expectedScreenName = nameContainer?.innerText && Timeline.normalizeScreenName(nameContainer.innerText);
+        const expectedScreenName = nameContainer ? Timeline.normalizeScreenName(nameContainer.innerText) : null;
         this.emitProfileWithFreshProps(profile, expectedScreenName);
     }
 
     /**
      * Emit a Profile after waiting for React props to align with the visible name.
      * @param targetElement Any descendant within the profile to anchor lookup.
-     * @param expectedScreenName Optional lowercase screen name text to match.
+     * @param $expectedScreenName Optional lowercase screen name text to match.
      * @param attempt Current retry attempt count.
      */
     // eslint-disable-next-line no-magic-numbers
-    private emitProfileWithFreshProps(targetElement: HTMLElement, expectedScreenName?: string, attempt = 0): void {
+    private emitProfileWithFreshProps(
+        targetElement: HTMLElement,
+        $expectedScreenName?: string | null,
+        attempt = 0
+    ): void {
         if (!this.onNewProfileCallback) return;
 
         const profileElement = targetElement.closest<HTMLElement>('[data-testid="UserName"]');
@@ -208,9 +212,9 @@ class Timeline {
 
         const profile = new Profile(profileElement);
         const screenName = Timeline.normalizeScreenName(profile.props.screen_name);
-        const expected = expectedScreenName ?? screenName;
+        const expectedScreenName = $expectedScreenName ?? screenName;
 
-        if (screenName !== expected && attempt < Timeline.PROFILE_PROPS_MAX_ATTEMPTS) {
+        if (screenName !== expectedScreenName && attempt < Timeline.PROFILE_PROPS_MAX_ATTEMPTS) {
             requestAnimationFrame(() => {
                 // eslint-disable-next-line no-magic-numbers
                 this.emitProfileWithFreshProps(targetElement, expectedScreenName, attempt + 1);
