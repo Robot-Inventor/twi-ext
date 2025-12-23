@@ -199,10 +199,10 @@ class Timeline {
      * @param $expectedScreenName Optional lowercase screen name text to match.
      * @param attempt Current retry attempt count.
      */
-    // eslint-disable-next-line no-magic-numbers
     private emitProfileWithFreshProps(
         targetElement: HTMLElement,
         $expectedScreenName?: string | null,
+        // eslint-disable-next-line no-magic-numbers
         attempt = 0
     ): void {
         if (!this.onNewProfileCallback) return;

@@ -34,9 +34,9 @@ const getReactFiber = (element: HTMLElement): ReactFiber | null => {
 };
 
 /**
- * Traverse a fiber tree to find the latest UserProps.
+ * Get UserProps from the React fiber associated with a profile element.
  * @param profileElement The profile element.
- * @returns The latest UserProps found in the fiber tree, or null if not found.
+ * @returns The latest UserProps found on the element's fiber node, or null if not found.
  */
 const getUserPropsFromFiberTree = (profileElement: HTMLElement): UserProps | null => {
     const fiber = getReactFiber(profileElement);
