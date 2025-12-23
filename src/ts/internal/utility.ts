@@ -1,4 +1,4 @@
-import { isProfileReactPropsData, type UserProps } from "../../types/reactProps.js";
+import { type UserProps, isProfileReactPropsData } from "../../types/reactProps.js";
 import type { InitialState } from "../../types/initialState.js";
 import { json } from "typia";
 
