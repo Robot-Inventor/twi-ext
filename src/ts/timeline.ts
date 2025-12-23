@@ -18,6 +18,10 @@ class Timeline {
         childList: true,
         subtree: true
     } as const;
+    private readonly profileNameObservers = new WeakMap<
+        HTMLElement,
+        { observer: MutationObserver; lastName: string }
+    >();
 
     private onNewTweetCallback: ((tweet: Tweet) => void) | null = null;
     private onNewProfileCallback: ((profile: Profile) => void) | null = null;
@@ -55,6 +59,7 @@ class Timeline {
                 if (profile) {
                     profile.setAttribute(checkedDataAttribute, "");
                     this.onNewProfileCallback(new Profile(profile));
+                    this.observeProfileName(profile);
                 }
             }
         });
@@ -87,6 +92,39 @@ class Timeline {
      */
     public onNewProfile(callback: (profile: Profile) => void): void {
         this.onNewProfileCallback = callback;
+    }
+
+    /**
+     * Observe the screen name container within a profile element and fire
+     * the profile callback when its text changes (handles SPA navigation
+     * between profiles where the checked attribute persists).
+     * @param profile The profile element to observe.
+     */
+    private observeProfileName(profile: HTMLElement): void {
+        // The screen name lives in a [tabindex] [dir] element inside the profile.
+        const nameContainer = profile.querySelector<HTMLElement>("[tabindex] [dir]");
+        if (!nameContainer || !this.onNewProfileCallback) return;
+
+        if (this.profileNameObservers.has(nameContainer)) return;
+
+        const currentText = nameContainer.innerText.trim();
+        const observer = new MutationObserver(() => {
+            const latestText = nameContainer.innerText.trim();
+            const tracked = this.profileNameObservers.get(nameContainer);
+            if (!tracked) return;
+
+            if (latestText && latestText !== tracked.lastName && this.onNewProfileCallback) {
+                tracked.lastName = latestText;
+                this.onNewProfileCallback(new Profile(profile));
+            }
+        });
+
+        this.profileNameObservers.set(nameContainer, { observer, lastName: currentText });
+        observer.observe(nameContainer, {
+            characterData: true,
+            childList: true,
+            subtree: true
+        });
     }
 }
 
