@@ -39,6 +39,7 @@ class Timeline {
         } as const;
         const mergedOptions = { ...defaultOptions, ...options };
 
+        // eslint-disable-next-line max-statements
         const timelineObserver = new MutationObserver(() => {
             if (this.onNewTweetCallback) {
                 const tweets = document.querySelectorAll<HTMLElement>(
@@ -119,7 +120,7 @@ class Timeline {
             }
         });
 
-        this.profileNameObservers.set(nameContainer, { observer, lastName: currentText });
+        this.profileNameObservers.set(nameContainer, { lastName: currentText, observer });
         observer.observe(nameContainer, {
             characterData: true,
             childList: true,
