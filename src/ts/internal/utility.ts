@@ -1,6 +1,11 @@
+import { type UserProps, isProfileReactPropsData } from "../../types/reactProps.js";
 import type { InitialState } from "../../types/initialState.js";
-import { isNonEmptyArray } from "@robot-inventor/ts-utils";
 import { json } from "typia";
+
+interface ReactFiber {
+    pendingProps?: unknown;
+    memoizedProps?: unknown;
+}
 
 /**
  * Get React props from an element.
@@ -9,10 +14,38 @@ import { json } from "typia";
  */
 const getReactProps = (element: HTMLElement): object | null => {
     const properties = Object.getOwnPropertyNames(element);
-    const reactPropsNames = properties.filter((name) => name.startsWith("__reactProps$")) as Array<keyof Element>;
-    if (!isNonEmptyArray(reactPropsNames)) return null;
+    const reactPropsNames = properties.find((name) => name.startsWith("__reactProps$"));
+    if (!reactPropsNames) return null;
 
-    return element[reactPropsNames[0]] as object;
+    return element[reactPropsNames as keyof Element] as object;
+};
+
+/**
+ * Get React fiber node from an element.
+ * @param element Target element.
+ * @returns React fiber of the element.
+ */
+const getReactFiber = (element: HTMLElement): ReactFiber | null => {
+    const properties = Object.getOwnPropertyNames(element);
+    const fiberPropName = properties.find((name) => name.startsWith("__reactFiber$"));
+    if (!fiberPropName) return null;
+
+    return element[fiberPropName as keyof Element] as ReactFiber;
+};
+
+/**
+ * Get UserProps from the React fiber associated with a profile element.
+ * @param profileElement The profile element.
+ * @returns The latest UserProps found on the element's fiber node, or null if not found.
+ */
+const getUserPropsFromFiberTree = (profileElement: HTMLElement): UserProps | null => {
+    const fiber = getReactFiber(profileElement);
+    if (!fiber) return null;
+
+    const fiberProps = fiber.pendingProps ?? fiber.memoizedProps;
+    if (!isProfileReactPropsData(fiberProps)) return null;
+
+    return fiberProps.children[0].props.children[1].props.user;
 };
 
 /**
@@ -38,4 +71,4 @@ const getInitialState = (): InitialState => {
     return initialState;
 };
 
-export { getReactProps, getInitialState };
+export { getReactProps, getInitialState, getUserPropsFromFiberTree };
