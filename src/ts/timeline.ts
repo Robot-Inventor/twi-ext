@@ -215,7 +215,6 @@ class Timeline {
         const screenName = Timeline.normalizeScreenName(profile.props.screen_name);
         const expected = expectedScreenName ?? screenName;
 
-        console.log(screenName, expected);
         if (screenName !== expected && attempt < Timeline.PROFILE_PROPS_MAX_ATTEMPTS) {
             requestAnimationFrame(() => {
                 this.emitProfileWithFreshProps(
