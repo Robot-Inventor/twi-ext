@@ -20,8 +20,6 @@ class Timeline {
     } as const;
     /* eslint-disable no-magic-numbers */
     private static readonly PROFILE_PROPS_MAX_ATTEMPTS = 30;
-    private static readonly PROFILE_PROPS_INITIAL_ATTEMPT = 0;
-    private static readonly PROFILE_PROPS_RETRY_INCREMENT = 1;
     /* eslint-enable no-magic-numbers */
     private static readonly PROFILE_SELECTOR = ':not([data-testid="tweet"]) [data-testid="UserName"]';
 
@@ -201,11 +199,8 @@ class Timeline {
      * @param expectedScreenName Optional lowercase screen name text to match.
      * @param attempt Current retry attempt count.
      */
-    private emitProfileWithFreshProps(
-        targetElement: HTMLElement,
-        expectedScreenName?: string,
-        attempt = Timeline.PROFILE_PROPS_INITIAL_ATTEMPT
-    ): void {
+    // eslint-disable-next-line no-magic-numbers
+    private emitProfileWithFreshProps(targetElement: HTMLElement, expectedScreenName?: string, attempt = 0): void {
         if (!this.onNewProfileCallback) return;
 
         const profileElement = targetElement.closest<HTMLElement>('[data-testid="UserName"]');
@@ -217,11 +212,8 @@ class Timeline {
 
         if (screenName !== expected && attempt < Timeline.PROFILE_PROPS_MAX_ATTEMPTS) {
             requestAnimationFrame(() => {
-                this.emitProfileWithFreshProps(
-                    targetElement,
-                    expectedScreenName,
-                    attempt + Timeline.PROFILE_PROPS_RETRY_INCREMENT
-                );
+                // eslint-disable-next-line no-magic-numbers
+                this.emitProfileWithFreshProps(targetElement, expectedScreenName, attempt + 1);
             });
             return;
         }
