@@ -1,5 +1,13 @@
 # twi-ext
 
+## 0.15.7
+
+### Patch Changes
+
+- [#418](https://github.com/Robot-Inventor/twi-ext/pull/418) [`c83d3f5`](https://github.com/Robot-Inventor/twi-ext/commit/c83d3f569d51c5029979cdbadec880c7329f7335) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: `onNewProfileCallback` is not called when navigating directly from one profile page to another
+
+- [#420](https://github.com/Robot-Inventor/twi-ext/pull/420) [`ea27229`](https://github.com/Robot-Inventor/twi-ext/commit/ea27229458990758562273a6026ecc640eaf1f6c) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency typia to v11
+
 ## 0.15.6
 
 ### Patch Changes
