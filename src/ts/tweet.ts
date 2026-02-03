@@ -69,7 +69,7 @@ class Tweet {
         }
 
         const loggedInUserScreenName = getInitialState().settings.remote.settings.screen_name;
-        const isFocalMode = grandparentProps.children.props.isFocalTweet;
+        const isFocalMode = grandparentProps.children[0].props.isFocalTweet;
 
         const result: TweetMetadata = {
             isFocalMode,

@@ -35,11 +35,14 @@ interface MenubarReactProps {
 const isMenubarReactProps = createIs<MenubarReactProps>();
 
 interface MenubarGrandparentReactProps {
-    children: {
-        props: {
-            isFocalTweet: boolean;
-        };
-    };
+    children: [
+        {
+            props: {
+                isFocalTweet: boolean;
+            };
+        },
+        unknown
+    ];
 }
 
 const isMenubarGrandparentReactProps = createIs<MenubarGrandparentReactProps>();
