@@ -46,7 +46,6 @@
     "@changesets/cli": "^2.27.1",
     "@robot-inventor/eslint-config": "^11.0.0",
     "@robot-inventor/tsconfig-base": "^7.0.0",
-    "@types/uuid": "^11.0.0",
     "eslint": "^9.0.0",
     "prettier": "^3.2.5",
     "rimraf": "^6.0.0",
