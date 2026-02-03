@@ -15,7 +15,7 @@
     "typedoc": "typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
-    "lint": "eslint ./src/ts/**/*.ts ./src/types/**/*.ts",
+    "lint": "eslint ./src/**/*.ts",
     "changeset-version": "changeset version && npm run build && npm run typedoc && git add .",
     "changeset-publish": "npm run build && changeset publish",
     "prepare": "ts-patch install && typia patch"
