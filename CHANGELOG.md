@@ -1,5 +1,15 @@
 # twi-ext
 
+## 0.15.9
+
+### Patch Changes
+
+- [#432](https://github.com/Robot-Inventor/twi-ext/pull/432) [`6f2ebaa`](https://github.com/Robot-Inventor/twi-ext/commit/6f2ebaa53d8ab1747d4ba30e87938ec3b23f9c89) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typia to v11.0.3
+
+- [#436](https://github.com/Robot-Inventor/twi-ext/pull/436) [`5c89172`](https://github.com/Robot-Inventor/twi-ext/commit/5c89172b4670abc344cc4a8999f41c72bb5ca3aa) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: `isFocalMode` acquisition error due to X spec change
+
+- [#437](https://github.com/Robot-Inventor/twi-ext/pull/437) [`bf60377`](https://github.com/Robot-Inventor/twi-ext/commit/bf603778e94567c4fa8e88dea9181327242cc3c9) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - docs: replace Twitter and tweet to X and post
+
 ## 0.15.8
 
 ### Patch Changes
