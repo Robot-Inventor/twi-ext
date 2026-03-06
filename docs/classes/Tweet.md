@@ -1,4 +1,4 @@
-[**twi-ext v0.15.9**](../README.md)
+[**twi-ext v0.15.10**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: Tweet
 
-Defined in: [ts/tweet.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/bf603778e94567c4fa8e88dea9181327242cc3c9/src/ts/tweet.ts#L14)
+Defined in: [ts/tweet.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/95191925635bc27203770a2adb5a5a57527b5055/src/ts/tweet.ts#L14)
 
 Represents a tweet.
 
@@ -16,7 +16,7 @@ Represents a tweet.
 
 > **new Tweet**(`tweet`): `Tweet`
 
-Defined in: [ts/tweet.ts:21](https://github.com/Robot-Inventor/twi-ext/blob/bf603778e94567c4fa8e88dea9181327242cc3c9/src/ts/tweet.ts#L21)
+Defined in: [ts/tweet.ts:21](https://github.com/Robot-Inventor/twi-ext/blob/95191925635bc27203770a2adb5a5a57527b5055/src/ts/tweet.ts#L21)
 
 Represents a tweet.
 
@@ -40,7 +40,7 @@ The tweet element.
 
 > **get** **element**(): `HTMLElement`
 
-Defined in: [ts/tweet.ts:40](https://github.com/Robot-Inventor/twi-ext/blob/bf603778e94567c4fa8e88dea9181327242cc3c9/src/ts/tweet.ts#L40)
+Defined in: [ts/tweet.ts:40](https://github.com/Robot-Inventor/twi-ext/blob/95191925635bc27203770a2adb5a5a57527b5055/src/ts/tweet.ts#L40)
 
 Get the tweet element.
 
@@ -58,7 +58,7 @@ The tweet element.
 
 > **get** **metadata**(): [`TweetMetadata`](../interfaces/TweetMetadata.md)
 
-Defined in: [ts/tweet.ts:58](https://github.com/Robot-Inventor/twi-ext/blob/bf603778e94567c4fa8e88dea9181327242cc3c9/src/ts/tweet.ts#L58)
+Defined in: [ts/tweet.ts:58](https://github.com/Robot-Inventor/twi-ext/blob/95191925635bc27203770a2adb5a5a57527b5055/src/ts/tweet.ts#L58)
 
 Get metadata of the tweet.
 
@@ -76,7 +76,7 @@ Metadata of the tweet.
 
 > **get** **props**(): [`BasicTweetProps`](../interfaces/BasicTweetProps.md)
 
-Defined in: [ts/tweet.ts:48](https://github.com/Robot-Inventor/twi-ext/blob/bf603778e94567c4fa8e88dea9181327242cc3c9/src/ts/tweet.ts#L48)
+Defined in: [ts/tweet.ts:48](https://github.com/Robot-Inventor/twi-ext/blob/95191925635bc27203770a2adb5a5a57527b5055/src/ts/tweet.ts#L48)
 
 Get the React props of the tweet element.
 
@@ -90,9 +90,9 @@ The React props of the tweet element.
 
 ### quoteTweet()
 
-> **quoteTweet**(`text`, `timeoutMs`, `shouldOpenInNewTab`): `Promise`\<`void`\>
+> **quoteTweet**(`text`, `timeoutMs?`, `shouldOpenInNewTab?`): `Promise`\<`void`\>
 
-Defined in: [ts/tweet.ts:129](https://github.com/Robot-Inventor/twi-ext/blob/bf603778e94567c4fa8e88dea9181327242cc3c9/src/ts/tweet.ts#L129)
+Defined in: [ts/tweet.ts:129](https://github.com/Robot-Inventor/twi-ext/blob/95191925635bc27203770a2adb5a5a57527b5055/src/ts/tweet.ts#L129)
 
 Quote specified tweet with specified text.
 This function opens the compose screen and inputs text.
@@ -109,13 +109,13 @@ it opens new tab with the specified text and the tweet URL.
 
 Text to tweet.
 
-##### timeoutMs
+##### timeoutMs?
 
 `number` = `1000`
 
 Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode.
 
-##### shouldOpenInNewTab
+##### shouldOpenInNewTab?
 
 `boolean` = `false`
 

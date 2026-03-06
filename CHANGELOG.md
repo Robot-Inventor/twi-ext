@@ -1,5 +1,11 @@
 # twi-ext
 
+## 0.15.10
+
+### Patch Changes
+
+- [#446](https://github.com/Robot-Inventor/twi-ext/pull/446) [`9519192`](https://github.com/Robot-Inventor/twi-ext/commit/95191925635bc27203770a2adb5a5a57527b5055) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps): bump minimatch
+
 ## 0.15.9
 
 ### Patch Changes
