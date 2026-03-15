@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.0.0
+
+### Major Changes
+
+- [#453](https://github.com/Robot-Inventor/twi-ext/pull/453) [`0381d1e`](https://github.com/Robot-Inventor/twi-ext/commit/0381d1ec7fa82f51d6331159e6daeaaa49c191a3) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency typia to v12
+
 ## 0.15.10
 
 ### Patch Changes
