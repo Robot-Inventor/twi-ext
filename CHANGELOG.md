@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.0.1
+
+### Patch Changes
+
+- [#457](https://github.com/Robot-Inventor/twi-ext/pull/457) [`eb5de65`](https://github.com/Robot-Inventor/twi-ext/commit/eb5de658620afeed5e309042c8d77061c9f1daaf) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps-dev): bump flatted from 3.3.1 to 3.4.2
+
 ## 1.0.0
 
 ### Major Changes
