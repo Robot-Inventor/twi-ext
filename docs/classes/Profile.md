@@ -1,4 +1,4 @@
-[**twi-ext v1.0.3**](../README.md)
+[**twi-ext v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: Profile
 
-Defined in: [ts/profile.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/f6b42de4ba939c7be1878addfa766c1637b8ba7f/src/ts/profile.ts#L7)
+Defined in: [ts/profile.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/726c84bf66785fe7d13ca647e1cd753cbaab9c5b/src/ts/profile.ts#L7)
 
 Represents a profile.
 
@@ -16,7 +16,7 @@ Represents a profile.
 
 > **new Profile**(`profile`): `Profile`
 
-Defined in: [ts/profile.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/f6b42de4ba939c7be1878addfa766c1637b8ba7f/src/ts/profile.ts#L14)
+Defined in: [ts/profile.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/726c84bf66785fe7d13ca647e1cd753cbaab9c5b/src/ts/profile.ts#L14)
 
 Represents a profile.
 
@@ -40,7 +40,7 @@ The profile element.
 
 > **get** **props**(): [`UserProps`](../interfaces/UserProps.md)
 
-Defined in: [ts/profile.ts:22](https://github.com/Robot-Inventor/twi-ext/blob/f6b42de4ba939c7be1878addfa766c1637b8ba7f/src/ts/profile.ts#L22)
+Defined in: [ts/profile.ts:22](https://github.com/Robot-Inventor/twi-ext/blob/726c84bf66785fe7d13ca647e1cd753cbaab9c5b/src/ts/profile.ts#L22)
 
 Get the React props of the profile element.
 
