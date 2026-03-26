@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.0.3
+
+### Patch Changes
+
+- [#464](https://github.com/Robot-Inventor/twi-ext/pull/464) [`afb8d8b`](https://github.com/Robot-Inventor/twi-ext/commit/afb8d8bd4c923b99e1872ee6dad329e34b3948c3) Thanks [@dependabot](https://github.com/apps/dependabot)! - chore(deps): bump picomatch
+
 ## 1.0.2
 
 ### Patch Changes
