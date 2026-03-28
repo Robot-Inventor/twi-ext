@@ -84,6 +84,7 @@ class Tweet {
      * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
      */
     private async clickRetweetButton(timeoutMs: number): Promise<void> {
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-arguments
         const retweetButton = await asyncQuerySelector<HTMLElement>(
             "[data-testid='unretweet'], [data-testid='retweet']",
             this.tweetElement,
