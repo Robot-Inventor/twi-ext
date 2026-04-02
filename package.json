@@ -1,6 +1,6 @@
 {
   "name": "twi-ext",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Unofficial utility to develop browser extensions for Twitter / X",
   "main": "dist/ts/index.js",
   "publishConfig": {
@@ -55,6 +55,6 @@
     "typescript": "^5.9.3"
   },
   "overrides": {
-      "zod-validation-error": "^5.0.0"
+    "zod-validation-error": "^5.0.0"
   }
 }
