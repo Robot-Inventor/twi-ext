@@ -7,6 +7,7 @@ interface UserProps {
     screen_name: string;
     profile_interstitial_type: ProfileInterstitialType;
     withheld_in_countries: string[];
+    has_graduated_access: boolean;
 }
 
 interface BasicTweetProps {
@@ -14,6 +15,11 @@ interface BasicTweetProps {
     possibly_sensitive_editable?: boolean | null;
     permalink: string;
     user: UserProps;
+    mediaVisibilityResults?: {
+        blurred_image_interstitial?: {
+            opacity: number;
+        };
+    };
 }
 
 interface MenubarReactProps {
