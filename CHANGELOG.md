@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.1.0
+
+### Minor Changes
+
+- [#480](https://github.com/Robot-Inventor/twi-ext/pull/480) [`fce1abe`](https://github.com/Robot-Inventor/twi-ext/commit/fce1abe488410b2e1bf0f8a5bad7e6bb9fe3982f) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add type definitions for `has_graduated_access` and `mediaVisibilityResults`
+
 ## 1.0.5
 
 ### Patch Changes
