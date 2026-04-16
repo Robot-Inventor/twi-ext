@@ -1,4 +1,4 @@
-[**twi-ext v1.1.0**](../README.md)
+[**twi-ext v1.1.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BasicTweetProps
 
-Defined in: [types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/blob/fce1abe488410b2e1bf0f8a5bad7e6bb9fe3982f/src/types/reactProps.ts#L13)
+Defined in: [types/reactProps.ts:20](https://github.com/Robot-Inventor/twi-ext/blob/b3a6fdbddaf4f2f9f59802e03db281d40367b4d3/src/types/reactProps.ts#L20)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/reactProps.ts:13](https://github.com/Robot-Inventor/twi-ext/b
 
 > `optional` **mediaVisibilityResults?**: `object`
 
-Defined in: [types/reactProps.ts:18](https://github.com/Robot-Inventor/twi-ext/blob/fce1abe488410b2e1bf0f8a5bad7e6bb9fe3982f/src/types/reactProps.ts#L18)
+Defined in: [types/reactProps.ts:25](https://github.com/Robot-Inventor/twi-ext/blob/b3a6fdbddaf4f2f9f59802e03db281d40367b4d3/src/types/reactProps.ts#L25)
 
 #### blurred\_image\_interstitial?
 
@@ -30,7 +30,7 @@ Defined in: [types/reactProps.ts:18](https://github.com/Robot-Inventor/twi-ext/b
 
 > **permalink**: `string`
 
-Defined in: [types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/fce1abe488410b2e1bf0f8a5bad7e6bb9fe3982f/src/types/reactProps.ts#L16)
+Defined in: [types/reactProps.ts:23](https://github.com/Robot-Inventor/twi-ext/blob/b3a6fdbddaf4f2f9f59802e03db281d40367b4d3/src/types/reactProps.ts#L23)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/b
 
 > `optional` **possibly\_sensitive?**: `boolean` \| `null`
 
-Defined in: [types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/blob/fce1abe488410b2e1bf0f8a5bad7e6bb9fe3982f/src/types/reactProps.ts#L14)
+Defined in: [types/reactProps.ts:21](https://github.com/Robot-Inventor/twi-ext/blob/b3a6fdbddaf4f2f9f59802e03db281d40367b4d3/src/types/reactProps.ts#L21)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [types/reactProps.ts:14](https://github.com/Robot-Inventor/twi-ext/b
 
 > `optional` **possibly\_sensitive\_editable?**: `boolean` \| `null`
 
-Defined in: [types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/blob/fce1abe488410b2e1bf0f8a5bad7e6bb9fe3982f/src/types/reactProps.ts#L15)
+Defined in: [types/reactProps.ts:22](https://github.com/Robot-Inventor/twi-ext/blob/b3a6fdbddaf4f2f9f59802e03db281d40367b4d3/src/types/reactProps.ts#L22)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: [types/reactProps.ts:15](https://github.com/Robot-Inventor/twi-ext/b
 
 > **user**: [`UserProps`](UserProps.md)
 
-Defined in: [types/reactProps.ts:17](https://github.com/Robot-Inventor/twi-ext/blob/fce1abe488410b2e1bf0f8a5bad7e6bb9fe3982f/src/types/reactProps.ts#L17)
+Defined in: [types/reactProps.ts:24](https://github.com/Robot-Inventor/twi-ext/blob/b3a6fdbddaf4f2f9f59802e03db281d40367b4d3/src/types/reactProps.ts#L24)
