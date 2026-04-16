@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.1.1
+
+### Patch Changes
+
+- [#482](https://github.com/Robot-Inventor/twi-ext/pull/482) [`b3a6fdb`](https://github.com/Robot-Inventor/twi-ext/commit/b3a6fdbddaf4f2f9f59802e03db281d40367b4d3) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: make `withheld_in_countries` optional
+
 ## 1.1.0
 
 ### Minor Changes
