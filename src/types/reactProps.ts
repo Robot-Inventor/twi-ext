@@ -6,7 +6,14 @@ interface UserProps {
     possibly_sensitive?: boolean | null;
     screen_name: string;
     profile_interstitial_type: ProfileInterstitialType;
-    withheld_in_countries: string[];
+    /*
+     * `withheld_in_countries` can sometimes be `undefined`.
+     *
+     * Ref:
+     * - https://x.com/sum1to/status/2044787946960916881
+     * - https://x.com/sum1to/status/2044790355749675034
+     */
+    withheld_in_countries?: string[];
     has_graduated_access: boolean;
 }
 
