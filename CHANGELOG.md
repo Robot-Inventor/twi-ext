@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.1.2
+
+### Patch Changes
+
+- [#484](https://github.com/Robot-Inventor/twi-ext/pull/484) [`dfb4ae9`](https://github.com/Robot-Inventor/twi-ext/commit/dfb4ae97bff422cb5b02c1bd201c54a4adbfc5e4) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - fix: make `has_graduated_access` optioinal
+
 ## 1.1.1
 
 ### Patch Changes
