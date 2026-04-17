@@ -14,7 +14,7 @@ interface UserProps {
      * - https://x.com/sum1to/status/2044790355749675034
      */
     withheld_in_countries?: string[];
-    has_graduated_access: boolean;
+    has_graduated_access?: boolean;
 }
 
 interface BasicTweetProps {
