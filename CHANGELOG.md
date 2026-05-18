@@ -1,5 +1,15 @@
 # twi-ext
 
+## 1.1.3
+
+### Patch Changes
+
+- [#491](https://github.com/Robot-Inventor/twi-ext/pull/491) [`d22b33a`](https://github.com/Robot-Inventor/twi-ext/commit/d22b33a4737f08d7092135b14c41c1645336f838) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency typia to v12.1.1
+
+- [#495](https://github.com/Robot-Inventor/twi-ext/pull/495) [`1411039`](https://github.com/Robot-Inventor/twi-ext/commit/141103956577c4abb4e447457e3bfd77772e7535) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: remove an unnecessary `eslint-disable-next-line` comment
+
+- [#490](https://github.com/Robot-Inventor/twi-ext/pull/490) [`2bb4859`](https://github.com/Robot-Inventor/twi-ext/commit/2bb4859e542a05e4f183033864a4cee2541ece6d) Thanks [@renovate](https://github.com/apps/renovate)! - chore(deps): update dependency ts-patch to v4
+
 ## 1.1.2
 
 ### Patch Changes
