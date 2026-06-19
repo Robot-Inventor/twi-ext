@@ -1,4 +1,4 @@
-[**twi-ext v1.1.3**](../README.md)
+[**twi-ext v1.1.4**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **getColorScheme**(): [`ColorScheme`](../type-aliases/ColorScheme.md)
 
-Defined in: [ts/util.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/d5a3e2ad4822965e927a01619640870de5028896/src/ts/util.ts#L11)
+Defined in: [ts/util.ts:11](https://github.com/Robot-Inventor/twi-ext/blob/99af34d5b2e242f30cfa6ef5fbaf47eb014421b6/src/ts/util.ts#L11)
 
 Get the current color scheme of the page.
 
