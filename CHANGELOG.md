@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.1.5
+
+### Patch Changes
+
+- [#512](https://github.com/Robot-Inventor/twi-ext/pull/512) [`6c4b548`](https://github.com/Robot-Inventor/twi-ext/commit/6c4b54809c1ecb38937f29644de3101675febf0a) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: update vulnerable dependencies
+
 ## 1.1.4
 
 ### Patch Changes
