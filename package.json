@@ -16,8 +16,8 @@
     "format": "prettier ./src/ --write",
     "format:check": "prettier ./src/ --check",
     "lint": "eslint ./src/**/*.ts",
-    "changeset-version": "changeset version && npm run build && npm run typedoc && git add .",
-    "changeset-publish": "npm run build && changeset publish",
+    "ci:version": "changeset version && npm run build && npm run typedoc && git add .",
+    "ci:publish": "npm run build && changeset publish",
     "prepare": "ts-patch install && typia patch"
   },
   "repository": {
