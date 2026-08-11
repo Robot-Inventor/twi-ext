@@ -38,7 +38,7 @@
   "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
   "dependencies": {
     "@robot-inventor/ts-utils": "^0.8.8",
-    "async-query": "^3.0.0",
+    "async-query": "^3.0.5",
     "typia": "^12.1.1"
   },
   "devDependencies": {
