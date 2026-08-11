@@ -50,7 +50,7 @@
     "prettier": "^3.9.6",
     "rimraf": "^6.0.0",
     "ts-patch": "^4.0.0",
-    "typedoc": "^0.28.0",
+    "typedoc": "^0.28.20",
     "typedoc-plugin-markdown": "^4.0.0",
     "typescript": "^6.0.0"
   },
