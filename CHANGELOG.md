@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.1.7
+
+### Patch Changes
+
+- [#545](https://github.com/Robot-Inventor/twi-ext/pull/545) [`2d38efc`](https://github.com/Robot-Inventor/twi-ext/commit/2d38efc2ac1d9aecb883657b284eaf1d1bbfb157) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): update dependency @robot-inventor/ts-utils to ^0.8.9
+
 ## 1.1.6
 
 ### Patch Changes

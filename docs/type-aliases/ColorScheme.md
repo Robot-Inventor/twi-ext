@@ -1,4 +1,4 @@
-[**twi-ext v1.1.6**](../README.md)
+[**twi-ext v1.1.7**](../README.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 > **ColorScheme** = `"light"` \| `"darkblue"` \| `"black"` \| `"unknown"`
 
-Defined in: [ts/util.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/e3faafa17c83a0c0a85be0d1d9f705b4ee799571/src/ts/util.ts#L5)
+Defined in: [ts/util.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/2d38efc2ac1d9aecb883657b284eaf1d1bbfb157/src/ts/util.ts#L5)
