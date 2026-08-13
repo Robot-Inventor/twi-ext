@@ -1,8 +1,8 @@
-**twi-ext v1.1.7**
+**twi-ext v1.1.8**
 
 ***
 
-# twi-ext v1.1.7
+# twi-ext v1.1.8
 
 ## Classes
 
