@@ -63,7 +63,7 @@ const getTextBoxFromMarker = (marker: HTMLElement): HTMLElement | HTMLTextAreaEl
  * @param text Text to tweet.
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
-// eslint-disable-next-line max-statements
+// oxlint-disable-next-line max-statements
 const enterTweetText = async (text: string, timeoutMs: number): Promise<void> => {
     const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
     const selector = isTweetDeck
@@ -74,10 +74,9 @@ const enterTweetText = async (text: string, timeoutMs: number): Promise<void> =>
     if (!isNonEmptyArray(textBoxMarkers)) throw new Error("[twi-ext] Failed to get text box marker of tweet");
 
     // Clear existing text.
-    // eslint-disable-next-line id-length
     for (let i = 0; i < textBoxMarkers.length; i++) {
         const textBoxMarker = textBoxMarkers[i];
-        // eslint-disable-next-line no-magic-numbers
+        // oxlint-disable-next-line no-magic-numbers
         if (i !== 0 && textBoxMarker) {
             const textBox = getTextBoxFromMarker(textBoxMarker);
             if (textBox) {
@@ -108,7 +107,7 @@ const openTweetComposerInNewTab = (text: string): void => {
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  * @param shouldOpenInNewTab Whether to open the tweet composer in a new tab immediately.
  */
-// eslint-disable-next-line no-magic-numbers
+// oxlint-disable-next-line no-magic-numbers
 const composeNewTweet = async (text: string, timeoutMs = 1000, shouldOpenInNewTab = false): Promise<void> => {
     if (shouldOpenInNewTab) {
         openTweetComposerInNewTab(text);
