@@ -116,7 +116,10 @@ const composeNewTweet = async (text: string, timeoutMs = 1000, shouldOpenInNewTa
 
     const keyboardEvent = new KeyboardEvent("keypress", {
         bubbles: true,
+        // X/TweetDeck handles this shortcut through the deprecated legacy fields.
+        // oxlint-disable-next-line typescript/no-deprecated
         keyCode: 78,
+        // oxlint-disable-next-line typescript/no-deprecated
         which: 78
     });
     document.dispatchEvent(keyboardEvent);
