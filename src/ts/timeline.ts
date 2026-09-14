@@ -18,9 +18,9 @@ class Timeline {
         childList: true,
         subtree: true
     } as const;
-    /* eslint-disable no-magic-numbers */
+    /* oxlint-disable no-magic-numbers */
     private static readonly PROFILE_PROPS_MAX_ATTEMPTS = 30;
-    /* eslint-enable no-magic-numbers */
+    /* oxlint-enable no-magic-numbers */
     private static readonly PROFILE_SELECTOR = ':not([data-testid="tweet"]) [data-testid="UserName"]';
 
     private readonly checkedDataAttribute: string;
@@ -36,7 +36,7 @@ class Timeline {
      * A class that observes the timeline and calls a callback when a new tweet is added.
      * @param options Options for the timeline observer.
      */
-    // eslint-disable-next-line max-lines-per-function
+    // oxlint-disable-next-line max-lines-per-function
     public constructor(options?: Partial<TimelineOptions>) {
         // Generate a unique data attribute name for each instance.
         this.checkedDataAttribute = `data-twi-ext-checked-${crypto.randomUUID()}`;
@@ -171,7 +171,7 @@ class Timeline {
      * @param options Optional flags.
      * @param options.forceRefresh Re-emit even if previously handled.
      */
-    // eslint-disable-next-line max-statements
+    // oxlint-disable-next-line max-statements
     private handleProfile(profile: HTMLElement, options?: { forceRefresh?: boolean }): void {
         if (!this.onNewProfileCallback) return;
         // If this is a repeated element and not forced, avoid double-processing.
@@ -202,7 +202,7 @@ class Timeline {
     private emitProfileWithFreshProps(
         targetElement: HTMLElement,
         $expectedScreenName?: string | null,
-        // eslint-disable-next-line no-magic-numbers
+        // oxlint-disable-next-line no-magic-numbers
         attempt = 0
     ): void {
         if (!this.onNewProfileCallback) return;
@@ -216,7 +216,7 @@ class Timeline {
 
         if (screenName !== expectedScreenName && attempt < Timeline.PROFILE_PROPS_MAX_ATTEMPTS) {
             requestAnimationFrame(() => {
-                // eslint-disable-next-line no-magic-numbers
+                // oxlint-disable-next-line no-magic-numbers
                 this.emitProfileWithFreshProps(targetElement, expectedScreenName, attempt + 1);
             });
             return;

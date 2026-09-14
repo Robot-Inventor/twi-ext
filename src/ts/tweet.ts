@@ -125,7 +125,7 @@ class Tweet {
      * Timeout in milliseconds. After the specified time has elapsed, it moves to fallback mode.
      * @param shouldOpenInNewTab Whether to open the tweet composer in a new tab immediately.
      */
-    // eslint-disable-next-line no-magic-numbers
+    // oxlint-disable-next-line no-magic-numbers
     public async quoteTweet(text: string, timeoutMs = 1000, shouldOpenInNewTab = false): Promise<void> {
         const sourceTweetPermalink = this.props.permalink;
         const tweetTextWithSourceLink = `${text}\nhttps://x.com${sourceTweetPermalink}`;
