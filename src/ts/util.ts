@@ -63,7 +63,6 @@ const getTextBoxFromMarker = (marker: HTMLElement): HTMLElement | HTMLTextAreaEl
  * @param text Text to tweet.
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
-// oxlint-disable-next-line max-statements
 const enterTweetText = async (text: string, timeoutMs: number): Promise<void> => {
     const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
     const selector = isTweetDeck
