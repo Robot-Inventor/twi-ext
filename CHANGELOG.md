@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.1.9
+
+### Patch Changes
+
+- [#576](https://github.com/Robot-Inventor/twi-ext/pull/576) [`ed57fef`](https://github.com/Robot-Inventor/twi-ext/commit/ed57fef20336d6c9866139607cb73cd4ca5581c6) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - chore: remove unused oxlint-disable comments
+
 ## 1.1.8
 
 ### Patch Changes
