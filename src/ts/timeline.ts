@@ -36,7 +36,6 @@ class Timeline {
      * A class that observes the timeline and calls a callback when a new tweet is added.
      * @param options Options for the timeline observer.
      */
-    // oxlint-disable-next-line max-lines-per-function
     public constructor(options?: Partial<TimelineOptions>) {
         // Generate a unique data attribute name for each instance.
         this.checkedDataAttribute = `data-twi-ext-checked-${crypto.randomUUID()}`;
@@ -171,7 +170,6 @@ class Timeline {
      * @param options Optional flags.
      * @param options.forceRefresh Re-emit even if previously handled.
      */
-    // oxlint-disable-next-line max-statements
     private handleProfile(profile: HTMLElement, options?: { forceRefresh?: boolean }): void {
         if (!this.onNewProfileCallback) return;
         // If this is a repeated element and not forced, avoid double-processing.
