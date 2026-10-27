@@ -2,40 +2,40 @@
   "name": "twi-ext",
   "version": "1.1.9",
   "description": "Unofficial utility to develop browser extensions for Twitter / X",
-  "main": "dist/ts/index.js",
-  "publishConfig": {
-    "provenance": true
+  "keywords": [
+    "browser-extension",
+    "extension",
+    "twitter",
+    "web-extension"
+  ],
+  "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
+  "bugs": {
+    "url": "https://github.com/Robot-Inventor/twi-ext/issues"
+  },
+  "license": "MIT",
+  "author": "Robot-Inventor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robot-Inventor/twi-ext.git"
   },
   "files": [
     "dist"
   ],
   "type": "module",
+  "main": "dist/ts/index.js",
+  "publishConfig": {
+    "provenance": true
+  },
   "scripts": {
     "build": "rimraf dist && tsc",
     "typedoc": "typedoc --plugin typedoc-plugin-markdown --cleanOutputDir --excludePrivate --includeVersion --readme none src/ts/index.ts",
-    "format": "prettier ./src/ --write",
-    "format:check": "prettier ./src/ --check",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
     "lint": "oxlint ./src",
     "ci:version": "changeset version && npm run build && npm run typedoc && git add .",
     "ci:publish": "npm run build && changeset publish",
     "prepare": "ts-patch install && typia patch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Robot-Inventor/twi-ext.git"
-  },
-  "keywords": [
-    "twitter",
-    "extension",
-    "web-extension",
-    "browser-extension"
-  ],
-  "author": "Robot-Inventor",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Robot-Inventor/twi-ext/issues"
-  },
-  "homepage": "https://github.com/Robot-Inventor/twi-ext#readme",
   "dependencies": {
     "@robot-inventor/ts-utils": "^0.8.9",
     "async-query": "^3.0.5",
@@ -46,8 +46,8 @@
     "@changesets/cli": "^3.0.3",
     "@robot-inventor/oxlint-config": "^1.0.0",
     "@robot-inventor/tsconfig-base": "^7.2.0",
+    "oxfmt": "^0.75.0",
     "oxlint": "^1.90.0",
-    "prettier": "^3.9.10",
     "rimraf": "^6.1.3",
     "ts-patch": "^4.0.0",
     "typedoc": "^0.28.20",
