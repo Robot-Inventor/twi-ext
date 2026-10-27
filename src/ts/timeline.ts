@@ -43,7 +43,10 @@ class Timeline {
         const defaultOptions = {
             timeoutMs: 10000
         } as const satisfies TimelineOptions;
-        const mergedOptions = { ...defaultOptions, ...options };
+        const mergedOptions = {
+            ...defaultOptions,
+            ...options
+        } as const;
 
         const timelineObserver = new MutationObserver(() => {
             if (this.onNewTweetCallback) {
