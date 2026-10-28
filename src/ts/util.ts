@@ -1,6 +1,5 @@
 import { TWEETDECK_DOMAINS } from "./constants.js";
 import { asyncQuerySelectorAll } from "async-query";
-import { isNonEmptyArray } from "@robot-inventor/ts-utils";
 
 type ColorScheme = "light" | "darkblue" | "black" | "unknown";
 
@@ -64,13 +63,13 @@ const getTextBoxFromMarker = (marker: HTMLElement): HTMLElement | HTMLTextAreaEl
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
 const enterTweetText = async (text: string, timeoutMs: number): Promise<void> => {
-    const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
+    const isTweetDeck = (TWEETDECK_DOMAINS as readonly string[]).includes(location.hostname);
     const selector = isTweetDeck
         ? "[role='dialog'] [data-text='true'], [role='dialog'] textarea[data-testid='tweetTextarea_0']"
         : "[role='dialog'] [data-text='true'], textarea[data-testid='tweetTextarea_0']";
 
-    const textBoxMarkers = [...(await asyncQuerySelectorAll<HTMLElement>(selector, document, timeoutMs))];
-    if (!isNonEmptyArray(textBoxMarkers)) throw new Error("[twi-ext] Failed to get text box marker of tweet");
+    const textBoxMarkers = [...(await asyncQuerySelectorAll<HTMLElement>(selector, document, timeoutMs))] as const;
+    if (!textBoxMarkers[0]) throw new Error("[twi-ext] Failed to get text box marker of tweet");
 
     // Clear existing text.
     for (let i = 0; i < textBoxMarkers.length; i++) {
