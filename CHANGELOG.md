@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.2.1
+
+### Patch Changes
+
+- [#600](https://github.com/Robot-Inventor/twi-ext/pull/600) [`43ec168`](https://github.com/Robot-Inventor/twi-ext/commit/43ec16808e2860dce298f04b7177a127211d4fb1) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - perf: improve performance
+
 ## 1.2.0
 
 ### Minor Changes

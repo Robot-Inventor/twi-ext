@@ -1,4 +1,4 @@
-[**twi-ext v1.2.0**](../README.md)
+[**twi-ext v1.2.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UserProps
 
-Defined in: [types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/types/reactProps.ts#L5)
+Defined in: [types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/blob/43ec16808e2860dce298f04b7177a127211d4fb1/src/types/reactProps.ts#L5)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/reactProps.ts:5](https://github.com/Robot-Inventor/twi-ext/bl
 
 > `optional` **has\_graduated\_access?**: `boolean`
 
-Defined in: [types/reactProps.ts:17](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/types/reactProps.ts#L17)
+Defined in: [types/reactProps.ts:17](https://github.com/Robot-Inventor/twi-ext/blob/43ec16808e2860dce298f04b7177a127211d4fb1/src/types/reactProps.ts#L17)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [types/reactProps.ts:17](https://github.com/Robot-Inventor/twi-ext/b
 
 > `optional` **possibly\_sensitive?**: `boolean` \| `null`
 
-Defined in: [types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/types/reactProps.ts#L6)
+Defined in: [types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/blob/43ec16808e2860dce298f04b7177a127211d4fb1/src/types/reactProps.ts#L6)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [types/reactProps.ts:6](https://github.com/Robot-Inventor/twi-ext/bl
 
 > **profile\_interstitial\_type**: [`ProfileInterstitialType`](../type-aliases/ProfileInterstitialType.md)
 
-Defined in: [types/reactProps.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/types/reactProps.ts#L8)
+Defined in: [types/reactProps.ts:8](https://github.com/Robot-Inventor/twi-ext/blob/43ec16808e2860dce298f04b7177a127211d4fb1/src/types/reactProps.ts#L8)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [types/reactProps.ts:8](https://github.com/Robot-Inventor/twi-ext/bl
 
 > **screen\_name**: `string`
 
-Defined in: [types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/types/reactProps.ts#L7)
+Defined in: [types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/blob/43ec16808e2860dce298f04b7177a127211d4fb1/src/types/reactProps.ts#L7)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [types/reactProps.ts:7](https://github.com/Robot-Inventor/twi-ext/bl
 
 > `optional` **withheld\_in\_countries?**: `string`[]
 
-Defined in: [types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/types/reactProps.ts#L16)
+Defined in: [types/reactProps.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/43ec16808e2860dce298f04b7177a127211d4fb1/src/types/reactProps.ts#L16)
