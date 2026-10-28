@@ -63,7 +63,7 @@ const getTextBoxFromMarker = (marker: HTMLElement): HTMLElement | HTMLTextAreaEl
  * @param timeoutMs Timeout in milliseconds. After the specified time has elapsed, it throws an error.
  */
 const enterTweetText = async (text: string, timeoutMs: number): Promise<void> => {
-    const isTweetDeck = TWEETDECK_DOMAINS.includes(location.hostname);
+    const isTweetDeck = (TWEETDECK_DOMAINS as readonly string[]).includes(location.hostname);
     const selector = isTweetDeck
         ? "[role='dialog'] [data-text='true'], [role='dialog'] textarea[data-testid='tweetTextarea_0']"
         : "[role='dialog'] [data-text='true'], textarea[data-testid='tweetTextarea_0']";
