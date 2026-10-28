@@ -1,4 +1,4 @@
-[**twi-ext v1.1.9**](../README.md)
+[**twi-ext v1.2.0**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: Timeline
 
-Defined in: [ts/timeline.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/ed57fef20336d6c9866139607cb73cd4ca5581c6/src/ts/timeline.ts#L16)
+Defined in: [ts/timeline.ts:16](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/ts/timeline.ts#L16)
 
 A class that observes the timeline and calls a callback when a new tweet is added.
 
@@ -16,7 +16,7 @@ A class that observes the timeline and calls a callback when a new tweet is adde
 
 > **new Timeline**(`options?`): `Timeline`
 
-Defined in: [ts/timeline.ts:39](https://github.com/Robot-Inventor/twi-ext/blob/ed57fef20336d6c9866139607cb73cd4ca5581c6/src/ts/timeline.ts#L39)
+Defined in: [ts/timeline.ts:39](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/ts/timeline.ts#L39)
 
 A class that observes the timeline and calls a callback when a new tweet is added.
 
@@ -38,7 +38,7 @@ Options for the timeline observer.
 
 > **onNewProfile**(`callback`): `void`
 
-Defined in: [ts/timeline.ts:107](https://github.com/Robot-Inventor/twi-ext/blob/ed57fef20336d6c9866139607cb73cd4ca5581c6/src/ts/timeline.ts#L107)
+Defined in: [ts/timeline.ts:110](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/ts/timeline.ts#L110)
 
 Set a callback that is called when a new profile is added.
 
@@ -60,7 +60,7 @@ A callback that is called when a new profile is added.
 
 > **onNewTweet**(`callback`): `void`
 
-Defined in: [ts/timeline.ts:99](https://github.com/Robot-Inventor/twi-ext/blob/ed57fef20336d6c9866139607cb73cd4ca5581c6/src/ts/timeline.ts#L99)
+Defined in: [ts/timeline.ts:102](https://github.com/Robot-Inventor/twi-ext/blob/d9195f45c87571df058113d45334572dfcd89487/src/ts/timeline.ts#L102)
 
 Set a callback that is called when a new tweet is added.
 

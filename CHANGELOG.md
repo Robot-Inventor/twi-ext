@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.2.0
+
+### Minor Changes
+
+- [#598](https://github.com/Robot-Inventor/twi-ext/pull/598) [`d9195f4`](https://github.com/Robot-Inventor/twi-ext/commit/d9195f45c87571df058113d45334572dfcd89487) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - refactor: remove `@robot-inventor/ts-utils` from dependencies
+
 ## 1.1.9
 
 ### Patch Changes
