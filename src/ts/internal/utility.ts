@@ -57,12 +57,14 @@ const getInitialState = (): InitialState => {
     const initialStateScript = [...scriptElements].find((script) =>
         script.textContent.trim().startsWith("window.__INITIAL_STATE__")
     );
+
     if (!initialStateScript) throw new Error("[twi-ext] Failed to find initial state.");
 
     const [initialStateText] = initialStateScript.textContent
         .trim()
         .replace(/^window\.__INITIAL_STATE__=/u, "")
         .split(";window.__META_DATA__");
+
     if (!initialStateText) throw new Error("[twi-ext] Failed to extract initial state.");
 
     const initialState = json.isParse<InitialState>(initialStateText);

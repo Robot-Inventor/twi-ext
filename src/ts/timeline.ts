@@ -43,6 +43,7 @@ class Timeline {
         const defaultOptions = {
             timeoutMs: 10000
         } as const satisfies TimelineOptions;
+
         const mergedOptions = {
             ...defaultOptions,
             ...options
@@ -177,6 +178,7 @@ class Timeline {
         if (!this.onNewProfileCallback) return;
         // If this is a repeated element and not forced, avoid double-processing.
         if (!options?.forceRefresh && profile.hasAttribute(this.checkedDataAttribute)) return;
+
         profile.setAttribute(this.checkedDataAttribute, "");
 
         // Ensure we listen for subsequent name changes.
@@ -220,6 +222,7 @@ class Timeline {
                 // oxlint-disable-next-line no-magic-numbers
                 this.emitProfileWithFreshProps(targetElement, expectedScreenName, attempt + 1);
             });
+
             return;
         }
 

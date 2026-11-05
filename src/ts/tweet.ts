@@ -48,6 +48,7 @@ class Tweet {
     public get props(): BasicTweetProps {
         const props = getReactProps(this.getMenuBar());
         if (!isMenubarReactProps(props)) throw new Error("[twi-ext] Failed to get React props of tweet");
+
         return props.children[1].props.retweetWithCommentLink.state.quotedStatus;
     }
 
@@ -89,7 +90,9 @@ class Tweet {
             this.tweetElement,
             timeoutMs
         );
+
         if (!retweetButton) throw new Error("[twi-ext] Failed to get retweet button of tweet");
+
         retweetButton.click();
     }
 
@@ -109,7 +112,9 @@ class Tweet {
             document,
             timeoutMs
         );
+
         if (!quoteButton) throw new Error("[twi-ext] Failed to get quote button of tweet");
+
         quoteButton.click();
     }
 
@@ -132,6 +137,7 @@ class Tweet {
 
         if (shouldOpenInNewTab) {
             openTweetComposerInNewTab(tweetTextWithSourceLink);
+
             return;
         }
 
