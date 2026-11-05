@@ -37,7 +37,7 @@
     "prepare": "ts-patch install && typia patch"
   },
   "dependencies": {
-    "async-query": "^3.0.5",
+    "async-query": "^3.0.6",
     "typia": "^12.2.1"
   },
   "devDependencies": {
