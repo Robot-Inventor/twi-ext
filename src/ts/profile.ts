@@ -25,6 +25,7 @@ class Profile {
 
         const props = getReactProps(this.profileElement);
         if (!isProfileReactPropsData(props)) throw new Error("Failed to get React props of profile");
+
         return props.children[0].props.children[1].props.user;
     }
 }

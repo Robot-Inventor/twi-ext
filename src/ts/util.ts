@@ -109,6 +109,7 @@ const openTweetComposerInNewTab = (text: string): void => {
 const composeNewTweet = async (text: string, timeoutMs = 1000, shouldOpenInNewTab = false): Promise<void> => {
     if (shouldOpenInNewTab) {
         openTweetComposerInNewTab(text);
+
         return;
     }
 
@@ -120,6 +121,7 @@ const composeNewTweet = async (text: string, timeoutMs = 1000, shouldOpenInNewTa
         // oxlint-disable-next-line typescript/no-deprecated
         which: 78
     });
+
     document.dispatchEvent(keyboardEvent);
 
     try {
