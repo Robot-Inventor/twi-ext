@@ -45,7 +45,7 @@
     "@changesets/cli": "^3.0.3",
     "@robot-inventor/oxlint-config": "^2.2.0",
     "@robot-inventor/tsconfig-base": "^7.2.0",
-    "oxfmt": "^0.77.0",
+    "oxfmt": "^0.78.0",
     "oxlint": "^1.92.0",
     "rimraf": "^6.1.4",
     "ts-patch": "^4.0.0",
