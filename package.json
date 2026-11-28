@@ -41,7 +41,7 @@
     "typia": "^12.2.1"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^1.0.1",
+    "@changesets/changelog-github": "^2.0.0",
     "@changesets/cli": "^3.0.3",
     "@robot-inventor/oxlint-config": "^2.2.0",
     "@robot-inventor/tsconfig-base": "^7.2.0",
