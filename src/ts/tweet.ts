@@ -1,7 +1,10 @@
 import { type BasicTweetProps, isMenubarGrandparentReactProps, isMenubarReactProps } from "../types/reactProps.js";
 import { enterTweetText, openTweetComposerInNewTab } from "./util.js";
 import { getInitialState, getReactProps } from "./internal/utility.js";
+import type { TweetData } from "../types/data.js";
 import { asyncQuerySelector } from "async-query";
+import { getWebClient } from "./internal/webClient.js";
+import { readXwebTweet } from "./internal/xweb.js";
 
 interface TweetMetadata {
     isFocalMode: boolean;
@@ -50,6 +53,24 @@ class Tweet {
         if (!isMenubarReactProps(props)) throw new Error("[twi-ext] Failed to get React props of tweet");
 
         return props.children[1].props.retweetWithCommentLink.state.quotedStatus;
+    }
+
+    /**
+     * Read the tweet data using the web client that rendered it.
+     * @returns Tweet data tagged with the web client.
+     */
+    public get data(): TweetData {
+        if (getWebClient() === "xweb") {
+            const data = readXwebTweet(this.tweetElement);
+            if (!data) throw new Error("[twi-ext] Failed to get xweb tweet data");
+
+            return data;
+        }
+
+        return {
+            client: "rweb",
+            props: this.props
+        };
     }
 
     /**

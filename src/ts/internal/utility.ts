@@ -73,4 +73,4 @@ const getInitialState = (): InitialState => {
     return initialState;
 };
 
-export { getReactProps, getInitialState, getUserPropsFromFiberTree };
+export { getReactFiber, getReactProps, getInitialState, getUserPropsFromFiberTree };

@@ -1,3 +1,6 @@
+import { WEB_ENTRY, getWebClient } from "./internal/webClient.js";
+import { XWEB_CONVERSATION_SELECTOR, observeXwebConversations } from "./internal/xwebConversation.js";
+import { readXwebProfile, readXwebTweet } from "./internal/xweb.js";
 import { Profile } from "./profile.js";
 import { Tweet } from "./tweet.js";
 import { asyncQuerySelector } from "async-query";
@@ -10,6 +13,8 @@ interface TimelineOptions {
     timeoutMs: number;
 }
 
+const DEFAULT_TIMEOUT_MS = 10000;
+
 /**
  * A class that observes the timeline and calls a callback when a new tweet is added.
  */
@@ -17,17 +22,16 @@ class Timeline {
     private readonly OBSERVER_OPTIONS = {
         childList: true,
         subtree: true
-    } as const;
+    } as const satisfies MutationObserverInit;
     /* oxlint-disable no-magic-numbers */
     private static readonly PROFILE_PROPS_MAX_ATTEMPTS = 30;
     /* oxlint-enable no-magic-numbers */
     private static readonly PROFILE_SELECTOR = ':not([data-testid="tweet"]) [data-testid="UserName"]';
+    private static readonly XWEB_TWEET_SELECTOR = "article:not(article article)";
 
-    private readonly checkedDataAttribute: string;
-    private readonly profileNameObservers = new WeakMap<
-        HTMLElement,
-        { observer: MutationObserver; lastName: string }
-    >();
+    private readonly seenTweets = new WeakSet<HTMLElement>();
+    private readonly seenProfiles = new WeakMap<HTMLElement, string>();
+    private readonly profileNameObservers = new WeakMap<HTMLElement, string>();
 
     private onNewTweetCallback: ((tweet: Tweet) => void) | null = null;
     private onNewProfileCallback: ((profile: Profile) => void) | null = null;
@@ -37,63 +41,84 @@ class Timeline {
      * @param options Options for the timeline observer.
      */
     public constructor(options?: Partial<TimelineOptions>) {
-        // Generate a unique data attribute name for each instance.
-        this.checkedDataAttribute = `data-twi-ext-checked-${crypto.randomUUID()}`;
+        const timeoutMs = options?.timeoutMs ?? DEFAULT_TIMEOUT_MS;
 
-        const defaultOptions = {
-            timeoutMs: 10000
-        } as const satisfies TimelineOptions;
+        void Promise.all([
+            asyncQuerySelector("main", document, timeoutMs),
+            asyncQuerySelector(WEB_ENTRY, document, timeoutMs)
+        ]).then(([main, entry]) => {
+            if (!main || !entry) throw new Error("[twi-ext] Failed to find the X timeline or web client");
 
-        const mergedOptions = {
-            ...defaultOptions,
-            ...options
-        } as const;
+            if (getWebClient() === "xweb") {
+                this.observeXweb(main);
+            } else {
+                this.observeRweb(main, timeoutMs);
+            }
+        });
+    }
 
-        const timelineObserver = new MutationObserver(() => {
-            if (this.onNewTweetCallback) {
-                const tweets = document.querySelectorAll<HTMLElement>(
-                    `[data-testid="tweet"]:not([${this.checkedDataAttribute}])`
-                );
+    private observeRweb(main: HTMLElement, timeoutMs: number): void {
+        const scan = (): void => {
+            const callback = this.onNewTweetCallback;
+            if (callback) {
+                const tweets = document.querySelectorAll<HTMLElement>('[data-testid="tweet"]');
 
                 for (const tweet of tweets) {
-                    tweet.setAttribute(this.checkedDataAttribute, "");
-                    this.onNewTweetCallback(new Tweet(tweet));
+                    if (!this.seenTweets.has(tweet)) {
+                        this.seenTweets.add(tweet);
+                        callback(new Tweet(tweet));
+                    }
                 }
             }
 
             if (this.onNewProfileCallback) {
-                const profile = document.querySelector<HTMLElement>(
-                    `${Timeline.PROFILE_SELECTOR}:not([${this.checkedDataAttribute}])`
-                );
+                const profiles = document.querySelectorAll<HTMLElement>(Timeline.PROFILE_SELECTOR);
+                const profile = Array.from(profiles).find((element) => !this.seenProfiles.has(element));
 
                 if (profile) {
                     this.handleProfile(profile);
                 }
             }
-        });
+        };
 
-        void asyncQuerySelector("main", document, mergedOptions.timeoutMs).then((main) => {
-            if (!main) throw new Error("[twi-ext] Failed to get main element");
-
-            timelineObserver.observe(main, this.OBSERVER_OPTIONS);
-        });
+        const observer = new MutationObserver(scan);
+        observer.observe(main, this.OBSERVER_OPTIONS);
 
         // #layers includes tweets that appear next to the image when you click on the image
-        void asyncQuerySelector("#layers", document, mergedOptions.timeoutMs).then((layers) => {
-            if (!layers) throw new Error("[twi-ext] Failed to get #layers element");
-
-            timelineObserver.observe(layers, this.OBSERVER_OPTIONS);
+        void asyncQuerySelector("#layers", document, timeoutMs).then((layers) => {
+            if (layers) {
+                observer.observe(layers, this.OBSERVER_OPTIONS);
+            }
         });
 
         // Handle back forward cache / history restores where no DOM mutations fire but the visible profile has changed (e.g., browser back/forward).
         window.addEventListener("pageshow", () => {
-            if (!this.onNewProfileCallback) return;
-
-            const profile = document.querySelector<HTMLElement>(Timeline.PROFILE_SELECTOR);
-            if (!profile) return;
-
-            this.handleProfile(profile, { forceRefresh: true });
+            if (this.onNewProfileCallback) {
+                const profile = document.querySelector<HTMLElement>(Timeline.PROFILE_SELECTOR);
+                if (profile) {
+                    this.handleProfile(profile, { forceRefresh: true });
+                }
+            }
         });
+    }
+
+    private observeXweb(main: HTMLElement): void {
+        const scan = (): void => {
+            this.scanXwebTweets(main);
+            this.scanXwebProfile();
+        };
+
+        new MutationObserver(scan).observe(main, this.OBSERVER_OPTIONS);
+        observeXwebConversations(this.OBSERVER_OPTIONS, (conversation) => {
+            this.scanXwebTweets(conversation);
+        });
+
+        window.addEventListener("pageshow", (event) => {
+            this.scanXwebTweets(main);
+            this.scanXwebProfile(event.persisted);
+        });
+
+        scan();
     }
 
     /**
@@ -102,6 +127,11 @@ class Timeline {
      */
     public onNewTweet(callback: (tweet: Tweet) => void): void {
         this.onNewTweetCallback = callback;
+        if (getWebClient() === "xweb") {
+            queueMicrotask(() => {
+                this.scanXwebTweets(document, `:is(main, ${XWEB_CONVERSATION_SELECTOR})`);
+            });
+        }
     }
 
     /**
@@ -110,39 +140,68 @@ class Timeline {
      */
     public onNewProfile(callback: (profile: Profile) => void): void {
         this.onNewProfileCallback = callback;
+        if (getWebClient() === "xweb") {
+            queueMicrotask(() => {
+                this.scanXwebProfile();
+            });
+        }
+    }
+
+    private scanXwebTweets(root: ParentNode, scope = ""): void {
+        const callback = this.onNewTweetCallback;
+        if (!callback) return;
+
+        const tweets = root.querySelectorAll<HTMLElement>(`${scope} ${Timeline.XWEB_TWEET_SELECTOR}`);
+        for (const tweet of tweets) {
+            if (!this.seenTweets.has(tweet) && readXwebTweet(tweet)) {
+                this.seenTweets.add(tweet);
+                callback(new Tweet(tweet));
+            }
+        }
+    }
+
+    private scanXwebProfile(forceRefresh = false): void {
+        const callback = this.onNewProfileCallback;
+        if (!callback) return;
+
+        const main = document.querySelector("main");
+        const heading = main?.querySelector<HTMLElement>("h1");
+        const name = location.pathname.split("/")[1]?.toLowerCase();
+        if (!heading || !name) return;
+
+        const alreadySeen = this.seenProfiles.get(heading) === name;
+        if (!forceRefresh && alreadySeen) return;
+
+        const profileName = readXwebProfile(heading)?.props.screen_name.toLowerCase();
+        if (profileName === name) {
+            this.seenProfiles.set(heading, name);
+            callback(new Profile(heading));
+        }
     }
 
     /**
      * Observe the screen name container within a profile element and fire
      * the profile callback when its text changes (handles SPA navigation
-     * between profiles where the checked attribute persists).
-     * @param profile The profile element to observe.
+     * where the element is reused between profiles).
+     * @param nameContainer The screen name container to observe.
      */
-    private observeProfileName(profile: HTMLElement): void {
-        const nameContainer = Timeline.getNameContainerFromProfile(profile);
-        if (!nameContainer || !this.onNewProfileCallback) return;
-
+    private observeProfileName(nameContainer: HTMLElement): void {
         if (this.profileNameObservers.has(nameContainer)) return;
 
         const currentText = nameContainer.innerText.trim();
 
-        const observer = new MutationObserver(() => {
+        this.profileNameObservers.set(nameContainer, currentText);
+        new MutationObserver(() => {
             const latestText = nameContainer.innerText.trim();
-            const tracked = this.profileNameObservers.get(nameContainer);
-            if (!tracked) return;
+            if (latestText === this.profileNameObservers.get(nameContainer)) return;
 
-            if (latestText !== tracked.lastName && this.onNewProfileCallback) {
-                tracked.lastName = latestText;
-                const normalizedText = Timeline.normalizeScreenName(latestText);
+            this.profileNameObservers.set(nameContainer, latestText);
+            const normalizedText = Timeline.normalizeScreenName(latestText);
 
-                requestAnimationFrame(() => {
-                    this.emitProfileWithFreshProps(nameContainer, normalizedText);
-                });
-            }
-        });
-
-        this.profileNameObservers.set(nameContainer, { lastName: currentText, observer });
-        observer.observe(nameContainer, {
+            requestAnimationFrame(() => {
+                this.emitProfileWithFreshProps(nameContainer, normalizedText);
+            });
+        }).observe(nameContainer, {
             characterData: true,
             childList: true,
             subtree: true
@@ -177,19 +236,14 @@ class Timeline {
     private handleProfile(profile: HTMLElement, options?: { forceRefresh?: boolean }): void {
         if (!this.onNewProfileCallback) return;
         // If this is a repeated element and not forced, avoid double-processing.
-        if (!options?.forceRefresh && profile.hasAttribute(this.checkedDataAttribute)) return;
+        if (!options?.forceRefresh && this.seenProfiles.has(profile)) return;
 
-        profile.setAttribute(this.checkedDataAttribute, "");
+        this.seenProfiles.set(profile, "");
 
         // Ensure we listen for subsequent name changes.
-        this.observeProfileName(profile);
-
         const nameContainer = Timeline.getNameContainerFromProfile(profile);
         if (nameContainer) {
-            const tracked = this.profileNameObservers.get(nameContainer);
-            if (tracked) {
-                tracked.lastName = nameContainer.innerText.trim();
-            }
+            this.observeProfileName(nameContainer);
         }
 
         const expectedScreenName = nameContainer ? Timeline.normalizeScreenName(nameContainer.innerText) : null;
@@ -208,7 +262,8 @@ class Timeline {
         // oxlint-disable-next-line no-magic-numbers
         attempt = 0
     ): void {
-        if (!this.onNewProfileCallback) return;
+        const callback = this.onNewProfileCallback;
+        if (!callback) return;
 
         const profileElement = targetElement.closest<HTMLElement>('[data-testid="UserName"]');
         if (!profileElement) return;
@@ -226,7 +281,7 @@ class Timeline {
             return;
         }
 
-        this.onNewProfileCallback(profile);
+        callback(profile);
     }
 }
 
