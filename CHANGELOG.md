@@ -1,5 +1,11 @@
 # twi-ext
 
+## 1.3.0
+
+### Minor Changes
+
+- [#622](https://github.com/Robot-Inventor/twi-ext/pull/622) [`a682c13`](https://github.com/Robot-Inventor/twi-ext/commit/a682c13bb6196300a0957ddb155b2d1927be8b52) Thanks [@Robot-Inventor](https://github.com/Robot-Inventor)! - feat: add support for the new X client
+
 ## 1.2.2
 
 ### Patch Changes
