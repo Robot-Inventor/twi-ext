@@ -1,8 +1,8 @@
-**twi-ext v1.2.2**
+**twi-ext v1.3.0**
 
 ***
 
-# twi-ext v1.2.2
+# twi-ext v1.3.0
 
 ## Classes
 
@@ -16,11 +16,17 @@
 - [TimelineOptions](interfaces/TimelineOptions.md)
 - [TweetMetadata](interfaces/TweetMetadata.md)
 - [UserProps](interfaces/UserProps.md)
+- [XwebProfileData](interfaces/XwebProfileData.md)
+- [XwebTweetData](interfaces/XwebTweetData.md)
+- [XwebTweetProps](interfaces/XwebTweetProps.md)
+- [XwebUserProps](interfaces/XwebUserProps.md)
 
 ## Type Aliases
 
 - [ColorScheme](type-aliases/ColorScheme.md)
+- [ProfileData](type-aliases/ProfileData.md)
 - [ProfileInterstitialType](type-aliases/ProfileInterstitialType.md)
+- [TweetData](type-aliases/TweetData.md)
 
 ## Functions
 
