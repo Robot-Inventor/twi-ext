@@ -26,8 +26,15 @@ import { Timeline, Tweet } from "twi-ext";
 const onNewTweet = (tweet: Tweet): void => {
     // Get the tweet element.
     const tweetElement = tweet.element;
-    // Get the React props of the tweet.
-    const props = tweet.props;
+    // Read data from either X web client.
+    const data = tweet.data;
+    if (data.client === "xweb") {
+        // New client
+        console.log(data.props.possibly_sensitive);
+    } else {
+        // Legacy client
+        console.log(data.props.possibly_sensitive, data.props.possibly_sensitive_editable);
+    }
 };
 
 const timeline = new Timeline();
